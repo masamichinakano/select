@@ -1,0 +1,98 @@
+.member-contents-wrap {
+  width: 900px;
+  height: 100%;
+  border: 1px solid black;
+  /* display: flex; */
+  /* justify-content: center; */ */
+}
+
+.member-header {
+  width: 100%;
+  height: 100px;
+
+}
+
+.member-header p {
+  margin: 0;
+  font-size: 50px;
+}
+
+.member-second-header {
+  width: 100%;
+  height: 70px;
+  margin: 0;
+  display: block;
+  display: flex;
+  justify-content: center;
+
+}
+
+ul {
+  padding: 0;
+}
+
+.position.lists {
+  width: 100%;
+  height: 100%;
+}
+
+.position-list {
+  padding: 10px 28px 10px 32px;
+  margin: 10px 40px 10px;
+  text-align: center;
+  border: 1px solid black;
+  display: inline;
+}
+
+.member-contents {
+  width: 100%;
+  height: 100%;
+  padding:100px 0 100px ;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+/* .member-contents a {
+  
+} */
+
+.member-content {
+  width: 23%;
+  height: 230px;
+  margin: 20px 20px;
+  /* display: inline-block; */
+}
+
+.member-image {
+  width: 100%;
+  height: 190px;
+  margin: 0 auto;
+}
+
+.member-name {
+  font-size: 20px;
+  text-align: center;
+}
+
+.member-registration {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.member-registration-btn {
+  width: 200px;
+  height: 50px;
+  background-color: lightskyblue;
+  border: none;
+  color: white;
+  text-align: center;
+  padding-top: 10px;
+  font-size: 20px;
+  
+}
