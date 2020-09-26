@@ -1,0 +1,19 @@
+<%= render "shared/header" %>
+<div class="main-page">
+  <div class="first-view">
+    <div class="top-image-content">
+      <%= image_tag "441449_m.jpg", class:"top-image" %>
+      <div class="main-text">
+        <h2>さぁ、ベストメンバーを</h2>
+        <h2 class="sub-text">作成しよう！！</h2>
+      </div>
+      <ul class="main-menu-lists">
+        <li><%= link_to "チーム登録", new_team_path, class:"memu-list"%></li>         
+        <%# <li><%= link_to "選手登録", new_members_path, class:"memu-list" %></li> %>
+        <%# <li><%= link_to "選手一覧", player_members_path, class:"memu-list" %></li> %>
+        <%# <li><%= link_to "スタメン設定", user_defences_path(current_user.id), class:"memu-list" %></li> %>
+      </ul>
+    </div> 
+  </div>
+</div>
+<%= render "shared/footer" %>
