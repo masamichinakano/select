@@ -1,0 +1,130 @@
+<%= render "shared/header" %>
+
+<%= form_with model: @member, url: members_path, class:"registration", local: true do |f| %>
+  <div class="main-registration-contents">
+    <div class="form-wrap">
+      <div class="form-header-text">
+        選手情報入力
+      </div>
+    </div>
+    <div class="form-group">
+      <div class='form-text-wrap'>
+        <label class="form-text">選手画像</label>
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.file_field :image, class:"small-field", id:"member_image" %>
+    </div>
+
+    <div class="form-group">
+      <div class='form-text-wrap'>
+        <label class="form-text">名前</label>
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_field :name, placeholder:"山田　太郎", class:"small-field", id:"member_name" %>
+    </div>
+    <div class="form-group">
+      <div class='form-text-wrap'>
+        <label class="form-text">学年</label>
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.collection_select(:school_year_id, SchoolYear.all, :id, :name, {}, {class:"small-field", id:"member_school_year"}) %>
+    </div>
+    <div class="form-group">
+      <div class='form-text-wrap'>
+        <label class="form-text">年齢</label>
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_field :age, placeholder:"半角数字を入力してください", class:"small-field"%> 
+    </div>
+    <div class="form-group">
+      <div class='form-text-wrap'>
+        <label class="form-text">身長</label>
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_field :tall, placeholder:"半角数字を入力してください", class:"small-field" %>
+    </div>
+    <div class="form-group">
+      <div class='form-text-wrap'>
+        <label class="form-text">体重</label>
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_field :weight, placeholder:"半角数字を入力してください", class:"small-field" %>
+    </div>
+    <div class="form-group">
+      <div class='form-text-wrap'>
+        <label class="form-text">投球</label>
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.collection_select(:throwing_id, Throwing.all, :id, :name, {}, {class:"small-field", id:"member_throwing"}) %>
+    </div>
+    <div class="form-group">
+      <div class='form-text-wrap'>
+        <label class="form-text">打席</label>
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.collection_select(:hitting_id, Hitting.all, :id, :name, {}, {class:"small-field", id:"member_hitting"}) %>
+    </div>
+    <div class="form-group">
+      <div class='form-text-wrap'>
+        <label class="form-text">背番号</label>
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_field :number, placeholder:"半角数字を入力してください", class:"small-field" %>
+    </div>
+
+    <div class="form-group">
+      <div class='form-text-wrap'>
+        <label class="form-text">投手</label>
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.check_box :pitcher_position %>
+    </div>
+    <div class="form-group">
+      <div class='form-text-wrap'>
+        <label class="form-text">捕手</label>
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.check_box :catcher_position %>
+    </div>
+    <div class="form-group">
+      <div class='form-text-wrap'>
+        <label class="form-text">一塁手</label>
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.check_box :first_position %>
+    </div>
+    <div class="form-group">
+      <div class='form-text-wrap'>
+        <label class="form-text">二塁手</label>
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.check_box :second_position %>
+    </div>
+    <div class="form-group">
+      <div class='form-text-wrap'>
+        <label class="form-text">三塁手</label>
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.check_box :third_position %>
+    </div>
+    <div class="form-group">
+      <div class='form-text-wrap'>
+        <label class="form-text">遊撃手</label>
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.check_box :short_position %>
+    </div>
+    <div class="form-group">
+      <div class='form-text-wrap'>
+        <label class="form-text">外野手</label>
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.check_box :outside_position %>
+    </div>
+    <div class='register-btn'>
+      <%= f.submit "選手登録", class:"register-send" %>
+    </div>
+
+  </div>
+<% end %>
+<%= render "shared/footer" %>
