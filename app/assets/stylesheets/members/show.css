@@ -1,0 +1,105 @@
+
+
+
+.member-show-header {
+  width: 100%;
+  height: 100px;
+
+}
+
+.member-show-header p {
+  margin: 0;
+  font-size: 50px;
+}
+
+.member-only-content {
+  width: 100%;
+  height: 700px;
+  padding-top: 60px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.member-only-image {
+  width: 400px;
+  height: 650px;
+  border: 1px solid black;
+}
+
+.only-image {
+  width: 100%;
+  height: 350px;
+}
+
+.member-only-data-contents {
+  width: 40%;
+  height: 500px;
+  border: 1px solid black;
+
+}
+
+.only-data-content {
+  width: 100%;
+  height: 8%;
+  margin-top: 5px;
+  border-bottom: 1px solid lightblue;
+  display: flex;
+  justify-content: space-around;
+}
+
+.position-data-content {
+  width: 100%;
+  height: 8%;
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-around;
+}
+
+
+.only-data-list {
+  width: 50%;
+  height: 100%;
+  font-size: 20px;
+  text-align: center;
+
+  /* display: flex;
+  align-items: center; */
+}
+
+.only-data-name {
+  width: 50%;
+  height: 100%;
+  font-size: 20px;
+  text-align: center;
+
+}
+
+.position-data-name {
+  width: 70px;
+  height: 100%;
+  font-size: 20px;
+  text-align: center;
+
+}
+
+
+.member-only-edit {
+  width: 100%;
+  height: 100px;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.member-only-edit-btn {
+  width: 200px;
+  height: 50px;
+  background-color: lightskyblue;
+  border: none;
+  color: white;
+  text-align: center;
+  padding-top: 10px;
+  font-size: 20px;
+
+}

@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: "teams#index"
-  resources :teams do
-    resources :members
+  root to: "members#index"
+  resources :members do
+    collection do
+      get "player"
+    end
   end
+  
 end
