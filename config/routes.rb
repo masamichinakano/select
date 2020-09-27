@@ -6,5 +6,6 @@ Rails.application.routes.draw do
       get "player"
     end
   end
+  resources :orders
   
 end

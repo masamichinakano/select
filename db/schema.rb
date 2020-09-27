@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_26_124819) do
+ActiveRecord::Schema.define(version: 2020_09_27_060412) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -33,6 +33,22 @@ ActiveRecord::Schema.define(version: 2020_09_26_124819) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
+  create_table "defences", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "first_defence_id", null: false
+    t.integer "second_defence_id", null: false
+    t.integer "third_defence_id", null: false
+    t.integer "fourth_defence_id", null: false
+    t.integer "fifth_defence_id", null: false
+    t.integer "sixth_defence_id", null: false
+    t.integer "seventh_defence_id", null: false
+    t.integer "eighth_defence_id", null: false
+    t.integer "ninth_defence_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_defences_on_user_id"
+  end
+
   create_table "members", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
     t.string "age", null: false
@@ -46,6 +62,22 @@ ActiveRecord::Schema.define(version: 2020_09_26_124819) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_members_on_user_id"
+  end
+
+  create_table "orders", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "first_order_id", null: false
+    t.integer "second_order_id", null: false
+    t.integer "third_order_id", null: false
+    t.integer "fourth_order_id", null: false
+    t.integer "fifth_order_id", null: false
+    t.integer "sixth_order_id", null: false
+    t.integer "seventh_order_id", null: false
+    t.integer "eighth_order_id", null: false
+    t.integer "ninth_order_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -62,5 +94,7 @@ ActiveRecord::Schema.define(version: 2020_09_26_124819) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "defences", "users"
   add_foreign_key "members", "users"
+  add_foreign_key "orders", "users"
 end
