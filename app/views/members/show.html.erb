@@ -1,0 +1,70 @@
+<%= render "shared/header" %>
+
+<div class="member-show-wrap">
+  <div class="member-show-contents">
+    <div class="member-show-header">
+      <p>選手詳細</p>
+    </div>
+    <div class="member-only-content">
+      <div class="member-only-image">
+        <%= image_tag @member.image, class:"only-image" %>
+        <div class="only-data-content">
+          <div class="only-data-list">
+            <p>名前：</p>
+          </div>
+          <div class="only-data-name">
+            <p><%= @member.name %></p>
+          </div>
+        </div>
+        <div class="only-data-content">
+          <div class="only-data-list">
+            <p>背番号：</p>
+          </div>
+          <div class="only-data-name">
+            <p><%= @member.number %></p>
+          </div>
+        </div>
+        <div class="only-data-content">
+          <div class="only-data-list">
+            <p>投球　打席：</p>
+          </div>
+          <div class="only-data-name">
+            <p><%= @member.style.name %></p>
+          </div>
+        </div>
+        <div class="position-data-content">
+          <div class="only-data-list">
+            <p>守備位置</p>
+          </div>
+        </div>
+        <div class="position-data-content">
+          <div class="position-data-name">
+            <% if @member.pitcher_position_id %>
+            <p>投手</p>
+            <% end %>
+          </div>
+          <div class="position-data-name">
+            <% if @member.catcher_position_id %>
+            <p>捕手</p>
+            <% end %>
+          </div>
+          <div class="position-data-name">
+            <% if @member.inside_position_id %>
+            <p>内野手</p>
+            <% end %>
+          </div>
+          <div class="position-data-name">
+            <% if @member.outside_position_id %>
+            <p>外野手</p>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div class="member-only-edit">
+    <%= link_to "編集", edit_member_path, method: :get, class:"member-only-edit-btn" %>
+    <%= link_to "削除", member_path, method: :delete, class:"member-only-edit-btn" %>
+  </div>
+</div>
+<%= render "shared/footer" %>
