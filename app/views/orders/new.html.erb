@@ -1,0 +1,72 @@
+<%= render "shared/header" %>
+<%= form_with model: @defence, url: orders_path, class: "defence-main-wrap", local: true do |f| %>
+<div class="offence-main-wrap">
+  <div class="match-form-group">
+    <div class='match-form-text-wrap'>
+      <%= current_user.name %>
+      <label class="form-text">VS</label>
+      <%# <%= f.text_field :match_name, class:"main-match-name", id:"nickname", placeholder:"例) furima太郎", maxlength:"40" %> %>
+      <%# <%= f.date_select :date %> %>
+    </div>
+  </div>
+    
+  <div class="offence-wrap">
+    <table class="offence-members">
+      <tr>
+        <th class="batting-order">打順</th>　
+        <th class="start-order-names">選手名</th>
+      　<th class="positioning">守</th>
+      </tr>
+      <tr>
+        <td>１</td>
+        <td><%= f.collection_select(:first_order_id, Member.all, :id, :name, {prompt:"選択してください"}, {class:"member-select"})%></td>
+        <td><%= f.collection_select(:first_defence_id, FirstDefence.all, :id, :name, {}, {class:"position-select"}) %></td>
+      </tr>
+      <tr>
+        <td>２</td>
+        <td><%= f.collection_select(:second_order_id, Member.all, :id, :name, {prompt:"選択してください"}, {class:"member-select"})%></td>
+        <td><%= f.collection_select(:second_defence_id, SecondDefence.all, :id, :name, {}, {class:"position-select"}) %></td>
+      </tr>
+      <tr>
+        <td>３</td>
+        <td><%= f.collection_select(:third_order_id, Member.all, :id, :name, {prompt:"選択してください"}, {class:"member-select"})%></td>
+        <td><%= f.collection_select(:third_defence_id, ThirdDefence.all, :id, :name, {}, {class:"position-select"}) %></td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td><%= f.collection_select(:fourth_order_id, Member.all, :id, :name, {prompt:"選択してください"}, {class:"member-select"})%></td>
+        <td><%= f.collection_select(:fourth_defence_id, FourthDefence.all, :id, :name, {}, {class:"position-select"}) %></td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td><%= f.collection_select(:fifth_order_id, Member.all, :id, :name, {prompt:"選択してください"}, {class:"member-select"})%></td>
+        <td><%= f.collection_select(:fifth_defence_id, FifthDefence.all, :id, :name, {}, {class:"position-select"}) %></td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td><%= f.collection_select(:sixth_order_id, Member.all, :id, :name, {prompt:"選択してください"}, {class:"member-select"})%></td>
+        <td><%= f.collection_select(:sixth_defence_id, SixthDefence.all, :id, :name, {}, {class:"position-select"}) %></td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td><%= f.collection_select(:seventh_order_id, Member.all, :id, :name, {prompt:"選択してください"}, {class:"member-select"})%></td>
+        <td><%= f.collection_select(:seventh_defence_id, SeventhDefence.all, :id, :name, {}, {class:"position-select"}) %></td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td><%= f.collection_select(:eighth_order_id, Member.all, :id, :name, {prompt:"選択してください"}, {class:"member-select"})%></td>
+        <td><%= f.collection_select(:eighth_defence_id, EighthDefence.all, :id, :name, {}, {class:"position-select"}) %></td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td><%= f.collection_select(:ninth_order_id, Member.all, :id, :name, {prompt:"選択してください"}, {class:"member-select"})%></td>
+        <td><%= f.collection_select(:ninth_defence_id, NinthDefence.all, :id, :name, {}, {class:"position-select"}) %></td>
+      </tr>
+    </table>
+  </div>
+  <div class="offence-set-wrap">
+    <input type="submit" value="保存する" class="order-create-btn">
+  </div>
+</div>
+<% end %>
+<%= render "shared/footer" %>
