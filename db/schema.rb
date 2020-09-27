@@ -44,8 +44,10 @@ ActiveRecord::Schema.define(version: 2020_09_27_060412) do
     t.integer "eighth_defence_id", null: false
     t.integer "ninth_defence_id", null: false
     t.bigint "user_id", null: false
+    t.bigint "order_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["order_id"], name: "index_defences_on_order_id"
     t.index ["user_id"], name: "index_defences_on_user_id"
   end
 
@@ -65,6 +67,10 @@ ActiveRecord::Schema.define(version: 2020_09_27_060412) do
   end
 
   create_table "orders", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "match_name", null: false
+    t.integer "year_id", null: false
+    t.integer "month_id", null: false
+    t.integer "day_id", null: false
     t.integer "first_order_id", null: false
     t.integer "second_order_id", null: false
     t.integer "third_order_id", null: false
@@ -94,6 +100,7 @@ ActiveRecord::Schema.define(version: 2020_09_27_060412) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "defences", "orders"
   add_foreign_key "defences", "users"
   add_foreign_key "members", "users"
   add_foreign_key "orders", "users"

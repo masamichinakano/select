@@ -10,7 +10,8 @@ class CreateDefences < ActiveRecord::Migration[6.0]
       t.integer :seventh_defence_id, null: false
       t.integer :eighth_defence_id, null: false
       t.integer :ninth_defence_id, null: false
-      t.references :user, null: false, foreign_key: true            
+      t.references :user, null: false, foreign_key: true  
+      t.references :order, null: false, foreign_key: true  
       t.timestamps
     end
   end

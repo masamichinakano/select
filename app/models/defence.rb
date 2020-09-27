@@ -1,10 +1,17 @@
 class Defence < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
-  belongs_to_active_hash :first_defence_id, :second_defence_id, :third_defence_id, :fourth_defence_id, :fifth_defence_id, :sixth_defence_id, :seventh_defence_id, :eighth_defence_id, :ninth_defence_id
+  belongs_to_active_hash :first_defence
+  belongs_to_active_hash :second_defence
+  belongs_to_active_hash :third_defence
+  belongs_to_active_hash :fourth_defence
+  belongs_to_active_hash :fifth_defence
+  belongs_to_active_hash :sixth_defence
+  belongs_to_active_hash :seventh_defence
+  belongs_to_active_hash :eighth_defence
+  belongs_to_active_hash :ninth_defence
 
 
-  validates :first_defence_id, :second_defence_id, :third_defence_id, :fourth_defence_id, :fifth_defence_id, :sixth_defence_id, :seventh_defence_id, :eighth_defence_id, :ninth_defence_id, presence: true
-  validates :first_defence_id, :second_defence_id, :third_defence_id, :fourth_defence_id, :fifth_defence_id, :sixth_defence_id, :seventh_defence_id, :eighth_defence_id, :ninth_defence_id, numericality: { other_than: 0 } 
 
   belongs_to :user
+  belongs_to :order
 end
