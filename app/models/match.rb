@@ -18,8 +18,8 @@ class Match < ApplicationRecord
   has_one :ninth
 
 
-  validates :match_name, :year_id, :month_id, :day_id, presence: true 
-  validates :year_id, :month_id, :day_id, numericality: { other_than: 0 }
+  # validates :match_name, :year_id, :month_id, :day_id, presence: true 
+  # validates :year_id, :month_id, :day_id, numericality: { other_than: 0 }
 
 
 end
