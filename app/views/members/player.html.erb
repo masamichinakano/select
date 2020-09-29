@@ -12,17 +12,21 @@
             <div class="players-positions">
               <ul class="position-lists">
                 <li class="position-list">
-                  <%= link_to "投手", pitch_members_path %>
+                  <%= link_to "投手", pitch_members_path, class:"pitch-players-btn" %>
                 </li>
                 <li class="position-list">
-                  <%= link_to "捕手", catch_members_path %>
+                  <%= link_to "捕手", catch_members_path, class:"catch-players-btn" %>
                 </li>
                 <li class="position-list">
-                  <%= link_to "内野手", inside_members_path %>
+                  <%= link_to "内野手", inside_members_path, class:"inside-players-btn" %>
                 </li>
                 <li class="position-list">
-                  <%= link_to "外野手", outside_members_path %>
+                  <%= link_to "外野手", outside_members_path, class:"outside-players-btn" %>
                 </li>
+                <li class="position-list">
+                  <div class="select-all-players-btn">選手一覧</div>
+                </li>
+
               </ul>
             </div>
             <div class="p-member-registration">

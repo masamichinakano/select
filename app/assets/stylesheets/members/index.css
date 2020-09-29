@@ -21,7 +21,7 @@
 
 .players-contents {
   width: 300px;
-  height: 450px;
+  height: 550px;
   margin: 100px 100px 0 100px;
   border: 3px solid white;
   display: flex;
@@ -43,7 +43,7 @@
 
 .member-header {
   width: 100%;
-
+  padding-left: 25px;
 }
 
 .member-header p {
@@ -72,12 +72,12 @@ ul {
 }
 
 .position-list {
-  width: 100px;
+  width: 150px;
   height: 44px;
   font-size: 30px;
   margin: 10px 50px 30px;
   text-align: center;
-  background-color: rgb(110, 49, 36);
+  /* background-color: rgb(110, 49, 36); */
 }
 
 .member-contents {
@@ -130,9 +130,146 @@ ul {
   transition    : .3s;         /* なめらか変化 */
   box-shadow    : 6px 6px 3px #666666;  /* 影の設定 */
   border        : 2px solid #000066;    /* 枠の指定 */
+  margin-left: 25px;
 }
 .p-member-registration-btn:hover {
   box-shadow    : none;        /* カーソル時の影消去 */
   color         : #000066;     /* 背景色     */
   background    : #ffffff;     /* 文字色     */
 }
+
+.pitch-players-btn {
+  display       : inline-block;
+  border-radius : 5%;          /* 角丸       */
+  font-size     : 18pt;        /* 文字サイズ */
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 12px 44px;   /* 余白       */
+  background    : #ffff1a;     /* 背景色     */
+  color         : #00007f;     /* 文字色     */
+  line-height   : 1em;         /* 1行の高さ  */
+  transition    : .3s;         /* なめらか変化 */
+  border        : 2px solid #ffff1a;    /* 枠の指定 */
+}
+.pitch-players-btn:hover {
+  color         : #ffff1a;     /* 背景色     */
+  background    : #00007f;     /* 文字色     */
+}
+
+.catch-players-btn {
+  display       : inline-block;
+  border-radius : 5%;          /* 角丸       */
+  font-size     : 18pt;        /* 文字サイズ */
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 12px 44px;   /* 余白       */
+  background    : #ffff1a;     /* 背景色     */
+  color         : #00007f;     /* 文字色     */
+  line-height   : 1em;         /* 1行の高さ  */
+  transition    : .3s;         /* なめらか変化 */
+  border        : 2px solid #ffff1a;    /* 枠の指定 */
+}
+.catch-players-btn:hover {
+  color         : #ffff1a;     /* 背景色     */
+  background    : #00007f;     /* 文字色     */
+}
+
+
+.inside-players-btn {
+  display       : inline-block;
+  border-radius : 5%;          /* 角丸       */
+  font-size     : 18pt;        /* 文字サイズ */
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 12px 30px;   /* 余白       */
+  background    : #ffff1a;     /* 背景色     */
+  color         : #00007f;     /* 文字色     */
+  line-height   : 1em;         /* 1行の高さ  */
+  transition    : .3s;         /* なめらか変化 */
+  border        : 2px solid #ffff1a;    /* 枠の指定 */
+}
+.inside-players-btn:hover {
+  color         : #ffff1a;     /* 背景色     */
+  background    : #00007f;     /* 文字色     */
+}
+
+
+.outside-players-btn {
+  display       : inline-block;
+  border-radius : 5%;          /* 角丸       */
+  font-size     : 18pt;        /* 文字サイズ */
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 12px 30px;   /* 余白       */
+  background    : #ffff1a;     /* 背景色     */
+  color         : #00007f;     /* 文字色     */
+  line-height   : 1em;         /* 1行の高さ  */
+  transition    : .3s;         /* なめらか変化 */
+  border        : 2px solid #ffff1a;    /* 枠の指定 */
+}
+.outside-players-btn:hover {
+  color         : #ffff1a;     /* 背景色     */
+  background    : #00007f;     /* 文字色     */
+}
+
+.player-players-btn {
+  display       : inline-block;
+  border-radius : 5%;          /* 角丸       */
+  font-size     : 18pt;        /* 文字サイズ */
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 12px 20px;   /* 余白       */
+  background    : #ffff1a;     /* 背景色     */
+  color         : #00007f;     /* 文字色     */
+  line-height   : 1em;         /* 1行の高さ  */
+  transition    : .3s;         /* なめらか変化 */
+  border        : 2px solid #ffff1a;    /* 枠の指定 */
+}
+.player-players-btn:hover {
+  color         : #ffff1a;     /* 背景色     */
+  background    : #00007f;     /* 文字色     */
+}
+
+
+.select-players-btn {
+  display       : inline-block;
+  border-radius : 5%;          /* 角丸       */
+  font-size     : 18pt;        /* 文字サイズ */
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 12px 44px;   /* 余白       */
+  background    : #00007f;     /* 背景色     */
+  color         : #ffff1a;     /* 文字色     */
+  line-height   : 1em;         /* 1行の高さ  */
+  transition    : .3s;         /* なめらか変化 */
+  box-shadow    : 8px 8px #666666;  /* 影の設定 */
+}
+
+.select-outside-players-btn {
+  display       : inline-block;
+  border-radius : 5%;          /* 角丸       */
+  font-size     : 18pt;        /* 文字サイズ */
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 12px 30px;   /* 余白       */
+  background    : #00007f;     /* 背景色     */
+  color         : #ffff1a;     /* 文字色     */
+  line-height   : 1em;         /* 1行の高さ  */
+  transition    : .3s;         /* なめらか変化 */
+  box-shadow    : 8px 8px #666666;  /* 影の設定 */
+}
+
+.select-all-players-btn {
+  display       : inline-block;
+  border-radius : 5%;          /* 角丸       */
+  font-size     : 18pt;        /* 文字サイズ */
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 12px 25px;   /* 余白       */
+  background    : #00007f;     /* 背景色     */
+  color         : #ffff1a;     /* 文字色     */
+  line-height   : 1em;         /* 1行の高さ  */
+  transition    : .3s;         /* なめらか変化 */
+  box-shadow    : 8px 8px #666666;  /* 影の設定 */
+}
+
