@@ -1,20 +1,55 @@
+.player-main-image {
+  height: 100vh;
+  padding: 15px;
+  background-image: url(https://i.gyazo.com/a2fa821cf5f2a07a6eda76b3e1124bd9.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.main-players-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.players-wrap {
+  width: 100%;
+  display: flex;
+}
+
+
+.players-contents {
+  width: 300px;
+  height: 450px;
+  margin: 100px 100px 0 100px;
+  border: 3px solid white;
+  display: flex;
+  justify-content: center;
+}
+
 .member-contents-wrap {
+  overflow: scroll;
+  margin-top: 40px;
+  height: 600px;
   width: 900px;
-  height: 100%;
-  border: 1px solid black;
+  border: 3px solid white;
   /* display: flex; */
   /* justify-content: center; */ */
 }
 
+
+
+
 .member-header {
   width: 100%;
-  height: 100px;
 
 }
 
 .member-header p {
   margin: 0;
   font-size: 50px;
+  color: white;
 }
 
 .member-second-header {
@@ -37,20 +72,22 @@ ul {
 }
 
 .position-list {
-  padding: 10px 28px 10px 32px;
-  margin: 10px 40px 10px;
+  width: 100px;
+  height: 44px;
+  font-size: 30px;
+  margin: 10px 50px 30px;
   text-align: center;
-  border: 1px solid black;
-  display: inline;
+  background-color: rgb(110, 49, 36);
 }
 
 .member-contents {
   width: 100%;
   height: 100%;
-  padding:100px 0 100px ;
+  padding: 50px 0 50px ;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+
 }
 
 /* .member-contents a {
@@ -72,27 +109,30 @@ ul {
 
 .member-name {
   font-size: 20px;
-  text-align: center;
-}
-
-.member-registration {
-  width: 100%;
-  height: 50px;
-  margin-bottom: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-
-.member-registration-btn {
-  width: 200px;
-  height: 50px;
-  background-color: lightskyblue;
-  border: none;
   color: white;
   text-align: center;
-  padding-top: 10px;
-  font-size: 20px;
-  
+}
+
+.p-member-registratio {
+}
+
+
+.p-member-registration-btn {
+  display       : inline-block;
+  border-radius : 5%;          /* 角丸       */
+  font-size     : 18pt;        /* 文字サイズ */
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 12px 50px;   /* 余白       */
+  background    : #000066;     /* 背景色     */
+  color         : #ffffff;     /* 文字色     */
+  line-height   : 1em;         /* 1行の高さ  */
+  transition    : .3s;         /* なめらか変化 */
+  box-shadow    : 6px 6px 3px #666666;  /* 影の設定 */
+  border        : 2px solid #000066;    /* 枠の指定 */
+}
+.p-member-registration-btn:hover {
+  box-shadow    : none;        /* カーソル時の影消去 */
+  color         : #000066;     /* 背景色     */
+  background    : #ffffff;     /* 文字色     */
 }

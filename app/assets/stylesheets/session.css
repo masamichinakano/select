@@ -41,7 +41,6 @@
 .form-wrap {
   width: 100%;
   height: 100px;
-  border-bottom: 1px solid black;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -88,14 +87,36 @@
 }
 
 
-.session-send {
+/* .session-send {
   margin-top: 25px;
   width: 200px;
   height: 40px;
   float: right;
-  background-color: rgb(202, 176, 170);
+  background-color: rgb(110, 49, 36);
   border: none;
   color: white;
-  opacity: 0.7;
 
+} */
+
+
+.session-send {
+  display       : inline-block;
+  border-radius : 20%;          /* 角丸       */
+  font-size     : 18pt;        /* 文字サイズ */
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 12px 64px;   /* 余白       */
+  background    : #7f007f;     /* 背景色     */
+  color         : #ffffff;     /* 文字色     */
+  line-height   : 1em;         /* 1行の高さ  */
+  opacity       : 1;           /* 透明度     */
+  transition    : .3s;         /* なめらか変化 */
+  box-shadow    : 7px 7px #666666;  /* 影の設定 */
+  float: right;
+  margin-top: 20px;
+
+}
+.session-send:hover {
+  box-shadow    : none;        /* カーソル時の影消去 */
+  opacity       : 0.8;         /* カーソル時透明度 */
 }

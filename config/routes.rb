@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: "members#index"
   resources :members do
     collection do
-      get "player"
+      get "player", "pitch", "catch", "inside", "outside"
     end
   end
   resources :orders

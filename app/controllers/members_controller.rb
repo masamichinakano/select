@@ -27,6 +27,23 @@ class MembersController < ApplicationController
     @members = Member.all
   end
 
+  def pitch
+    @members = Member.all
+  end
+
+  def catch
+    @members = Member.all
+  end
+
+  def inside
+    @members = Member.all
+  end
+
+  def outside
+    @members = Member.all
+  end
+
+
   def show
     @member = Member.find(params[:id])
   end
