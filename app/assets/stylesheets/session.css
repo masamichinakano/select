@@ -1,10 +1,42 @@
-.main-session-contents {
-  margin: 120px auto 120px;
-  width: 500px;
-  height: 410px;
-  border: 1px solid black;
+.session-header-contents {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  margin: 10px 0 10px 0;
+  justify-content: space-between;
+
 }
 
+.session-header-logo {
+  font-family: "Safari", sans-serif;
+  /* font-weight: bolder; */
+  font-size: 100px;
+  color: white;
+  /* margin-top: 10px; */
+  margin-left: 80px;
+
+}
+
+.main-session-contents {
+  margin-top: 0;
+  margin-left: 950px;
+  width: 500px;
+  height: 250px;
+}
+.top-session-image {
+  height: 100vh;
+  padding: 15px;
+  background-image: url(https://i.gyazo.com/c2cefed13235e5c97b9a0564f14e4800.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.top-session-wrap {
+  width: 100%;
+  height: 100%;
+  border: 8px solid white;
+
+}
 
 .form-wrap {
   width: 100%;
@@ -15,17 +47,17 @@
   justify-content: center;
 }
 
-.form-header-text {
+.session-header-text {
   font-size: 25px;
   font-weight: bold;
-  color: black;
+  color: white;
 }
 
-.form-group {
-  height: 85px;
+.session-form-group {
+  height: 100px;
   width: 100%;
-  border-bottom: 1px solid black;
-  text-align: center;
+  /* text-align: center; */
+  margin-top: 10px;
   padding-top: 10px;
   padding-bottom: 5px;
 }
@@ -34,25 +66,36 @@
   margin-top: 10px;
 }
 
+.session-form-text {
+  font-size: 15px;
+  color: white;
+}
 
-.small-field {
-  width: 300px;
-  height: 30px;
+.session-field {
+  width: 400px;
+  height: 50px;
   margin-top: 5px;
+  background-color: rgb(202, 176, 170);
+  opacity: 0.7;
+  border: none;
+  color: black;
 }
 
-.register-btn {
+.session-btn {
   height: 85px;
-  width: 100%;
-  text-align: center;
+  width: 400px;
+  margin-top: 20px;
 }
 
 
-.register-send {
+.session-send {
   margin-top: 25px;
   width: 200px;
   height: 40px;
-  background-color: lightskyblue;
+  float: right;
+  background-color: rgb(202, 176, 170);
   border: none;
   color: white;
+  opacity: 0.7;
+
 }
