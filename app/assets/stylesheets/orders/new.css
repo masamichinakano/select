@@ -1,27 +1,43 @@
+.order-main-image {
+  height: 100vh;
+  padding: 20px;
+
+  background-image: url(https://i.gyazo.com/b861996d8f39286c6c61c65d27a25efa.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
 .offence-main-wrap {
   width: 100%;
   height: 100%; 
   padding: 20px 0 30px 0;
-
+  display: flex;
 }
 
 
 .offence-wrap {
-  width: 100%;
+  width: 800px;
   height: 100%; 
+  margin-top: 50px;
   display: flex;
   justify-content: center;
 }
 
 .match-form-group {
-  width: 100%;
-  height: 100%;
-  /* display: flex; */
+  padding: 20px;
+  width: 450px;
+  height: 300px;
+  margin: 100px 50px 0 100px;
+  
+  border: 3px solid white;
+
 }
 
 .match-form-text-wrap {
-  width: 100%;
+  width: 400px;
   height: 50px;
+  margin-top: 20px;
   margin-bottom: 30px;
   display: flex;
   justify-content: center;
@@ -30,7 +46,7 @@
 }
 
 .match-form-date-wrap {
-  width: 100%;
+  width: 400px;
   height: 50px;
   margin-bottom: 30px;
 
@@ -48,11 +64,13 @@
 }
 
 .user-name {
+  color: white;
   font-size: 30px;
   margin-right: 20px;
 }
 
 .form-text {
+  color: white;
   font-size: 30px;
   
 }
@@ -84,7 +102,7 @@
 .match-contents-wrap {
   width: 400px;
   height: 600px; 
-  border: 1px solid black;
+  /* border: 1px solid black; */
   margin-left: 250px;
 }
 
@@ -93,6 +111,8 @@
   width: 700px;
   height: 100%;
   font-size: 20px;
+  background-color: white;
+
   /* display: flex;
   justify-content: center; */
 }
@@ -112,14 +132,21 @@ th,td {
 }
 
 .batting-order {
+  background-color: #000066;
+  color: yellow;
   width: 80px;
   text-align: center;
+  border: 5px solid yellow;
 
 }
 
 
 .start-order-names {
+  background-color: #000066;
+  color: yellow;
   width: 300px;
+  border: 5px solid yellow;
+
   text-align: center;
 
 }
@@ -127,6 +154,9 @@ th,td {
 .positioning {
   width: 60px;
   text-align: center;
+  background-color: #000066;
+  color: yellow;
+  border: 5px solid yellow;
 
 }
 
@@ -169,19 +199,28 @@ td {
 
 
 .offence-set-wrap {
-  /* position: absolute;
-  bottom: 50px;
-  right: 80px; */
+  width: 400px;
+  text-align: center;
 }
 
 .order-create-btn {
-  width: 160px;
-  height: 50px;
-  background-color: lightskyblue;
-  color: white;
-  font-size: 20px;
-  margin-left: 900px;
-  margin-top: 20px;
+  display       : inline-block;
+  border-radius : 5%;          /* 角丸       */
+  font-size     : 18pt;        /* 文字サイズ */
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 12px 50px;   /* 余白       */
+  background    : #000066;     /* 背景色     */
+  color         : #ffffff;     /* 文字色     */
+  line-height   : 1em;         /* 1行の高さ  */
+  transition    : .3s;         /* なめらか変化 */
+  box-shadow    : 6px 6px 3px #666666;  /* 影の設定 */
+  border        : 2px solid #000066;    /* 枠の指定 */
 }
 
+.order-create-btn:hover {
+  box-shadow    : none;        /* カーソル時の影消去 */
+  color         : #000066;     /* 背景色     */
+  background    : #ffffff;     /* 文字色     */
+}
 
