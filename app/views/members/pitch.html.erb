@@ -36,7 +36,7 @@
         <div class="member-contents-wrap">
           <ul class="member-contents">
             <% @members.each do |member| %>
-              <% if member.pitcher_position_id %>
+              <% if member.pitcher_position_id && current_user.id == member.user_id %>
               <li class="member-content">
                 <%= link_to member_path(member.id) do %>
                 <%= image_tag member.image.variant(resize:'500x500'), class:"member-image" if member.image.attached? %>

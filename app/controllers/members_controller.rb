@@ -1,9 +1,18 @@
 class MembersController < ApplicationController
   before_action :move_to_new_user_session, except: [:index]    
-
+  before_action :only_player, only: [:show]
 
   def index
   end
+
+  def only_player
+    @member = Member.find(params[:id])
+    if current_user.id != @member.user_id
+      redirect_to root_path
+    end
+  end
+
+
 
   def new
     @member = Member.new
