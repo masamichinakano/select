@@ -1,0 +1,37 @@
+class Day < ActiveHash::Base
+  self.data = [
+    {id: 0, name: "--"},
+    {id: 1, name: "１"},
+    {id: 2, name: "２"},
+    {id: 3, name: "３"},
+    {id: 4, name: "４"},
+    {id: 5, name: "５"},
+    {id: 6, name: "６"},
+    {id: 7, name: "７"},
+    {id: 8, name: "８"},
+    {id: 9, name: "９"},
+    {id: 10, name: "１０"},
+    {id: 11, name: "１１"},
+    {id: 12, name: "１２"},
+    {id: 13, name: "１３"},
+    {id: 14, name: "１４"},
+    {id: 15, name: "１５"},
+    {id: 16, name: "１６"},
+    {id: 17, name: "１７"},
+    {id: 18, name: "１８"},
+    {id: 19, name: "１９"},
+    {id: 20, name: "２０"},
+    {id: 21, name: "２１"},
+    {id: 22, name: "２２"},
+    {id: 23, name: "２３"},
+    {id: 24, name: "２４"},
+    {id: 25, name: "２５"},
+    {id: 26, name: "２６"},
+    {id: 27, name: "２７"},
+    {id: 28, name: "２８"},
+    {id: 29, name: "２９"},
+    {id: 30, name: "３０"},
+    {id: 31, name: "３１"}
+  ]
+  
+end

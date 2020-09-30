@@ -1,0 +1,86 @@
+<div class="order-main-image">
+  <div class="top-session-wrap">
+
+    <%= render "shared/header" %>
+    <%= form_with model: @order, url: orders_path, class: "defence-main-wrap", local: true do |f| %>
+    <div class="offence-main-wrap">
+      <div class="match-form-group">
+        <div class='match-form-text-wrap'>
+          <p class="user-name"><%= current_user.name %></p>
+          <label class="form-text"> VS </label>
+          <%= f.text_field :match_name, placeholder:"対戦相手", class:"match-name" %>
+        </div>
+        <div class='match-form-date-wrap'>
+          <%= f.collection_select(:year_id, Year.all, :id, :name, {}, {class:"year-date-field"}) %>
+          <label class="form-text">年</label>
+          <%= f.collection_select(:month_id, Month.all, :id, :name, {}, {class:"date-field"}) %>
+          <label class="form-text">月</label>
+          <%= f.collection_select(:day_id, Day.all, :id, :name, {}, {class:"date-field"}) %>
+          <label class="form-text">日</label>
+        </div>
+        <div class="offence-set-wrap">
+          <input type="submit" value="保存する" class="order-create-btn">
+        </div>
+      </div>
+        
+      <div class="offence-wrap">
+        <table class="offence-members">
+          <tr>
+            <th class="batting-order">打順</th>　
+            <th class="start-order-names">選手名</th>
+          　<th class="positioning">守</th>
+          </tr>
+          <tr>
+            <td>１</td>
+            <td><%= f.collection_select(:first_name_id, Member.all, :id, :name, {prompt:"選択してください"}, {class:"member-select"})%></td>
+            <%# <td><%= f.select(:first_name_id, options_for_select(Member.all.where{|member| [member.name, member.id]}), {selected: :member_id, prompt:"選択してください"}, {class:"member-select"})%></td> %>
+            <%# f.select :name, options_for_select(セレクトボックスで表示したい要素配列.map{|c|[セレクトボックスで表示される値, value属性値にセットしたい値, {追加属性記述}]}, 初期値のvalueを選択), {}, {class: 'hoge', id: 'hogehoge'} %>
+            <td><%= f.collection_select(:first_position_id, FirstPosition.all, :id, :name, {}, {class:"position-select"}) %></td>
+          </tr>
+          <tr>
+            <td>２</td>
+            <td><%= f.collection_select(:second_name_id, Member.all, :id, :name, {prompt:"選択してください"}, {class:"member-select"})%></td>
+            <td><%= f.collection_select(:second_position_id, SecondPosition.all, :id, :name, {}, {class:"position-select"}) %></td>
+          </tr>
+          <tr>
+            <td>３</td>
+            <td><%= f.collection_select(:third_name_id, Member.all, :id, :name, {prompt:"選択してください"}, {class:"member-select"})%></td>
+            <td><%= f.collection_select(:third_position_id, ThirdPosition.all, :id, :name, {}, {class:"position-select"}) %></td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td><%= f.collection_select(:fourth_name_id, Member.all, :id, :name, {prompt:"選択してください"}, {class:"member-select"})%></td>
+            <td><%= f.collection_select(:fourth_position_id, FourthPosition.all, :id, :name, {}, {class:"position-select"}) %></td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td><%= f.collection_select(:fifth_name_id, Member.all, :id, :name, {prompt:"選択してください"}, {class:"member-select"})%></td>
+            <td><%= f.collection_select(:fifth_position_id, FifthPosition.all, :id, :name, {}, {class:"position-select"}) %></td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td><%= f.collection_select(:sixth_name_id, Member.all, :id, :name, {prompt:"選択してください"}, {class:"member-select"})%></td>
+            <td><%= f.collection_select(:sixth_position_id, SixthPosition.all, :id, :name, {}, {class:"position-select"}) %></td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td><%= f.collection_select(:seventh_name_id, Member.all, :id, :name, {prompt:"選択してください"}, {class:"member-select"})%></td>
+            <td><%= f.collection_select(:seventh_position_id, SeventhPosition.all, :id, :name, {}, {class:"position-select"}) %></td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td><%= f.collection_select(:eighth_name_id, Member.all, :id, :name, {prompt:"選択してください"}, {class:"member-select"})%></td>
+            <td><%= f.collection_select(:eighth_position_id, EighthPosition.all, :id, :name, {}, {class:"position-select"}) %></td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td><%= f.collection_select(:ninth_name_id, Member.all, :id, :name, {prompt:"選択してください"}, {class:"member-select"})%></td>
+            <td><%= f.collection_select(:ninth_position_id, NinthPosition.all, :id, :name, {}, {class:"position-select"}) %></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
+<%= render "shared/footer" %>

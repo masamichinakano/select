@@ -1,21 +1,47 @@
-<%= render "shared/header" %>
-<div class="main-page">
-  <div class="first-view">
-    <div class="top-image-content">
-      <%= image_tag "441449_m.jpg", class:"top-image" %>
-      <div class="main-text">
-        <h2>さぁ、ベストメンバーを</h2>
-        <h2 class="sub-text">作成しよう！！</h2>
+<div class="top-main-image">
+  <header>
+    <div class="session-header-contents">
+      <div class="session-header-logo-warap">
+        <h1><%= link_to "select", root_path, class:"session-header-logo" %></h1>
       </div>
+      <div class="header-lists">
+        <% if user_signed_in? %>
+          <ul class="list-contents">
+            <li><%= link_to current_user.name, "#", class:"my-page" %></li>
+            <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class:"log-out" %></li>
+          </ul>
+        <% else %>
+          <ul class="list-contents">
+            <li><%= link_to "ログイン", user_session_path, class:"log-in" %></li>
+            <li><%= link_to "新規登録", new_user_registration_path, class:"session" %></li>
+          </ul>
+        <% end %>
+      </div>
+    </div>
+  </header>
+  <div class="main-page">
+    <div class="top-image-content">
       <ul class="main-menu-lists">
-        <li><%= link_to "選手登録", new_member_path, class:"memu-list"%></li> 
-        <li><%= link_to "選手一覧", player_members_path, class:"memu-list" %></li>
-        <%# <li><%= link_to "スタメン設定", user_defences_path(current_user.id), class:"memu-list" %></li> %>
-          <%# <% else %> %>
-          <%# <li><%= link_to "チーム登録", new_team_path, class:"memu-list"%></li>  %>
-            
+        <li><%= link_to "選手登録", new_member_path, class:"main-list"%></li> 
+        <li><%= link_to "選手一覧", player_members_path, class:"main-list" %></li>
+        <li><%= link_to "スタメン設定", orders_path, class:"main-list" %></li>
+        <li><%= link_to "スタメン履歴", "#", class:"main-list"%></li> 
       </ul>
     </div> 
+  </div>
+</div>
+<div class="second-main-wrap">
+  <div class="second-view-contents">
+    <%= link_to image_tag("https://i.gyazo.com/0a675f8086f254b4ff843b5a7a89d676.jpg", class:"second-view-content"), "#" %>
+  </div>
+  <div class="second-view-contents">
+     <%= link_to image_tag("https://i.gyazo.com/a2fa821cf5f2a07a6eda76b3e1124bd9.jpg", class:"second-view-content"), "#" %>
+  </div>
+  <div class="second-view-contents">
+      <%= link_to image_tag("https://i.gyazo.com/b861996d8f39286c6c61c65d27a25efa.jpg", class:"second-view-content"), "#" %>
+  </div>
+  <div class="second-view-contents">
+      <%= link_to image_tag("975756_m.jpg", class:"second-view-content"), "#" %>
   </div>
 </div>
 <%= render "shared/footer" %>

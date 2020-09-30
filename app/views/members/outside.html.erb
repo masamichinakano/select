@@ -1,0 +1,55 @@
+<div class="player-main-image">
+  <div class="top-session-wrap">
+
+    <%= render "shared/header" %>
+    <div class="main-players-wrap">
+      <div class="players-wrap">
+        <div class="players-contents">
+          <div>
+            <div class="member-header">
+              <p>選手一覧</p>
+            </div>
+            <div class="players-positions">
+              <ul class="position-lists">
+                <li class="position-list">
+                  <%= link_to "投手", pitch_members_path, class:"pitch-players-btn" %>
+                </li>
+                <li class="position-list">
+                  <%= link_to "捕手", catch_members_path, class:"catch-players-btn" %>
+                </li>
+                <li class="position-list">
+                  <%= link_to "内野手", inside_members_path, class:"inside-players-btn" %>
+                </li>
+                <li class="position-list">
+                  <div class="select-outside-players-btn">外野手</div>
+                </li>
+                <li class="position-list">
+                  <%= link_to "選手一覧", player_members_path, class:"player-players-btn" %>
+                </li>
+
+              </ul>
+            </div>
+            <div class="p-member-registration">
+              <%= link_to "選手登録", new_member_path, class:"p-member-registration-btn"%>
+            </div>
+          </div>
+        </div>
+        <div class="member-contents-wrap">
+          <ul class="member-contents">
+            <% @members.each do |member| %>
+              <% if member.outside_position_id && current_user.id == member.user_id %>
+              <li class="member-content">
+                <%= link_to member_path(member.id) do %>
+                <%= image_tag member.image.variant(resize:'500x500'), class:"member-image" if member.image.attached? %>
+                <div class="member-name"><%= member.name %></div>
+                <% end %>
+              </li>
+              <% end %>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<%= render "shared/footer" %>
