@@ -15,6 +15,26 @@ class OrdersController < ApplicationController
     end
   end
 
+  def ofence
+    @matchs = Match.all
+  end
+
+  def show
+    @match = Match.find(params[:id])
+    @members = Member.all
+    @firsts = First.all
+    @seconds = Second.all
+    @thirds = Third.all
+    @fourths = Fourth.all
+    @fifths = Fifth.all
+    @sixths = Sixth.all
+    @sevenths = Seventh.all
+    @eighths = Eighth.all
+    @ninths = Ninth.all
+  end
+
+
+
 
   private
   def order_params
