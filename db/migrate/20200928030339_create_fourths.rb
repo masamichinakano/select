@@ -3,7 +3,6 @@ class CreateFourths < ActiveRecord::Migration[6.0]
     create_table :fourths do |t|
       t.integer :fourth_name_id, null: false
       t.integer :fourth_position_id, null: false
-      t.references :member, null: false, foreign_key: true            
       t.references :match, null: false, foreign_key: true            
       t.timestamps
     end

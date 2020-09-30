@@ -3,7 +3,6 @@ class CreateSixths < ActiveRecord::Migration[6.0]
     create_table :sixths do |t|
       t.integer :sixth_name_id, null: false
       t.integer :sixth_position_id, null: false
-      t.references :member, null: false, foreign_key: true            
       t.references :match, null: false, foreign_key: true            
       t.timestamps
     end

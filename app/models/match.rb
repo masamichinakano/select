@@ -14,7 +14,7 @@ class Match < ApplicationRecord
   has_one :fifth
   has_one :sixth
   has_one :seventh
-  has_one :eight
+  has_one :eighth
   has_one :ninth
 
 

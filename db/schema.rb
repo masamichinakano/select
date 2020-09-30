@@ -35,46 +35,38 @@ ActiveRecord::Schema.define(version: 2020_09_28_030621) do
 
   create_table "eighths", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "eighth_name_id", null: false
-    t.integer "eight_position_id", null: false
-    t.bigint "member_id", null: false
+    t.integer "eighth_position_id", null: false
     t.bigint "match_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["match_id"], name: "index_eighths_on_match_id"
-    t.index ["member_id"], name: "index_eighths_on_member_id"
   end
 
   create_table "fifths", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "fifth_name_id", null: false
     t.integer "fifth_position_id", null: false
-    t.bigint "member_id", null: false
     t.bigint "match_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["match_id"], name: "index_fifths_on_match_id"
-    t.index ["member_id"], name: "index_fifths_on_member_id"
   end
 
   create_table "firsts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "first_name_id", null: false
     t.integer "first_position_id", null: false
-    t.bigint "member_id", null: false
     t.bigint "match_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["match_id"], name: "index_firsts_on_match_id"
-    t.index ["member_id"], name: "index_firsts_on_member_id"
   end
 
   create_table "fourths", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "fourth_name_id", null: false
     t.integer "fourth_position_id", null: false
-    t.bigint "member_id", null: false
     t.bigint "match_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["match_id"], name: "index_fourths_on_match_id"
-    t.index ["member_id"], name: "index_fourths_on_member_id"
   end
 
   create_table "matches", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -106,56 +98,46 @@ ActiveRecord::Schema.define(version: 2020_09_28_030621) do
   create_table "ninths", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "ninth_name_id", null: false
     t.integer "ninth_position_id", null: false
-    t.bigint "member_id", null: false
     t.bigint "match_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["match_id"], name: "index_ninths_on_match_id"
-    t.index ["member_id"], name: "index_ninths_on_member_id"
   end
 
   create_table "seconds", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "second_name_id", null: false
     t.integer "second_position_id", null: false
-    t.bigint "member_id", null: false
     t.bigint "match_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["match_id"], name: "index_seconds_on_match_id"
-    t.index ["member_id"], name: "index_seconds_on_member_id"
   end
 
   create_table "sevenths", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "seventh_name_id", null: false
     t.integer "seventh_position_id", null: false
-    t.bigint "member_id", null: false
     t.bigint "match_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["match_id"], name: "index_sevenths_on_match_id"
-    t.index ["member_id"], name: "index_sevenths_on_member_id"
   end
 
   create_table "sixths", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "sixth_name_id", null: false
     t.integer "sixth_position_id", null: false
-    t.bigint "member_id", null: false
     t.bigint "match_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["match_id"], name: "index_sixths_on_match_id"
-    t.index ["member_id"], name: "index_sixths_on_member_id"
   end
 
   create_table "thirds", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "third_name_id", null: false
     t.integer "third_position_id", null: false
-    t.bigint "member_id", null: false
     t.bigint "match_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["match_id"], name: "index_thirds_on_match_id"
-    t.index ["member_id"], name: "index_thirds_on_member_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -173,23 +155,14 @@ ActiveRecord::Schema.define(version: 2020_09_28_030621) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "eighths", "matches"
-  add_foreign_key "eighths", "members"
   add_foreign_key "fifths", "matches"
-  add_foreign_key "fifths", "members"
   add_foreign_key "firsts", "matches"
-  add_foreign_key "firsts", "members"
   add_foreign_key "fourths", "matches"
-  add_foreign_key "fourths", "members"
   add_foreign_key "matches", "users"
   add_foreign_key "members", "users"
   add_foreign_key "ninths", "matches"
-  add_foreign_key "ninths", "members"
   add_foreign_key "seconds", "matches"
-  add_foreign_key "seconds", "members"
   add_foreign_key "sevenths", "matches"
-  add_foreign_key "sevenths", "members"
   add_foreign_key "sixths", "matches"
-  add_foreign_key "sixths", "members"
   add_foreign_key "thirds", "matches"
-  add_foreign_key "thirds", "members"
 end
