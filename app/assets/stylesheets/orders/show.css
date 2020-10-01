@@ -3,18 +3,17 @@
   width: 550px;
   height: 550px;
   margin: 100px 50px 0 100px;
-  
-  border: 3px solid white;
+  background-color: rgba(214, 182, 182, 0.5);
 
 }
 
 .show-match-form-text-wrap {
   width: 500px;
   height: 50px;
-  margin-top: 20px;
-  margin-bottom: 30px;
+  margin-top: 40px;
+
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 
 }
@@ -25,7 +24,7 @@
   margin-bottom: 30px;
 
   display: flex;
-  /* justify-content: center; */
+  justify-content: flex-end;
   align-items: center;
 
 }
@@ -33,18 +32,21 @@
 
 
 .show-user-name {
-  color: white;
-  font-size: 30px;
+  color: #000066;
+  font-size: 40px;
+  font-weight: bold;
   text-align: center;
 
 }
 
 .show-match-name {
   width: 200px;
-  height: 50px;
-  font-size: 30px;
+  /* height: 50px; */
+  font-size: 40px;
+  font-weight: bold;
+
   text-align: center;
-  color: white;
+  color: #000066;
 
 }
 
@@ -53,7 +55,7 @@
   height: 20px;
   font-size: 15px;
   text-align: center;
-  color: white;
+  color: #000066;
 }
 
 .show-date-field {
@@ -61,12 +63,12 @@
   height: 20px;
   font-size: 15px;
   text-align: center;
-  color: white;
+  color: #000066;
 
 }
 
 .show-form-text {
-    color: white;
+    color: #000066;
     font-size: 15px;  
 }
 
@@ -119,19 +121,23 @@
 
 .show-offence-wrap {
   width: 800px;
-  height: 600px; 
-  margin-top: 50px;
+  height: 550px; 
+  margin-top: 100px;
   display: flex;
   justify-content: center;
 }
 
 .show-offence-members {
-  width: 100%;
+  width: 550px;
+  height: 550px;
   font-size: 20px;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.9);
   table-layout: fixed;
 }
 
+.show-offence-contents {
+  height: 50px;
+}
 
 
 .show-batting-orders {
@@ -155,7 +161,7 @@
   color: yellow;
   border: 5px solid yellow;
   text-align: center;
-  width: 300px;
+  width: 200px;
 
 }
 
@@ -164,7 +170,7 @@
   background-color: #000066;
   color: yellow;
   border: 5px solid yellow;
-  width: 100px;
+  width: 50px;
 }
 
 

@@ -21,7 +21,9 @@ class OrdersController < ApplicationController
 
   def ofence
     @matchs = Match.all
+    @results = @p.result
     set_product_column
+    # set_product_column
   end
 
   def show
@@ -46,7 +48,9 @@ class OrdersController < ApplicationController
   end
 
   def search
-    @match = @p.match.includes(:match_name, :year_id, :month_id, :day_id) 
+    @results = @p.result
+    set_product_column
+
   end
 
 
@@ -73,6 +77,7 @@ class OrdersController < ApplicationController
   def search_product
     @p = Match.ransack(params[:q])  # 検索オブジェクトを生成
   end
+
 
 end
 

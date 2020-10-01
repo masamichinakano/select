@@ -7,13 +7,9 @@
         <div class="ofence-contents">
           <div class="ofence-data-wrap">
             <div class="ofence-search-wrap">
-            <%= search_form_for @p, url: search_orders_path, local: true, method: :get, class: "search-form" do |f| %>
-              <%# <% @match.each do |match| %> %>
-                <%# <%= if current_user.id == match.user_id %> %>
-                <%= f.label :match_name_eq, '対戦相手', class: "search-input" %>
-                <%= f.collection_select :match_name_eq, @match_names.where(user_id: current_user.id), :id, :match_name,  include_blank: '指定なし' %>
-                <%# <% end %> %>
-              <%# <% end %> %>
+            <%= search_form_for @p, url: search_orders_path do |f| %>
+              <%= f.label :match_name_eq, '対戦相手', class: "search-input" %>
+              <%= f.collection_select :match_name_eq, @match_names.where(user_id: current_user.id), :match_name, :match_name,  include_blank: '指定なし' %>
               <%= f.label :year_id_eq, '対戦相手', class: "search-input" %>              
               <%= f.collection_select :year_id_eq, Year.all, :id, :name,  include_blank: '指定なし' %>
               <%= f.label :month_id_eq, '対戦相手', class: "search-input" %>
