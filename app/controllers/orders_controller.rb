@@ -1,4 +1,5 @@
 class OrdersController < ApplicationController
+  before_action :only_order, only: [:show]
 
 
   def index
@@ -33,6 +34,12 @@ class OrdersController < ApplicationController
     @ninths = Ninth.all
   end
 
+  def only_order
+    @match = Match.find(params[:id])
+    if current_user.id != @match.user_id
+      redirect_to root_path
+    end
+  end
 
 
 

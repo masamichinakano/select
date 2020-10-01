@@ -12,8 +12,9 @@
         <div class="ofence-contents">
           <div class="ofence-history-wrap">
             <% @matchs.each do |match| %>
+              <% if current_user.id == match.user_id %>
               <div class="ofence-history">
-              <%= link_to order_path(match.id) do %>
+                <%= link_to order_path(match.id) do %>
                 <div class="match-name-wrap">
                   <p class="ofence-user-name"><%= current_user.name %></p>
                   <label class="ofence-form-text"> VS </label>
@@ -24,8 +25,9 @@
                   <p class="ofence-match-month"><%= match.month.name %>月</p>
                   <p class="ofence-match-day"><%= match.day.name %>日</p>
                 </div>
-              <% end %>
+                <% end %>
               </div>
+              <% end %>
             <% end %>
           </div>
         </div>

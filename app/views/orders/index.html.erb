@@ -28,13 +28,11 @@
           <tr>
             <th class="batting-order">打順</th>　
             <th class="start-order-names">選手名</th>
-          　<th class="positioning">守</th>
+          　<th class="positioning">守備</th>
           </tr>
           <tr>
             <td>１</td>
             <td><%= f.collection_select(:first_name_id, Member.all, :id, :name, {prompt:"選択してください"}, {class:"member-select"})%></td>
-            <%# <td><%= f.select(:first_name_id, options_for_select(Member.all.where{|member| [member.name, member.id]}), {selected: :member_id, prompt:"選択してください"}, {class:"member-select"})%></td> %>
-            <%# f.select :name, options_for_select(セレクトボックスで表示したい要素配列.map{|c|[セレクトボックスで表示される値, value属性値にセットしたい値, {追加属性記述}]}, 初期値のvalueを選択), {}, {class: 'hoge', id: 'hogehoge'} %>
             <td><%= f.collection_select(:first_position_id, FirstPosition.all, :id, :name, {}, {class:"position-select"}) %></td>
           </tr>
           <tr>

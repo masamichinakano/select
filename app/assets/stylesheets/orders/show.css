@@ -1,0 +1,177 @@
+.show-match-form-group {
+  padding: 20px;
+  width: 550px;
+  height: 550px;
+  margin: 100px 50px 0 100px;
+  
+  border: 3px solid white;
+
+}
+
+.show-match-form-text-wrap {
+  width: 500px;
+  height: 50px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.show-match-form-date-wrap {
+  width: 500px;
+  height: 50px;
+  margin-bottom: 30px;
+
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+
+}
+
+
+
+.show-user-name {
+  color: white;
+  font-size: 30px;
+  text-align: center;
+
+}
+
+.show-match-name {
+  width: 200px;
+  height: 50px;
+  font-size: 30px;
+  text-align: center;
+  color: white;
+
+}
+
+.show-year-date-field {
+  width: 60px;
+  height: 20px;
+  font-size: 15px;
+  text-align: center;
+  color: white;
+}
+
+.show-date-field {
+  width: 30px;
+  height: 20px;
+  font-size: 15px;
+  text-align: center;
+  color: white;
+
+}
+
+.show-form-text {
+    color: white;
+    font-size: 15px;  
+}
+
+
+/* オーダー詳細ページボタン */
+.show-offence-set-wrap {
+  margin-bottom:70px;
+  margin-top: 10px;
+  width: 500px;
+  text-align: center;
+}
+
+.show-offence-edit-wrap {
+  margin-bottom:20px;
+  width: 500px;
+  text-align: center;
+}
+
+
+
+.show-order-create-btn {
+  display       : inline-block;
+  border-radius : 5%;          /* 角丸       */
+  font-size     : 18pt;        /* 文字サイズ */
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 12px 50px;   /* 余白       */
+  background    : #000066;     /* 背景色     */
+  color         : #ffffff;     /* 文字色     */
+  line-height   : 1em;         /* 1行の高さ  */
+  transition    : .3s;         /* なめらか変化 */
+  box-shadow    : 6px 6px 3px #666666;  /* 影の設定 */
+  border        : 2px solid #000066;    /* 枠の指定 */
+}
+
+.show-order-create-btn:hover {
+  box-shadow    : none;        /* カーソル時の影消去 */
+  color         : #000066;     /* 背景色     */
+  background    : #ffffff;     /* 文字色     */
+}
+
+
+
+
+
+
+
+
+
+
+.show-offence-wrap {
+  width: 800px;
+  height: 600px; 
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.show-offence-members {
+  width: 100%;
+  font-size: 20px;
+  background-color: white;
+  table-layout: fixed;
+}
+
+
+
+.show-batting-orders {
+  background-color: #000066;
+  color: yellow;
+  text-align: center;
+  border: 5px solid yellow;
+  width: 50px;
+
+
+}
+
+.show-batting-order {
+  width: 100px;
+}
+
+
+
+.show-start-order-names {
+  background-color: #000066;
+  color: yellow;
+  border: 5px solid yellow;
+  text-align: center;
+  width: 300px;
+
+}
+
+.show-positioning {
+  text-align: center;
+  background-color: #000066;
+  color: yellow;
+  border: 5px solid yellow;
+  width: 100px;
+}
+
+
+.show-member-select {
+  text-align: center;
+}
+
+.show-position-select {
+  text-align: center;
+}
