@@ -1,5 +1,8 @@
 class OrdersController < ApplicationController
+  before_action :move_to_index, except: [:index, :ofence]
   before_action :only_order, only: [:show]
+  before_action :search_product, only: [:ofence, :search]
+
 
 
   def index
@@ -18,6 +21,7 @@ class OrdersController < ApplicationController
 
   def ofence
     @matchs = Match.all
+    set_product_column
   end
 
   def show
@@ -41,6 +45,10 @@ class OrdersController < ApplicationController
     end
   end
 
+  def search
+    @match = @p.match.includes(:match_name, :year_id, :month_id, :day_id) 
+  end
+
 
 
   private
@@ -50,6 +58,20 @@ class OrdersController < ApplicationController
     :fourth_name_id, :fourth_position_id, :fifth_name_id, :fifth_position_id, :sixth_name_id, :sixth_position_id,
     :seventh_name_id, :seventh_position_id, :eighth_name_id, :eighth_position_id, :ninth_name_id, :ninth_position_id
     ).merge(user_id: current_user.id)
+  end
+
+  def move_to_index
+    unless user_signed_in?
+      redirect_to "index"
+    end
+  end
+
+  def set_product_column
+    @match_names = Match.select("match_name").distinct  # 重複なくnameカラムのデータを取り出す
+  end
+
+  def search_product
+    @p = Match.ransack(params[:q])  # 検索オブジェクトを生成
   end
 
 end

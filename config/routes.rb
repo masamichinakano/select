@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   end
   resources :orders do
     collection do
-      get "ofence"
+      get "ofence", "search"
     end
   end
   
