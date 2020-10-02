@@ -34,6 +34,26 @@
 
 }
 
+.new-match-form-group {
+  padding: 20px;
+  width: 550px;
+  height: 300px;
+  margin: 100px 50px 0 100px;
+  background-color: rgba(214, 182, 182, 0.5);
+}
+
+
+.new-match-form-text-wrap {
+  width:100%;
+  height: 50px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
 .match-form-text-wrap {
   width: 400px;
   height: 50px;
@@ -44,6 +64,7 @@
   align-items: center;
 
 }
+
 
 .match-form-date-wrap {
   width: 400px;
@@ -56,6 +77,17 @@
 
 }
 
+.new-match-form-date-wrap {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 30px;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
 
 
 .match-form-wrap {
@@ -64,9 +96,10 @@
 }
 
 .user-name {
-  color: white;
-  font-size: 30px;
+  color: #000066;
+  font-size: 35px;
   margin-right: 20px;
+  font-weight: bold;
 }
 
 .form-text {
@@ -74,6 +107,13 @@
   font-size: 30px;
   
 }
+
+.new-form-text {
+  color: #000066;
+  font-size: 30px;
+  
+}
+
 
 .match-name {
   width: 200px;
@@ -144,7 +184,7 @@ th,td {
 .start-order-names {
   background-color: #000066;
   color: yellow;
-  width: 300px;
+  width: 200px;
   border: 5px solid yellow;
 
   text-align: center;
@@ -202,6 +242,13 @@ td {
   width: 400px;
   text-align: center;
 }
+
+.new-offence-set-wrap {
+  width: 100%;
+  text-align: center;
+  margin-top: 40px;
+}
+
 
 .order-create-btn {
   display       : inline-block;

@@ -8,15 +8,41 @@
           <div class="ofence-data-wrap">
             <div class="ofence-search-wrap">
             <%= search_form_for @p, url: search_orders_path do |f| %>
-              <%= f.label :match_name_eq, '対戦相手', class: "search-input" %>
-              <%= f.collection_select :match_name_eq, @match_names.where(user_id: current_user.id), :match_name, :match_name,  include_blank: '指定なし' %>
-              <%= f.label :year_id_eq, '対戦相手', class: "search-input" %>              
-              <%= f.collection_select :year_id_eq, Year.all, :id, :name,  include_blank: '指定なし' %>
-              <%= f.label :month_id_eq, '対戦相手', class: "search-input" %>
-              <%= f.collection_select :month_id_eq, Month.all, :id, :name,  include_blank: '指定なし' %>
-              <%= f.label :day_id_eq, '対戦相手', class: "search-input" %>
-              <%= f.collection_select :day_id_eq, Day.all, :id, :name,  include_blank: '指定なし' %>
-              <%= f.submit "検索", class: "search-btn" %>
+              <div class="search-content">
+                <div class="search-input">
+                  <%= f.label :match_name_eq, '対戦相手' %>
+                </div>
+                <div class="ofence-search-form" >
+                  <%= f.collection_select :match_name_eq, @match_names.where(user_id: current_user.id), :match_name, :match_name,  {include_blank: '指定なし'}, {class:"ofence-search-form"} %>
+                </div>
+              </div>
+              <div class="search-content">
+                <div class="search-input">
+                  <%= f.label :year_id_eq, '対戦 年', class: "search-input" %>
+                </div>            
+                <div class="ofence-search-form" >
+                  <%= f.collection_select :year_id_eq, Year.all, :id, :name,  {include_blank: '指定なし'}, {class:"ofence-search-form"} %>
+                </div>
+              </div>
+              <div class="search-content">
+                <div class="search-input">
+                  <%= f.label :month_id_eq, '対戦 月', class: "search-input" %>
+                </div>
+                <div class="ofence-search-form" >
+                  <%= f.collection_select :month_id_eq, Month.all, :id, :name, {include_blank: '指定なし'}, {class:"ofence-search-form"} %>
+                </div>
+              </div>
+              <div class="search-content">
+                <div class="search-input">
+                  <%= f.label :day_id_eq, '対戦 日', class: "search-input" %>
+                </div>
+                <div class="ofence-search-form" >
+                  <%= f.collection_select :day_id_eq, Day.all, :id, :name,{include_blank: '指定なし'}, {class:"ofence-search-form"} %>
+                </div>
+              </div>
+              <div>
+                <%= f.submit "検索", class: "search-btn" %>
+              </div>
             <% end %>
             </div>
           </div>

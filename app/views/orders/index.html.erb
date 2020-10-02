@@ -4,13 +4,13 @@
     <%= render "shared/header" %>
     <%= form_with model: @order, url: orders_path, class: "defence-main-wrap", local: true do |f| %>
     <div class="offence-main-wrap">
-      <div class="match-form-group">
-        <div class='match-form-text-wrap'>
+      <div class="new-match-form-group">
+        <div class='new-match-form-text-wrap'>
           <p class="user-name"><%= current_user.name %></p>
-          <label class="form-text"> VS </label>
+          <label class="new-form-text"> VS </label>
           <%= f.text_field :match_name, placeholder:"対戦相手", class:"match-name" %>
         </div>
-        <div class='match-form-date-wrap'>
+        <div class='new-match-form-date-wrap'>
           <%= f.collection_select(:year_id, Year.all, :id, :name, {}, {class:"year-date-field"}) %>
           <label class="form-text">年</label>
           <%= f.collection_select(:month_id, Month.all, :id, :name, {}, {class:"date-field"}) %>
@@ -18,7 +18,7 @@
           <%= f.collection_select(:day_id, Day.all, :id, :name, {}, {class:"date-field"}) %>
           <label class="form-text">日</label>
         </div>
-        <div class="offence-set-wrap">
+        <div class="new-offence-set-wrap">
           <input type="submit" value="保存する" class="order-create-btn">
         </div>
       </div>
