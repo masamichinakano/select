@@ -19,7 +19,8 @@
             <label class="show-form-text">日</label>
           </div>
           <div class="show-offence-set-wrap">
-            <%= link_to "試合開始", "#", class:"show-order-create-btn"%>
+            <%= link_to "先攻で試合", order_fronts_path(@match.id), class:"show-order-create-btn"%>
+            <%= link_to "後攻で試合", "#", class:"show-order-create-btn"%>          
           </div>
           <div class="show-offence-edit-wrap">
             <%= link_to "編集", "#", class:"show-order-create-btn"%>

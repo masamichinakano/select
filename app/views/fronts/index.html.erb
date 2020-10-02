@@ -1,0 +1,48 @@
+<div class="front-main-image">
+  <div class="top-session-wrap">
+    <%= render "shared/header" %>
+      <div class="front-main-wrap">
+        <div class="front-wrap">
+          <table class="score-table">
+            <tr>
+              <th>
+                TEAM
+              </th>
+              <td>
+                １
+              </td>
+              <td>
+                ２
+              </td>
+              <th>
+                計
+              </th>
+            </tr>
+            <tr>
+              <th>
+                <%= current_user.name %>
+              </th>
+              <td>
+              </td>
+              <td>
+              </td>
+              <th>
+              </th>
+            </tr>
+            <tr>
+              <th>
+                <%# <%= @match.match_name %> %>
+              </th>
+              <td>
+              </td>
+              <td>
+              </td>
+              <th>
+              </th>
+            </tr>
+          </table>
+        </div>
+      </div>
+  </div>
+</div>
+<%= render "shared/footer" %>
