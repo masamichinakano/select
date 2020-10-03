@@ -15,7 +15,7 @@
 }
 
 .front-wrap {
-  width: 800px;
+  width: 850px;
   height: 300px;
   margin-top: 200px;
   margin-left: 100px;
@@ -27,9 +27,26 @@
   height: 100%;
 }
 
-.score-table tr {
+.front-match--form {
+  
+}
+
+.score-table th {
+  width: 15%;
   border: 3px solid white;
 }
+
+
+.score-table tr {
+  height: 30%;
+  border: 3px solid white;
+}
+
+.score-table td {
+  width: 7%;
+  height: 50px;
+}
+
 
 .inning-wrap {
   border-right: 3px solid white;
@@ -37,15 +54,14 @@
 }
 
 .score-field {
-  width: 100%;
-  height: 100%;
+  width: 50px;
+  height: 50px;
   border-right: 3px solid white;
   border-left: 3px solid white;
   background-color: green;
 }
 
-.total-wrap {
-  width: 100px;
-  height: 100px;
 
+.total-wrap {
+  width: 15%;
 }
