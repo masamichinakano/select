@@ -6,7 +6,7 @@
         <div class="front-wrap">
           <table class="score-table">
             <tr>
-              <th>
+              <th class="score-content">
                 TEAM
               </th>
               <td class="inning-wrap">
@@ -36,15 +36,12 @@
               <td class="inning-wrap">
                 ９
               </td>
-              <td class="inning-wrap">
-                １０
-              </td>
               <th class="total-wrap">
                 計
               </th>
             </tr>
             <tr>
-              <th>
+              <th class="score-content">
                 <%= current_user.name %>
               </th>
               <td>
@@ -79,8 +76,8 @@
               </th>
             </tr>
             <tr>
-              <th>
-                <%= f.collection_select(:hoge, @match_names.where(user_id: current_user.id), :match_name, :match_name,  {include_blank: '指定なし'}, {class:"front-match--form"}) %>
+              <th class="score-content">
+                <%= f.collection_select(:hoge, @match_names.where(user_id: current_user.id), :match_name, :match_name,  {include_blank: '指定なし'}, {class:"front-match-form"}) %>
               </th>
               <td>
                 <%= f.text_field :first_sa_inning, id:"first-sa-score-field", class:"score-field"  %>

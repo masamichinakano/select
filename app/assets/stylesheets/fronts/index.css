@@ -15,7 +15,7 @@
 }
 
 .front-wrap {
-  width: 850px;
+  width: 80vw;
   height: 300px;
   margin-top: 200px;
   margin-left: 100px;
@@ -27,12 +27,9 @@
   height: 100%;
 }
 
-.front-match--form {
-  
-}
 
 .score-table th {
-  width: 15%;
+  width: 20%;
   border: 3px solid white;
 }
 
@@ -43,6 +40,7 @@
 }
 
 .score-table td {
+
   width: 7%;
   height: 50px;
 }
@@ -54,11 +52,31 @@
 }
 
 .score-field {
-  width: 50px;
-  height: 50px;
+  width: 100%;
+  height: 100%;
   border-right: 3px solid white;
   border-left: 3px solid white;
   background-color: green;
+  font-size: 40px;
+  color: white;
+  text-align: center;
+
+}
+
+.score-content {
+  font-size: 40px;
+  color: white;
+  text-align: center;
+
+}
+
+.front-match-form {
+  width: 100%;
+  height: 100%;
+  background-color: green;
+  font-size: 40px;
+  color: white;
+
 }
 
 
