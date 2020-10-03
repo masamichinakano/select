@@ -38,6 +38,8 @@ class OrdersController < ApplicationController
     @sevenths = Seventh.all
     @eighths = Eighth.all
     @ninths = Ninth.all
+    set_product_column
+
   end
 
   def only_order

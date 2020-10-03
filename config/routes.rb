@@ -7,11 +7,11 @@ Rails.application.routes.draw do
     end
   end
   resources :orders do
+    resources :fronts
+    resources :backs
     collection do
       get "ofence", "search"
     end
-    resources :fronts
-    resources :backs
   end
   
 end

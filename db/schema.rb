@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_02_022742) do
+ActiveRecord::Schema.define(version: 2020_10_03_013044) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -67,6 +67,15 @@ ActiveRecord::Schema.define(version: 2020_10_02_022742) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["match_id"], name: "index_fourths_on_match_id"
+  end
+
+  create_table "fronts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "match_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["match_id"], name: "index_fronts_on_match_id"
+    t.index ["user_id"], name: "index_fronts_on_user_id"
   end
 
   create_table "matches", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -173,6 +182,8 @@ ActiveRecord::Schema.define(version: 2020_10_02_022742) do
   add_foreign_key "fifths", "matches"
   add_foreign_key "firsts", "matches"
   add_foreign_key "fourths", "matches"
+  add_foreign_key "fronts", "matches"
+  add_foreign_key "fronts", "users"
   add_foreign_key "matches", "users"
   add_foreign_key "members", "users"
   add_foreign_key "ninths", "matches"
