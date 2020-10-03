@@ -16,8 +16,7 @@ class Match < ApplicationRecord
   has_one :seventh
   has_one :eighth
   has_one :ninth
-
-
+  has_one :front
   # validates :match_name, :year_id, :month_id, :day_id, presence: true 
   # validates :year_id, :month_id, :day_id, numericality: { other_than: 0 }
 

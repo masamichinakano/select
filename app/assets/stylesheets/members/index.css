@@ -21,19 +21,19 @@
 
 .players-contents {
   width: 300px;
-  height: 550px;
+  height: 570px;
   margin: 100px 100px 0 100px;
-  border: 3px solid white;
+  background-color: rgba(214, 182, 182, 0.5);
   display: flex;
   justify-content: center;
 }
 
 .member-contents-wrap {
   overflow: scroll;
-  margin-top: 40px;
-  height: 600px;
+  margin-top: 100px;
+  height: 570px;
   width: 900px;
-  border: 3px solid white;
+  background-color: rgba(214, 182, 182, 0.5);
   /* display: flex; */
   /* justify-content: center; */ */
 }
@@ -43,13 +43,15 @@
 
 .member-header {
   width: 100%;
+  margin-top: 20px;
   padding-left: 25px;
 }
 
 .member-header p {
   margin: 0;
   font-size: 50px;
-  color: white;
+  color: #000066;
+  font-weight: bold;
 }
 
 .member-second-header {
@@ -102,19 +104,19 @@ ul {
 }
 
 .member-image {
+  border: 3px solid #000066;
   width: 100%;
   height: 190px;
   margin: 0 auto;
 }
 
 .member-name {
-  font-size: 20px;
-  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  color: #000066;
   text-align: center;
 }
 
-.p-member-registratio {
-}
 
 
 .p-member-registration-btn {

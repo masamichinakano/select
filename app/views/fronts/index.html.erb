@@ -1,0 +1,54 @@
+<div class="front-main-image">
+  <div class="top-session-wrap">
+    <%= render "shared/header" %>
+    <%= form_with model: @front, url: order_fronts_path, class: "registration", local: true do |f| %>
+      <div class="front-main-wrap">
+        <div class="front-wrap">
+          <table class="score-table">
+            <tr>
+              <th>
+                TEAM
+              </th>
+              <td class="inning-wrap">
+                １
+              </td>
+              <td class="inning-wrap">
+                ２
+              </td>
+              <th class="total-wrap">
+                計
+              </th>
+            </tr>
+            <tr>
+              <th>
+                <%= current_user.name %>
+              </th>
+              <td>
+                <%= f.text_field :number, class:"score-field" %>
+              </td>
+              <td>
+                <%= f.text_field :number, class:"score-field" %>
+              </td>
+              <th class="total-wrap">
+              </th>
+            </tr>
+            <tr>
+              <th>
+                <%= f.collection_select(:hoge, @match_names.where(user_id: current_user.id), :match_name, :match_name,  {include_blank: '指定なし'}, {class:"ofence-search-form"}) %>
+              </th>
+              <td>
+                <%= f.text_field :number, class:"score-field" %>
+              </td>
+              <td>
+                <%= f.text_field :number, class:"score-field" %>
+              </td>
+              <th class="total-wrap">
+              </th>
+            </tr>
+          </table>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+<%= render "shared/footer" %>

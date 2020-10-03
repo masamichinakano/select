@@ -1,0 +1,2 @@
+class BacksController < ApplicationController
+end

@@ -6,6 +6,12 @@ Rails.application.routes.draw do
       get "player", "pitch", "catch", "inside", "outside"
     end
   end
-  resources :orders
+  resources :orders do
+    resources :fronts
+    resources :backs
+    collection do
+      get "ofence", "search"
+    end
+  end
   
 end
