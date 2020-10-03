@@ -70,6 +70,26 @@ ActiveRecord::Schema.define(version: 2020_10_03_013044) do
   end
 
   create_table "fronts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "first_fa_inning", null: false
+    t.integer "second_fa_inning", null: false
+    t.integer "third_fa_inning", null: false
+    t.integer "fourth_fa_inning", null: false
+    t.integer "fifth_fa_inning", null: false
+    t.integer "sixth_fa_inning", null: false
+    t.integer "seventh_fa_inning", null: false
+    t.integer "eighth_fa_inning", null: false
+    t.integer "ninth_fa_inning", null: false
+    t.integer "f_total", null: false
+    t.integer "first_sa_inning", null: false
+    t.integer "second_sa_inning", null: false
+    t.integer "third_sa_inning", null: false
+    t.integer "fourth_sa_inning", null: false
+    t.integer "fifth_sa_inning", null: false
+    t.integer "sixth_sa_inning", null: false
+    t.integer "seventh_sa_inning", null: false
+    t.integer "eighth_sa_inning", null: false
+    t.integer "ninth_sa_inning", null: false
+    t.integer "s_total", null: false
     t.bigint "user_id", null: false
     t.bigint "match_id", null: false
     t.datetime "created_at", precision: 6, null: false
