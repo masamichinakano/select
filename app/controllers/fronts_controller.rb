@@ -10,6 +10,8 @@ class FrontsController < ApplicationController
 
 
   def create
+    @front = Front.new
+
   end
 
   private
