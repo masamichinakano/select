@@ -13,7 +13,7 @@
                   <%= f.label :match_name_eq, '対戦相手' %>
                 </div>
                 <div class="offence-search-form" >
-                  <%= f.collection_select :match_name_eq, @match_names.where(user_id: current_user.id), :match_name, :match_name,  {include_blank: '指定なし'}, {class:"ofence-search-form"} %>
+                  <%= f.collection_select :match_name_eq, @match_names.where(user_id: current_user.id), :match_name, :match_name,  {include_blank: '指定なし'}, {class:"offence-search-form"} %>
                 </div>
               </div>
               <div class="search-content">
@@ -21,7 +21,7 @@
                   <%= f.label :year_id_eq, '対戦 年', class: "search-input" %>
                 </div>            
                 <div class="offence-search-form" >
-                  <%= f.collection_select :year_id_eq, Year.all, :id, :name,  {include_blank: '指定なし'}, {class:"ofence-search-form"} %>
+                  <%= f.collection_select :year_id_eq, Year.all, :id, :name,  {include_blank: '指定なし'}, {class:"offence-search-form"} %>
                 </div>
               </div>
               <div class="search-content">
@@ -29,7 +29,7 @@
                   <%= f.label :month_id_eq, '対戦 月', class: "search-input" %>
                 </div>
                 <div class="offence-search-form" >
-                  <%= f.collection_select :month_id_eq, Month.all, :id, :name, {include_blank: '指定なし'}, {class:"ofence-search-form"} %>
+                  <%= f.collection_select :month_id_eq, Month.all, :id, :name, {include_blank: '指定なし'}, {class:"offence-search-form"} %>
                 </div>
               </div>
               <div class="search-content">
@@ -37,7 +37,7 @@
                   <%= f.label :day_id_eq, '対戦 日', class: "search-input" %>
                 </div>
                 <div class="offence-search-form" >
-                  <%= f.collection_select :day_id_eq, Day.all, :id, :name,{include_blank: '指定なし'}, {class:"ofence-search-form"} %>
+                  <%= f.collection_select :day_id_eq, Day.all, :id, :name,{include_blank: '指定なし'}, {class:"offence-search-form"} %>
                 </div>
               </div>
               <div class="search-btn-wrap">
