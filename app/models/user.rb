@@ -9,8 +9,5 @@ class User < ApplicationRecord
   has_many :fronts
 
 
-  with_options presence: true do
-    validates :name, :email, :password, uniqueness: true
-  end
-
+  validates :name, presence: true
 end
