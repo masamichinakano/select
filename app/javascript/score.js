@@ -21,79 +21,145 @@ window.addEventListener("load", function() {
     second_total_score = (first_fa_score + second_fa_score);
     fa_total.innerHTML = second_total_score 
   })
-})
-      
-//       // 三回表
-//       let third_score = document.getElementById("third-fa-score-field");
-//       third_score.addEventListener("input", function() {
-//         let third_fa_score = parseInt(third_score.value);
-//         let fa_total = document.getElementById("fa-total");
   
-//         third_score = (first_fa_score + second_fa_score + third_fa_score)
-//         fa_total.innerHTML = third_score 
+  // 三回表
+  var third_score = document.getElementById("third-fa-score-field");
+  third_score.addEventListener("input", function() {
+    var third_fa_score = parseInt(third_score.value);
+    var score = document.getElementById("first-fa-score-field");
+    var first_fa_score = parseInt(score.value);
+    var second_score = document.getElementById("second-fa-score-field");
+    var second_fa_score = parseInt(second_score.value);
+    var fa_total = document.getElementById("fa-total");
 
-//         // 四回表
-//         let fourth_score = document.getElementById("fourth-fa-score-field");
-//         fourth_score.addEventListener("input", function() {
-//           let fourth_fa_score = parseInt(fourth_score.value);
-//           let fa_total = document.getElementById("fa-total");
+    third_total_score = (first_fa_score + second_fa_score + third_fa_score)
+    fa_total.innerHTML = third_total_score 
     
-//           fourth_score = (third_score + fourth_fa_score)
-//           fa_total.innerHTML = fourth_score 
+  })
+  // 四回表
+  var fourth_score = document.getElementById("fourth-fa-score-field");
+  fourth_score.addEventListener("input", function() {
+    var fourth_fa_score = parseInt(fourth_score.value);
+    var score = document.getElementById("first-fa-score-field");
+    var first_fa_score = parseInt(score.value);
+    var second_score = document.getElementById("second-fa-score-field");
+    var second_fa_score = parseInt(second_score.value);
+    var third_score = document.getElementById("third-fa-score-field");
+    var third_fa_score = parseInt(third_score.value);
+    var fa_total = document.getElementById("fa-total");
 
-//           // 五回表
-//           let fifth_score = document.getElementById("fifth-fa-score-field");
-//           fifth_score.addEventListener("input", function() {
-//             let fifth_fa_score = parseInt(fifth_score.value);
-//             let fa_total = document.getElementById("fa-total");
-      
-//             fifth_score = (fourth_score + fifth_fa_score)
-//             fa_total.innerHTML = fifth_score 
-            
-//             // 六回表
-//             let sixth_score = document.getElementById("sixth-fa-score-field");
-//             sixth_score.addEventListener("input", function() {
-//               let sixth_fa_score = parseInt(sixth_score.value);
-//               let fa_total = document.getElementById("fa-total");
+    fourth_total_score = (first_fa_score + second_fa_score + third_fa_score + fourth_fa_score)
+    fa_total.innerHTML = fourth_total_score 
+  })
+
+  // 五回表
+  var fifth_score = document.getElementById("fifth-fa-score-field");
+  fifth_score.addEventListener("input", function() {
+    var fifth_fa_score = parseInt(fifth_score.value);
+    var score = document.getElementById("first-fa-score-field");
+    var first_fa_score = parseInt(score.value);
+    var second_score = document.getElementById("second-fa-score-field");
+    var second_fa_score = parseInt(second_score.value);
+    var third_score = document.getElementById("third-fa-score-field");
+    var third_fa_score = parseInt(third_score.value);
+    var fourth_score = document.getElementById("fourth-fa-score-field");
+    var fourth_fa_score = parseInt(fourth_score.value);
+    var fa_total = document.getElementById("fa-total");
+
+    fifth_total_score = (first_fa_score + second_fa_score + third_fa_score + fourth_fa_score + fifth_fa_score)
+    fa_total.innerHTML = fifth_total_score 
+  })
+    
+  // 六回表
+  var sixth_score = document.getElementById("sixth-fa-score-field");
+  sixth_score.addEventListener("input", function() {
+    var sixth_fa_score = parseInt(sixth_score.value);
+    var score = document.getElementById("first-fa-score-field");
+    var first_fa_score = parseInt(score.value);
+    var second_score = document.getElementById("second-fa-score-field");
+    var second_fa_score = parseInt(second_score.value);
+    var third_score = document.getElementById("third-fa-score-field");
+    var third_fa_score = parseInt(third_score.value);
+    var fourth_score = document.getElementById("fourth-fa-score-field");
+    var fourth_fa_score = parseInt(fourth_score.value);
+    var fifth_score = document.getElementById("fifth-fa-score-field");
+    var fifth_fa_score = parseInt(fifth_score.value);
+    var fa_total = document.getElementById("fa-total");
+
+    sixth_total_score = (first_fa_score + second_fa_score + third_fa_score + fourth_fa_score + fifth_fa_score + sixth_fa_score)
+    fa_total.innerHTML = sixth_total_score 
+  })
+
+  // 七回表
+  var seventh_score = document.getElementById("seventh-fa-score-field");
+  seventh_score.addEventListener("input", function() {
+    var seventh_fa_score = parseInt(seventh_score.value);
+    var score = document.getElementById("first-fa-score-field");
+    var first_fa_score = parseInt(score.value);
+    var second_score = document.getElementById("second-fa-score-field");
+    var second_fa_score = parseInt(second_score.value);
+    var third_score = document.getElementById("third-fa-score-field");
+    var third_fa_score = parseInt(third_score.value);
+    var fourth_score = document.getElementById("fourth-fa-score-field");
+    var fourth_fa_score = parseInt(fourth_score.value);
+    var fifth_score = document.getElementById("fifth-fa-score-field");
+    var fifth_fa_score = parseInt(fifth_score.value);
+    var sixth_score = document.getElementById("sixth-fa-score-field");
+    var sixth_fa_score = parseInt(sixth_score.value);
+    var fa_total = document.getElementById("fa-total");
+  
+    seventh_total_score = (first_fa_score + second_fa_score + third_fa_score + fourth_fa_score + fifth_fa_score + sixth_fa_score + seventh_fa_score)
+    fa_total.innerHTML = seventh_total_score 
+  })
+
+  // 八回表
+  var eighth_score = document.getElementById("eighth-fa-score-field");
+  eighth_score.addEventListener("input", function() {
+    var eighth_fa_score = parseInt(eighth_score.value);
+    var score = document.getElementById("first-fa-score-field");
+    var first_fa_score = parseInt(score.value);
+    var second_score = document.getElementById("second-fa-score-field");
+    var second_fa_score = parseInt(second_score.value);
+    var third_score = document.getElementById("third-fa-score-field");
+    var third_fa_score = parseInt(third_score.value);
+    var fourth_score = document.getElementById("fourth-fa-score-field");
+    var fourth_fa_score = parseInt(fourth_score.value);
+    var fifth_score = document.getElementById("fifth-fa-score-field");
+    var fifth_fa_score = parseInt(fifth_score.value);
+    var sixth_score = document.getElementById("sixth-fa-score-field");
+    var sixth_fa_score = parseInt(sixth_score.value);
+    var seventh_score = document.getElementById("seventh-fa-score-field");
+    var seventh_fa_score = parseInt(seventh_score.value);
+    var fa_total = document.getElementById("fa-total");
+  
+    eighth_total_score = (first_fa_score + second_fa_score + third_fa_score + fourth_fa_score + fifth_fa_score + sixth_fa_score + seventh_fa_score + eighth_fa_score)
+    fa_total.innerHTML = eighth_total_score
+  })
+
+  // 八回表
+  var ninth_score = document.getElementById("ninth-fa-score-field");
+  ninth_score.addEventListener("input", function() {
+    var ninth_fa_score = parseInt(ninth_score.value);
+    var eighth_score = document.getElementById("eighth-fa-score-field");
+    var eighth_fa_score = parseInt(eighth_score.value);
+    var score = document.getElementById("first-fa-score-field");
+    var first_fa_score = parseInt(score.value);
+    var second_score = document.getElementById("second-fa-score-field");
+    var second_fa_score = parseInt(second_score.value);
+    var third_score = document.getElementById("third-fa-score-field");
+    var third_fa_score = parseInt(third_score.value);
+    var fourth_score = document.getElementById("fourth-fa-score-field");
+    var fourth_fa_score = parseInt(fourth_score.value);
+    var fifth_score = document.getElementById("fifth-fa-score-field");
+    var fifth_fa_score = parseInt(fifth_score.value);
+    var sixth_score = document.getElementById("sixth-fa-score-field");
+    var sixth_fa_score = parseInt(sixth_score.value);
+    var seventh_score = document.getElementById("seventh-fa-score-field");
+    var seventh_fa_score = parseInt(seventh_score.value);
+    var fa_total = document.getElementById("fa-total");
+  
+    ninth_total_score = (first_fa_score + second_fa_score + third_fa_score + fourth_fa_score + fifth_fa_score + sixth_fa_score + seventh_fa_score + eighth_fa_score + ninth_fa_score)
+    fa_total.innerHTML = ninth_total_score 
+  })
+})
         
-//               sixth_score = (fifth_score + sixth_fa_score)
-//               fa_total.innerHTML = sixth_score 
-              
-//               // 七回表
-//               let seventh_score = document.getElementById("seventh-fa-score-field");
-//               seventh_score.addEventListener("input", function() {
-//                 let seventh_fa_score = parseInt(seventh_score.value);
-//                 let fa_total = document.getElementById("fa-total");
-          
-//                 seventh_score = (sixth_score + seventh_fa_score)
-//                 fa_total.innerHTML = seventh_score 
-                
-//                 // 八回表
-//                 let eighth_score = document.getElementById("eighth-fa-score-field");
-//                 eighth_score.addEventListener("input", function() {
-//                   let eighth_fa_score = parseInt(eighth_score.value);
-//                   let fa_total = document.getElementById("fa-total");
-            
-//                   eighth_score = (seventh_score + eighth_fa_score)
-//                   fa_total.innerHTML = eighth_score
-                  
-//                   // 八回表
-//                   let ninth_score = document.getElementById("ninth-fa-score-field");
-//                   ninth_score.addEventListener("input", function() {
-//                     let ninth_fa_score = parseInt(ninth_score.value);
-//                     let fa_total = document.getElementById("fa-total");
-              
-//                     ninth_score = (eighth_score + ninth_fa_score)
-//                     fa_total.innerHTML = ninth_score 
-//                   })
-//                 })
-//               })
-//             })
-//           })
-//         })
-//       })
-//     })
-//   })
-// })
-
-    
