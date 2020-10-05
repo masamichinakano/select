@@ -11,11 +11,11 @@
   width: 100%;
   height: 100%; 
   padding: 20px;
-  display: flex;
+  /* display: flex; */
 }
 
 .front-wrap {
-  width: 800px;
+  width: 80vw;
   height: 300px;
   margin-top: 200px;
   margin-left: 100px;
@@ -27,9 +27,24 @@
   height: 100%;
 }
 
-.score-table tr {
+
+.score-table th {
+  width: 20%;
   border: 3px solid white;
 }
+
+
+.score-table tr {
+  height: 30%;
+  border: 3px solid white;
+}
+
+.score-table td {
+
+  width: 7%;
+  height: 50px;
+}
+
 
 .inning-wrap {
   border-right: 3px solid white;
@@ -42,10 +57,64 @@
   border-right: 3px solid white;
   border-left: 3px solid white;
   background-color: green;
+  font-size: 40px;
+  color: white;
+  text-align: center;
+
 }
+
+.score-content {
+  font-size: 40px;
+  color: white;
+  text-align: center;
+
+}
+
+.front-match-form {
+  width: 100%;
+  height: 100%;
+  background-color: green;
+  font-size: 40px;
+  color: white;
+
+}
+
 
 .total-wrap {
-  width: 100px;
-  height: 100px;
+  width: 15%;
+  font-size: 40px;
+  color: white;
+  text-align: center;
+
 
 }
+
+.front-set-wrap {
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+
+.front-set-btn {
+  display       : inline-block;
+  border-radius : 5%;          /* 角丸       */
+  font-size     : 18pt;        /* 文字サイズ */
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 12px 50px;   /* 余白       */
+  background    : #000066;     /* 背景色     */
+  color         : #ffffff;     /* 文字色     */
+  line-height   : 1em;         /* 1行の高さ  */
+  transition    : .3s;         /* なめらか変化 */
+  box-shadow    : 6px 6px 3px #666666;  /* 影の設定 */
+  border        : 2px solid #000066;    /* 枠の指定 */
+}
+
+.front-set-btn:hover {
+  box-shadow    : none;        /* カーソル時の影消去 */
+  color         : #000066;     /* 背景色     */
+  background    : #ffffff;     /* 文字色     */
+}
+

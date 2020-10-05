@@ -7,7 +7,7 @@
         <div class="ofence-contents">
           <div class="ofence-data-wrap">
             <div class="ofence-search-wrap">
-            <%= search_form_for @p, url: search_orders_path do |f| %>
+            <%= search_form_for @p, url: search_matchs_path do |f| %>
               <div class="search-content">
                 <div class="search-input">
                   <%= f.label :match_name_eq, '対戦相手' %>
@@ -53,7 +53,7 @@
             <% @matchs.each do |match| %>
               <% if current_user.id == match.user_id %>
               <div class="ofence-history">
-                <%= link_to order_path(match.id) do %>
+                <%= link_to match_path(match.id) do %>
                 <div class="match-name-wrap">
                   <p class="ofence-user-name"><%= current_user.name %></p>
                   <label class="ofence-form-text"> VS </label>

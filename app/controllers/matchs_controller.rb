@@ -1,4 +1,4 @@
-class OrdersController < ApplicationController
+class MatchsController < ApplicationController
   before_action :move_to_index, except: [:index, :ofence]
   before_action :only_order, only: [:show]
   before_action :search_product, only: [:ofence, :search]
