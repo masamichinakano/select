@@ -1,10 +1,10 @@
-.main-ofence-contents-wrap {
+.main-offence-contents-wrap {
   width: 100%;
   height: 600px;
 
 }
 
-.ofence-contents-wrap {
+.offence-contents-wrap {
   width: 100%;
   height: 100%;
   padding-top: 100px;
@@ -15,7 +15,7 @@
 
 
 /* 検索フォーム */
-.ofence-contents {
+.offence-contents {
   width: 450px;
   height: 550px;
   background-color: rgba(214, 182, 182, 0.5);
@@ -27,18 +27,17 @@
   justify-content: center;
 }
 
-.ofence-data-wrap {
+.offence-data-wrap {
   width: 430px;
   height: 430px;
   text-align: center;
 }
 
-.ofence-search-wrap {
+.offence-search-wrap {
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
-  /* align-items: center; */
 }
 
 .search-content {
@@ -56,7 +55,7 @@
   font-weight: bold;
 }
 
-.ofence-search-form {
+.offence-search-form {
   width: 200px;
   height: 50px;
 }
@@ -68,7 +67,7 @@
 }
 
 
-.ofence-history-wrap {
+.offence-history-wrap {
   width: 430px;
   height: 430px;
   text-align: center;
@@ -79,7 +78,7 @@
 
 
 
-.ofence-history {
+.offence-history {
   width: 400px;
   height: 100px;
   border: 8px solid #00007f;
@@ -92,52 +91,48 @@
   height: 50px;
   display: flex;
   align-items: center;
-  /* justify-content: center; */
 }
 
 .match-date-wrap {
   width: 100%;
   height: 50px;
   padding-left: 15px;
-
   display: flex;
-  /* align-items: center; */
-  /* justify-content: flex-end; */
 }
 
 
-.ofence-user-name {
+.offence-user-name {
   width: 200px;
   font-size: 30px;
   color: #00007f;
 }
 
-.ofence-match-name {
+.offence-match-name {
   width: 150px;
   font-size: 30px;
   color: #00007f;
 }
 
-.ofence-form-text {
+.offence-form-text {
   width: 50px;
   font-size: 15px;
   color: #00007f;
 }
 
 
-.ofence-match-year {
+.offence-match-year {
   width: 100px;
   font-size: 20px;
   color: #00007f;
 }
 
-.ofence-match-month {
+.offence-match-month {
   width: 70px;
   font-size: 20px;
   color: #00007f;
 }
 
-.ofence-match-day {
+.offence-match-day {
   width: 70px;
   font-size: 20px;
   color: #00007f;

@@ -81,12 +81,6 @@
 }
 
 
-.member-registration-group {
-  height: 90px;
-  text-align: center;
-  /* display: flex;
-  justify-content: center; */
-}
 
 
 
@@ -123,7 +117,6 @@
   background-color: rgb(255, 255, 255, 0.7);
   width: 45%;
   height: 100px;
-  /* margin-left: 260px; */
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -140,7 +133,6 @@
 .member-first-contents {
   height: 120px;
   display: flex;
-  /* justify-content: space-around; */
 }
 
 .check-box {
