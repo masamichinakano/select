@@ -1,16 +1,23 @@
 class FrontsController < ApplicationController
   def index
     @front = Front.new
-    # @match = @match_names.find(params[:match_id])
+    @match_names
+    @match = Match.find(params[:match_id])
     # @match = Match.find_by(id: params[:match_id])
     # binding.pry
-    @matchs = Match.all
+    # @matchs = Match.all
     set_product_column
   end
 
 
   def create
-    @front = Front.new
+    binding.pry
+    @front = Front.new(front_params)
+    if @order.save
+      return redirect_to root_path
+    else
+      render "index"
+    end
 
   end
 
