@@ -23,7 +23,6 @@ class MatchsController < ApplicationController
     @matchs = Match.all.order("created_at DESC")
     @results = @p.result
     set_product_column
-    # set_product_column
   end
 
   def show

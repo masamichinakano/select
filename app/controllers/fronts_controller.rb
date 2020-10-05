@@ -3,9 +3,6 @@ class FrontsController < ApplicationController
     @front = Front.new
     @match_names
     @match = Match.find(params[:match_id])
-    # @match = Match.find_by(id: params[:match_id])
-    # binding.pry
-    # @matchs = Match.all
     set_product_column
   end
 
