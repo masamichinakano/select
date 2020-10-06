@@ -7,7 +7,8 @@ class BacksController < ApplicationController
 
   def create
     @match = Match.find(params[:match_id])
-    @back = back.new(back_params)
+    binding.pry
+    @back = Back.new(back_params)
     if @back.save
       redirect_to root_path
     else
