@@ -1,14 +1,11 @@
 class FrontsController < ApplicationController
   def index
     @front = Front.new
-    # @match_names
     @match = Match.find(params[:match_id])
-    # set_product_column
   end
 
 
   def create
-    binding.pry
     @match = Match.find(params[:match_id])
     @front = Front.new(front_params)
     if @front.save
@@ -28,9 +25,6 @@ class FrontsController < ApplicationController
      :sixth_sa_inning, :seventh_sa_inning, :eighth_sa_inning, :ninth_sa_inning).merge(user_id: current_user.id, match_id: @match.id)
   end
 
-  # def set_product_column
-  #   @match_names = Match.select("match_name").distinct  # 重複なくnameカラムのデータを取り出す
-  # end
 
 end
 

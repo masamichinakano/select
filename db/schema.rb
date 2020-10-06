@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_03_013044) do
+ActiveRecord::Schema.define(version: 2020_10_06_044519) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -31,6 +31,33 @@ ActiveRecord::Schema.define(version: 2020_10_03_013044) do
     t.string "checksum", null: false
     t.datetime "created_at", null: false
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
+  end
+
+  create_table "backs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "back_first_fa_inning", null: false
+    t.integer "back_second_fa_inning", null: false
+    t.integer "back_third_fa_inning", null: false
+    t.integer "back_fourth_fa_inning", null: false
+    t.integer "back_fifth_fa_inning", null: false
+    t.integer "back_sixth_fa_inning", null: false
+    t.integer "back_seventh_fa_inning", null: false
+    t.integer "back_eighth_fa_inning", null: false
+    t.integer "back_ninth_fa_inning", null: false
+    t.integer "back_first_sa_inning", null: false
+    t.integer "back_second_sa_inning", null: false
+    t.integer "back_third_sa_inning", null: false
+    t.integer "back_fourth_sa_inning", null: false
+    t.integer "back_fifth_sa_inning", null: false
+    t.integer "back_sixth_sa_inning", null: false
+    t.integer "back_seventh_sa_inning", null: false
+    t.integer "back_eighth_sa_inning", null: false
+    t.integer "back_ninth_sa_inning", null: false
+    t.bigint "user_id", null: false
+    t.bigint "match_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["match_id"], name: "index_backs_on_match_id"
+    t.index ["user_id"], name: "index_backs_on_user_id"
   end
 
   create_table "eighths", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -196,6 +223,8 @@ ActiveRecord::Schema.define(version: 2020_10_03_013044) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "backs", "matches"
+  add_foreign_key "backs", "users"
   add_foreign_key "eighths", "matches"
   add_foreign_key "fifths", "matches"
   add_foreign_key "firsts", "matches"
