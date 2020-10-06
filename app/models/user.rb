@@ -7,6 +7,7 @@ class User < ApplicationRecord
   has_many :members
   has_many :matchs
   has_many :fronts
+  has_many :backs
 
 
   validates :name, presence: true
