@@ -10,7 +10,6 @@ class CreateFronts < ActiveRecord::Migration[6.0]
       t.integer :seventh_fa_inning, null: false
       t.integer :eighth_fa_inning, null: false
       t.integer :ninth_fa_inning, null: false
-      t.integer :f_total, null: false
       t.integer :first_sa_inning, null: false
       t.integer :second_sa_inning, null: false
       t.integer :third_sa_inning, null: false
@@ -20,7 +19,6 @@ class CreateFronts < ActiveRecord::Migration[6.0]
       t.integer :seventh_sa_inning, null: false
       t.integer :eighth_sa_inning, null: false
       t.integer :ninth_sa_inning, null: false
-      t.integer :s_total, null: false
       t.references :user, null: false, foreign_key: true            
       t.references :match, null: false, foreign_key: true            
       t.timestamps
