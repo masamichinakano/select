@@ -5,6 +5,9 @@ class HistorysController < ApplicationController
     @matchs = Match.all.order("created_at DESC")
     @results = @p.result
     set_product_column
+    @fronts = Front.all
+    @backs = Back.all
+
 
   end
   

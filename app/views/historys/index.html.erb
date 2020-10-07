@@ -63,11 +63,32 @@
                   <p class="offence-match-year"><%= match.year.name %>年</p>
                   <p class="offence-match-month"><%= match.month.name %>月</p>
                   <p class="offence-match-day"><%= match.day.name %>日</p>
-                  
-                  <%# <p class="match-win">勝利</p>
-                  <p class="match-win">勝利</p>
-                  <p class="match-win">勝利</p> %>
-
+                  <% @fronts.each do |front| %>
+                    <% if match.id == front.match_id %>
+                      <% a = front.first_fa_inning + front.second_fa_inning + front.third_fa_inning + front.fourth_fa_inning + front.fifth_fa_inning + front.sixth_fa_inning + front.seventh_fa_inning + front.eighth_fa_inning + front.ninth_fa_inning %>
+                      <% b = front.first_sa_inning + front.second_sa_inning + front.third_sa_inning + front.fourth_sa_inning + front.fifth_sa_inning + front.sixth_sa_inning + front.seventh_sa_inning + front.eighth_sa_inning + front.ninth_sa_inning %>
+                      <% if a > b  %>
+                        <p class="match-win">勝利</p>
+                      <% elsif a < b %>
+                        <p class="match-win">敗北</p>
+                      <% else %>
+                        <p class="match-win">引き分け</p>
+                      <% end %>
+                    <% end %>
+                  <% end %>
+                  <% @backs.each do |back| %>
+                    <% if match.id == back.match_id %>
+                      <% c = back.back_first_fa_inning + back.back_second_fa_inning + back.back_third_fa_inning + back.back_fourth_fa_inning + back.back_fifth_fa_inning + back.back_sixth_fa_inning + back.back_seventh_fa_inning + back.back_eighth_fa_inning + back.back_ninth_fa_inning %>
+                      <% d = back.back_first_sa_inning + back.back_second_sa_inning + back.back_third_sa_inning + back.back_fourth_sa_inning + back.back_fifth_sa_inning + back.back_sixth_sa_inning + back.back_seventh_sa_inning + back.back_eighth_sa_inning + back.back_ninth_sa_inning %>
+                      <% if c < d  %>
+                        <p class="match-win">勝利</p>
+                      <% elsif c > d %>
+                        <p class="match-win">敗北</p>
+                      <% else %>
+                        <p class="match-win">引き分け</p>
+                      <% end %>
+                    <% end %>
+                  <% end %>
                 </div>
                 <% end %>
               </div>
