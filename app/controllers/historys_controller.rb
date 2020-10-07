@@ -14,6 +14,9 @@ class HistorysController < ApplicationController
   def search
     @results = @p.result.order("created_at DESC")
     set_product_column
+    @fronts = Front.all
+    @backs = Back.all
+
     
   end
   

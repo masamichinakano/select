@@ -2,7 +2,7 @@
   <div class="history-main-wrap">
 
     <%= render "shared/header" %>
-    <div class="front-main-wrap">
+    <div class="history-wrap">
         <div class="history-date-wrap">
             <p class="history-year-date-field"><%= @match.year.name %></p>
             <label class="history-form-text">年</label>
@@ -373,11 +373,10 @@
           </table>
         </div>
 
-        
+
         <div class="front-set-wrap">
           <%= link_to "戻る", historys_path, class:"front-set-btn" %> 
         </div>
       </div>
   </div>
 </div>
-<%= render "shared/footer" %>

@@ -48,7 +48,7 @@
           </div>
         </div>
 
-        <div class="offence-contents">
+        <div class="offence-contents-history">
           <div class="offence-history-wrap">
             <% @matchs.each do |match| %>
               <% if current_user.id == match.user_id && match.front == nil && match.back == nil %>
@@ -76,4 +76,3 @@
 
   </div>
 </div>
-<%= render "shared/footer" %>

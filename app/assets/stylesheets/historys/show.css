@@ -14,6 +14,13 @@
 
 }
 
+.history-wrap {
+  width: 100%;
+  padding: 20px;
+  /* display: flex; */
+}
+
+
 .history-front-wrap {
   width: 80vw;
   height: 300px;

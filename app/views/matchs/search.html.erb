@@ -48,10 +48,10 @@
           </div>
         </div>
 
-        <div class="offence-contents">
+        <div class="offence-contents-history">
           <div class="offence-history-wrap">
             <% @results.each do |result| %>
-              <% if current_user.id == result.user_id %>
+              <% if current_user.id == result.user_id && result.front == nil && result.back == nil %>
               <div class="offence-history">
                 <%= link_to match_path(result.id) do %>
                 <div class="match-name-wrap">
@@ -76,4 +76,3 @@
 
   </div>
 </div>
-<%= render "shared/footer" %>

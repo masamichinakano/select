@@ -48,7 +48,7 @@
           </div>
         </div>
 
-        <div class="offence-contents">
+        <div class="offence-contents-history">
           <div class="offence-history-wrap">
             <% @matchs.each do |match| %>
               <% if current_user.id == match.user_id && match.front || current_user.id == match.user_id && match.back %>
@@ -70,9 +70,9 @@
                       <% if a > b  %>
                         <p class="match-win">勝利</p>
                       <% elsif a < b %>
-                        <p class="match-win">敗北</p>
+                        <p class="match-lose">敗北</p>
                       <% else %>
-                        <p class="match-win">引き分け</p>
+                        <p class="match-draw">引き分け</p>
                       <% end %>
                     <% end %>
                   <% end %>
@@ -83,9 +83,9 @@
                       <% if c < d  %>
                         <p class="match-win">勝利</p>
                       <% elsif c > d %>
-                        <p class="match-win">敗北</p>
+                        <p class="match-lose">敗北</p>
                       <% else %>
-                        <p class="match-win">引き分け</p>
+                        <p class="match-drow">引き分け</p>
                       <% end %>
                     <% end %>
                   <% end %>
@@ -102,4 +102,3 @@
 
   </div>
 </div>
-<%= render "shared/footer" %>
