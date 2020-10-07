@@ -1,7 +1,7 @@
 .player-main-image {
   height: 100vh;
   padding: 15px;
-  background-image: url(https://i.gyazo.com/a2fa821cf5f2a07a6eda76b3e1124bd9.jpg);
+  background-image: url(https://i.gyazo.com/e1b0ceb10b1e6d340595647e504546ab.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -22,7 +22,7 @@
   width: 300px;
   height: 570px;
   margin: 100px 100px 0 100px;
-  background-color: rgba(214, 182, 182, 0.5);
+  background-color: rgba(255, 255, 255, 0.7);
   display: flex;
   justify-content: center;
 }
@@ -32,7 +32,7 @@
   margin-top: 100px;
   height: 570px;
   width: 900px;
-  background-color: rgba(214, 182, 182, 0.5);
+  background-color: rgba(255, 255, 255, 0.7);
 }
 
 

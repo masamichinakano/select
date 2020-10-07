@@ -18,7 +18,7 @@
 .offence-contents {
   width: 450px;
   height: 550px;
-  background-color: rgba(214, 182, 182, 0.5);
+  background-color: rgba(255, 255, 255, 0.7);
   overflow: scroll;
   border: 5px solid #000066;
   margin-right: 100px;

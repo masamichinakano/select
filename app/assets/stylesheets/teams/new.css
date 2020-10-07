@@ -4,7 +4,7 @@
 .member-main-image {
   height: 100vh;
   padding: 20px;
-  background-image: url(https://i.gyazo.com/0a675f8086f254b4ff843b5a7a89d676.jpg);
+  background-image: url(https://i.gyazo.com/d9b04c655ba0318922800c814ac8c207.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -23,14 +23,14 @@
 }
 
 .registration-member-wrap {
-  background-color: rgba(214, 182, 182, 0.5);
+  background-color: rgba(255, 255, 255, 0.7);
   margin-top: 100px;
   width: 900px;
   height: 650px;
 }
 
 .registration-edit-member-wrap {
-  background-color: rgba(214, 182, 182, 0.5);
+  background-color: rgba(255, 255, 255, 0.7);
   margin-top: 100px;
   width: 900px;
   height: 650px;
