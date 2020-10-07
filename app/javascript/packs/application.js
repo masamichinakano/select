@@ -11,6 +11,7 @@ require("../front_first")
 require("../front_second")
 require("../back_first")
 require("../back_second")
+require("../history")
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference

@@ -5,10 +5,11 @@ class HistorysController < ApplicationController
     @matchs = Match.all.order("created_at DESC")
     @results = @p.result
     set_product_column
+
   end
   
   def search
-    @results = @p.result
+    @results = @p.result.order("created_at DESC")
     set_product_column
     
   end
@@ -27,9 +28,10 @@ class HistorysController < ApplicationController
     @sevenths = Seventh.all
     @eighths = Eighth.all
     @ninths = Ninth.all
-    set_product_column
-
+    # set_product_column
   end
+
+
 
 
   private

@@ -51,16 +51,12 @@
             </tr>
             <tr>
               <th class="score-content">
-                <% if @match.front %>
-                  <%= current_user.name %>
-                <% else %>
-                  <%= @match.match_name %>
-                <% end %>
+                <%= @match.match_name %>
               </th>
               <td class="score-field">
-                <% @fronts.each do |front| %>
+                <% @fronts.each do |front|%>
                   <% if @match.id == front.match_id %>
-                    <%= front.first_fa_inning %>
+                  <%= front.first_fa_inning %>
                   <% end %>
                 <% end %>
               </td>
@@ -130,12 +126,7 @@
             </tr>
             <tr>
               <th class="score-content">
-                <% if @match.back %>
-                  <%= current_user.name %>
-                <% else %>
-                  <%= @match.match_name %>
-                <% end %>
-             
+                <%= current_user.name %>
               </th>
               <td class="score-field">
                 <% @fronts.each do |front|%>

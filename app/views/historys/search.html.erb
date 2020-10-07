@@ -51,7 +51,7 @@
         <div class="offence-contents">
           <div class="offence-history-wrap">
             <% @results.each do |result| %>
-              <% if current_user.id == result.user_id && result.front != nil || result.back != nil %>
+              <% if current_user.id == result.user_id && result.front || current_user.id == result.user_id && result.back %>
               <div class="offence-history">
                 <%= link_to history_path(result.id) do %>
                 <div class="match-name-wrap">
@@ -70,6 +70,7 @@
             <% end %>
           </div>
         </div>
+
       </div>
     </div>
 
