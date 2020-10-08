@@ -1,0 +1,382 @@
+<div class="history-main-image">
+  <div class="history-main-wrap">
+
+    <%= render "shared/header" %>
+    <div class="history-wrap">
+        <div class="history-date-wrap">
+            <p class="history-year-date-field"><%= @match.year.name %></p>
+            <label class="history-form-text">年</label>
+            <p class="history-date-field"><%= @match.month.name %></p>
+            <label class="history-form-text">月</label>
+            <p class="history-date-field"><%= @match.day.name %></p>
+            <label class="history-form-text">日</label>
+
+        </div>
+        <div class="history-front-wrap">
+          <table class="score-table">
+            <tr>
+              <th class="score-content">
+                TEAM
+              </th>
+              <td class="inning-wrap">
+                １
+              </td>
+              <td class="inning-wrap">
+                ２
+              </td>
+              <td class="inning-wrap">
+                ３
+              </td>
+              <td class="inning-wrap">
+                ４
+              </td>
+              <td class="inning-wrap">
+                ５
+              </td>
+              <td class="inning-wrap">
+                ６
+              </td>
+              <td class="inning-wrap">
+                ７
+              </td>
+              <td class="inning-wrap">
+                ８
+              </td>
+              <td class="inning-wrap">
+                ９
+              </td>
+              <th class="total-wrap">
+                計
+              </th>
+            </tr>
+            <tr>
+              <th class="score-content">
+                <% if @match.front %>
+                  <%= current_user.name %>
+                <% else %>
+                  <%= @match.match_name %>
+                <% end %>
+              </th>
+              <td class="score-field">
+                <% if @match.front %>
+                  <% @fronts.each do |front| %>
+                    <% if @match.id == front.match_id %>
+                      <%= front.first_fa_inning %>
+                    <% end %>
+                  <% end %>
+                <% else %>
+                  <% @backs.each do |back| %>
+                    <% if @match.id == back.match_id %>
+                      <%= back.back_first_fa_inning %>
+                    <% end %>
+                  <% end %>
+                <% end %>
+              </td>
+              <td class="score-field">
+                <% if @match.front %>
+                  <% @fronts.each do |front|%>
+                    <% if @match.id == front.match_id %>
+                    <%= front.second_fa_inning %>
+                    <% end %>
+                  <% end %>
+                <% else %>
+                  <% @backs.each do |back| %>
+                    <% if @match.id == back.match_id %>
+                      <%= back.back_second_fa_inning %>
+                    <% end %>
+                  <% end %>
+                <% end %>
+              </td>
+              <td class="score-field">
+                <% if @match.front %>
+                  <% @fronts.each do |front|%>
+                    <% if @match.id == front.match_id %>
+                    <%= front.third_fa_inning %>
+                    <% end %>
+                  <% end %>
+                <% else %>
+                  <% @backs.each do |back| %>
+                    <% if @match.id == back.match_id %>
+                      <%= back.back_third_fa_inning %>
+                    <% end %>
+                  <% end %>
+                <% end %>
+              </td>
+              <td class="score-field">
+                <% if @match.front %>
+                  <% @fronts.each do |front|%>
+                    <% if @match.id == front.match_id %>
+                    <%= front.fourth_fa_inning %>
+                    <% end %>
+                  <% end %>
+                <% else %>
+                  <% @backs.each do |back| %>
+                    <% if @match.id == back.match_id %>
+                      <%= back.back_fourth_fa_inning %>
+                    <% end %>
+                  <% end %>
+                <% end %>
+              </td>
+              <td class="score-field">
+                <% if @match.front %>
+                  <% @fronts.each do |front|%>
+                    <% if @match.id == front.match_id %>
+                    <%= front.fifth_fa_inning %>
+                    <% end %>
+                  <% end %>
+                <% else %>
+                  <% @backs.each do |back| %>
+                    <% if @match.id == back.match_id %>
+                      <%= back.back_fifth_fa_inning %>
+                    <% end %>
+                  <% end %>
+                <% end %>
+              </td>
+              <td class="score-field">
+                <% if @match.front %>
+                  <% @fronts.each do |front|%>
+                    <% if @match.id == front.match_id %>
+                    <%= front.sixth_fa_inning %>
+                    <% end %>
+                  <% end %>
+                <% else %>
+                  <% @backs.each do |back| %>
+                    <% if @match.id == back.match_id %>
+                      <%= back.back_sixth_fa_inning %>
+                    <% end %>
+                  <% end %>
+                <% end %>
+              </td>
+              <td class="score-field">
+                <% if @match.front %>
+                  <% @fronts.each do |front|%>
+                    <% if @match.id == front.match_id %>
+                    <%= front.seventh_fa_inning %>
+                    <% end %>
+                  <% end %>
+                <% else %>
+                  <% @backs.each do |back| %>
+                    <% if @match.id == back.match_id %>
+                      <%= back.back_seventh_fa_inning %>
+                    <% end %>
+                  <% end %>
+                <% end %>
+              </td>
+              <td class="score-field">
+                <% if @match.front %>
+                  <% @fronts.each do |front|%>
+                    <% if @match.id == front.match_id %>
+                    <%= front.eighth_fa_inning %>
+                    <% end %>
+                  <% end %>
+                <% else %>
+                  <% @backs.each do |back| %>
+                    <% if @match.id == back.match_id %>
+                      <%= back.back_eighth_fa_inning %>
+                    <% end %>
+                  <% end %>
+                <% end %>
+              </td>
+              <td class="score-field">
+                <% if @match.front %>
+                  <% @fronts.each do |front|%>
+                    <% if @match.id == front.match_id %>
+                    <%= front.ninth_fa_inning %>
+                    <% end %>
+                  <% end %>
+                <% else %>
+                  <% @backs.each do |back| %>
+                    <% if @match.id == back.match_id %>
+                      <%= back.back_ninth_fa_inning %>
+                    <% end %>
+                  <% end %>
+                <% end %>
+              </td>
+              <th class="total-wrap">
+              <% if @match.front %>
+                <% @fronts.each do |front| %>
+                  <% if @match.id == front.match_id %>
+                  <%= front.first_fa_inning + front.second_fa_inning + front.third_fa_inning + front.fourth_fa_inning + front.fifth_fa_inning + front.sixth_fa_inning + front.seventh_fa_inning + front.eighth_fa_inning + front.ninth_fa_inning %>
+                  <% end %>
+                <% end %>
+              <% else %>
+                <% @backs.each do |back| %>
+                  <% if @match.id == back.match_id %>
+                    <%= back.back_first_fa_inning + back.back_second_fa_inning + back.back_third_fa_inning + back.back_fourth_fa_inning + back.back_fifth_fa_inning + back.back_sixth_fa_inning + back.back_seventh_fa_inning + back.back_eighth_fa_inning + back.back_ninth_fa_inning %>
+                  <% end %>
+                <% end %>
+              <% end %>
+              </th>
+            </tr>
+            <tr>
+              <th class="score-content">
+                <% if @match.back %>
+                  <%= current_user.name %>
+                <% else %>
+                  <%= @match.match_name %>
+                <% end %>
+             
+              </th>
+              <td class="score-field">
+              <% if @match.front %>
+                <% @fronts.each do |front|%>
+                  <% if @match.id == front.match_id %>
+                  <%= front.first_sa_inning {id:"first-back"} %>
+                  <% end %>
+                <% end %>
+              <% else %>
+                <% @backs.each do |back| %>
+                  <% if @match.id == back.match_id %>
+                    <%= back.back_first_sa_inning %>
+                  <% end %>
+                <% end %>
+              <% end %>
+              </td>
+              <td class="score-field">
+              <% if @match.front %>
+                <% @fronts.each do |front|%>
+                  <% if @match.id == front.match_id %>
+                  <%= front.second_sa_inning {id:"second-back"} %>
+                  <% end %>
+                <% end %>
+              <% else %>
+                <% @backs.each do |back| %>
+                  <% if @match.id == back.match_id %>
+                    <%= back.back_second_sa_inning %>
+                  <% end %>
+                <% end %>
+              <% end %>
+
+              </td>
+              <td class="score-field">
+              <% if @match.front %>
+                <% @fronts.each do |front|%>
+                  <% if @match.id == front.match_id %>
+                  <%= front.third_sa_inning {id:"third-back"}%>
+                  <% end %>
+                <% end %>
+              <% else %>
+                <% @backs.each do |back| %>
+                  <% if @match.id == back.match_id %>
+                    <%= back.back_third_sa_inning %>
+                  <% end %>
+                <% end %>
+              <% end %>
+              </td>
+              <td class="score-field">
+              <% if @match.front %>
+                <% @fronts.each do |front|%>
+                  <% if @match.id == front.match_id %>
+                  <%= front.fourth_sa_inning {id:"fourth-back"}%>
+                  <% end %>
+                <% end %>
+              <% else %>
+                <% @backs.each do |back| %>
+                  <% if @match.id == back.match_id %>
+                    <%= back.back_fourth_sa_inning %>
+                  <% end %>
+                <% end %>
+              <% end %>
+              </td>
+              <td class="score-field">
+              <% if @match.front %>
+                <% @fronts.each do |front|%>
+                  <% if @match.id == front.match_id %>
+                  <%= front.fifth_sa_inning %>
+                  <% end %>
+                <% end %>
+              <% else %>
+                <% @backs.each do |back| %>
+                  <% if @match.id == back.match_id %>
+                    <%= back.back_fifth_sa_inning %>
+                  <% end %>
+                <% end %>
+              <% end %>
+              </td>
+              <td class="score-field">
+              <% if @match.front %>
+                <% @fronts.each do |front|%>
+                  <% if @match.id == front.match_id %>
+                  <%= front.sixth_sa_inning {id:"fifth-back"}%>
+                  <% end %>
+                <% end %>
+              <% else %>
+                <% @backs.each do |back| %>
+                  <% if @match.id == back.match_id %>
+                    <%= back.back_sixth_sa_inning %>
+                  <% end %>
+                <% end %>
+              <% end %>
+              </td>
+              <td class="score-field">
+              <% if @match.front %>
+                <% @fronts.each do |front|%>
+                  <% if @match.id == front.match_id %>
+                  <%= front.seventh_sa_inning {id:"seventh-back"}%>
+                  <% end %>
+                <% end %>
+              <% else %>
+                <% @backs.each do |back| %>
+                  <% if @match.id == back.match_id %>
+                    <%= back.back_seventh_sa_inning %>
+                  <% end %>
+                <% end %>
+              <% end %>
+              </td>
+              <td class="score-field">
+              <% if @match.front %>
+                <% @fronts.each do |front|%>
+                  <% if @match.id == front.match_id %>
+                  <%= front.eighth_sa_inning {id:"eighth-back"}%>
+                  <% end %>
+                <% end %>
+              <% else %>
+                <% @backs.each do |back| %>
+                  <% if @match.id == back.match_id %>
+                    <%= back.back_eighth_sa_inning %>
+                  <% end %>
+                <% end %>
+              <% end %>
+              </td>
+              <td class="score-field">
+              <% if @match.front %>
+                <% @fronts.each do |front|%>
+                  <% if @match.id == front.match_id %>
+                  <%= front.ninth_sa_inning {id:"ninth-back"}%>
+                  <% end %>
+                <% end %>
+              <% else %>
+                <% @backs.each do |back| %>
+                  <% if @match.id == back.match_id %>
+                    <%= back.back_ninth_sa_inning %>
+                  <% end %>
+                <% end %>
+              <% end %>
+
+              </td>
+              <th class="total-wrap" >
+              <% if @match.front %>
+                <% @fronts.each do |front| %>
+                  <% if @match.id == front.match_id %>
+                  <%= front.first_sa_inning + front.second_sa_inning + front.third_sa_inning + front.fourth_sa_inning + front.fifth_sa_inning + front.sixth_sa_inning + front.seventh_sa_inning + front.eighth_sa_inning + front.ninth_sa_inning %>
+                  <% end %>
+                <% end %>
+              <% else %>
+                <% @backs.each do |back| %>
+                  <% if @match.id == back.match_id %>
+                    <%= back.back_first_sa_inning + back.back_second_sa_inning + back.back_third_sa_inning + back.back_fourth_sa_inning + back.back_fifth_sa_inning + back.back_sixth_sa_inning + back.back_seventh_sa_inning + back.back_eighth_sa_inning + back.back_ninth_sa_inning %>
+                  <% end %>
+                <% end %>
+              <% end %>
+              </th>
+            </tr>
+          </table>
+        </div>
+
+
+        <div class="front-set-wrap">
+          <%= link_to "戻る", historys_path, class:"front-set-btn" %> 
+        </div>
+      </div>
+  </div>
+</div>

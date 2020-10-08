@@ -1,3 +1,12 @@
+.registration-session {
+  width: 100%;
+  /* height: 100%;
+  padding: 20px 0; */
+  display: flex;
+  justify-content: center;
+}
+
+
 .session-header-contents {
   width: 100%;
   height: 80px;
@@ -8,30 +17,36 @@
 }
 
 .session-header-logo {
-  font-family: "Safari", sans-serif;
-  /* font-weight: bolder; */
+  font-family: 'Impact','Arial Black',sans-serif;
   font-size: 100px;
-  color: white;
-  /* margin-top: 10px; */
   margin-left: 80px;
-
+  display        : inline-block;
+  color          : #ffffff;            /* 文字の色 */
+  letter-spacing : 13px;                /* 文字間 */
+  text-shadow    : 
+  5px  5px 1px #00007f,
+  -5px  5px 1px #00007f,
+   5px -5px 1px #00007f,
+  -5px -5px 1px #00007f,
+   5px  0px 1px #00007f,
+   0px  5px 1px #00007f,
+  -5px  0px 1px #00007f,
+   0px -5px 1px #00007f;
 }
 
 .main-session-contents {
   margin-top: 150px;
-  margin-left: 950px;
-  padding-top: 50px;
-  padding-left: 50px;
-  width: 500px;
-  height: 400px;
-  background-color: rgba(214, 182, 182, 0.5);
+  padding-left: 100px;
+  width: 600px;
+  height: 470px;
+  background-color: rgba(255, 255, 255, 0.7);
 
 }
 
 .top-session-image {
   height: 100vh;
   padding: 15px;
-  background-image: url(https://i.gyazo.com/c2cefed13235e5c97b9a0564f14e4800.jpg);
+  background-image: url(https://i.gyazo.com/dba1c44e42f214dec6d4e1b5fac7f289.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -47,7 +62,7 @@
 .session-header-text {
   font-size: 25px;
   font-weight: bold;
-  color: white;
+  color: #00007f;
 }
 
 .session-form-group {
@@ -58,14 +73,32 @@
   padding-bottom: 5px;
 }
 
+.session-header-form-group {
+  height: 100px;
+  width: 100%;
+  margin-top: 10px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
+
 .form-text-wrap {
   margin-top: 10px;
 }
 
 .session-form-text {
   font-size: 15px;
-  color: white;
+  color: #00007f;
 }
+
+.session-header-form-text {
+  font-size: 40px;
+  padding-left: 80px;
+  color: #00007f;
+  font-weight: bold;
+
+}
+
 
 .session-field {
   width: 400px;
@@ -73,11 +106,12 @@
   margin-top: 5px;
   background-color: rgba(255, 255, 255, 0.7);
   opacity: 0.7;
-  border: none;
+  border: 3px solid #00007f;
   color: black;
 }
 
 .session-btn {
+  text-align: center;
   height: 85px;
   width: 400px;
   margin-top: 40px;

@@ -17,3 +17,19 @@
  * {
   box-sizing: border-box;
 }
+
+.error-alert {
+  margin-bottom: 5vh;
+  margin-right: 50px;
+}
+
+/* .error-wrap {
+  display: flex;
+  justify-content: space-around;
+} */
+
+.error-message {
+  font-size: 1.0vw;
+  list-style: circle;
+  color: rgb(182, 48, 0);
+}

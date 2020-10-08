@@ -4,7 +4,7 @@
 .member-main-image {
   height: 100vh;
   padding: 20px;
-  background-image: url(https://i.gyazo.com/0a675f8086f254b4ff843b5a7a89d676.jpg);
+  background-image: url(https://i.gyazo.com/d9b04c655ba0318922800c814ac8c207.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -23,23 +23,24 @@
 }
 
 .registration-member-wrap {
-  background-color: rgba(214, 182, 182, 0.5);
+  background-color: rgba(255, 255, 255, 0.7);
   margin-top: 100px;
   width: 900px;
   height: 650px;
 }
 
 .registration-edit-member-wrap {
-  background-color: rgba(214, 182, 182, 0.5);
-  margin-top: 100px;
+  background-color: rgba(255, 255, 255, 0.7);
+  margin-top: 60px;
   width: 900px;
-  height: 650px;
+  height: 700px;
 }
 
 
 .member-form-wrap {
   width: 100%;
   height: 130px;
+  margin-top: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -90,7 +91,7 @@
   margin-top: 5px;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.7);
-  border: 1px solid #000066;
+  border: 3px solid #000066;
   color: black;
 }
 
@@ -115,6 +116,8 @@
 
 .member-position-check {
   background-color: rgba(255, 255, 255, 0.7);
+  border: 3px solid #000066;
+
   width: 45%;
   height: 100px;
   display: flex;
@@ -124,6 +127,8 @@
 
 .member-text-wrap {
   background-color: rgba(255, 255, 255, 0.7);
+  border: 3px solid #000066;
+
 
   width: 45%;
   height: 100px;

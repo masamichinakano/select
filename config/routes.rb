@@ -13,5 +13,11 @@ Rails.application.routes.draw do
       get "ofence", "search"
     end
   end
+
+  resources :historys do
+    collection do
+      get "search"
+    end
+  end
   
 end

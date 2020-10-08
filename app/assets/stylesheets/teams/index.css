@@ -14,7 +14,8 @@ header {
 
 .top-main-image {
   height: 100vh;
-  background-image: url(https://i.gyazo.com/c75c0e6b452f64d8c710722aeaa4aac1.jpg);
+  padding: 20px;
+  background-image: url(https://i.gyazo.com/dba1c44e42f214dec6d4e1b5fac7f289.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -28,56 +29,103 @@ header {
 
 
 .header-logo {
-  font-family: "Safari", sans-serif;
-  /* font-weight: bolder; */
+  font-family: 'Impact','Arial Black',sans-serif;
   font-size: 100px;
-  color: white;
-  margin-top: 30px;
   margin-left: 80px;
+  display        : inline-block;
+  color          : #ffffff;            /* 文字の色 */
+  letter-spacing : 13px;                /* 文字間 */
+  text-shadow    : 
+  5px  5px 1px #00007f,
+  -5px  5px 1px #00007f,
+   5px -5px 1px #00007f,
+  -5px -5px 1px #00007f,
+   5px  0px 1px #00007f,
+   0px  5px 1px #00007f,
+  -5px  0px 1px #00007f,
+   0px -5px 1px #00007f;
 }
 
 .header-lists {
   display: flex;
   align-items: center;
+  margin-top: 20px;
   margin-right: 100px;
   height: 100px;
 }
 
 .list-contents li {
+  margin-right: 30px;
   font-size: 20px;
   list-style: none;
 }
 
 .log-in {
-  margin-right: 50px;
-  color: white;
-  border: 1px solid white;
-  padding: 10px 20px;
-
+  display       : inline-block;
+  border-radius : 5%;          /* 角丸       */
+  font-size     : 20pt;        /* 文字サイズ */
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 11px 30px;   /* 余白       */
+  background    : #00007f;     /* 背景色     */
+  color         : #ffffff;     /* 文字色     */
+  line-height   : 1em;         /* 1行の高さ  */
+  transition    : .3s;         /* なめらか変化 */
+  border        : 2px solid #00007f;    /* 枠の指定 */
+}
+.log-in:hover {
+  color         : #00007f;     /* 背景色     */
+  background    : #ffffff;     /* 文字色     */
 }
 
 .my-page {
-  margin-right: 50px;
-  color: white;
-  border: 1px solid white;
-  padding: 10px 20px;
+  display       : inline-block;
+  border-radius : 5%;          /* 角丸       */
+  font-size     : 20pt;        /* 文字サイズ */
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 11px 30px;   /* 余白       */
+  background    : #00007f;     /* 背景色     */
+  color         : #ffffff;     /* 文字色     */
+  line-height   : 1em;         /* 1行の高さ  */
+  transition    : .3s;         /* なめらか変化 */
+  border        : 2px solid #00007f;    /* 枠の指定 */
 }
 
-
 .session {
-  margin-right: 20px;
-  color: white;
-  border: 1px solid white;
-  padding: 10px 20px;
-
+  display       : inline-block;
+  border-radius : 5%;          /* 角丸       */
+  font-size     : 20pt;        /* 文字サイズ */
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 11px 30px;   /* 余白       */
+  background    : #00007f;     /* 背景色     */
+  color         : #ffffff;     /* 文字色     */
+  line-height   : 1em;         /* 1行の高さ  */
+  transition    : .3s;         /* なめらか変化 */
+  border        : 2px solid #00007f;    /* 枠の指定 */
+}
+.session:hover {
+  color         : #00007f;     /* 背景色     */
+  background    : #ffffff;     /* 文字色     */
 }
 
 .log-out {
-  margin-right: 20px;
-  color: white;
-  border: 1px solid white;
-  padding: 10px 20px;
-
+  display       : inline-block;
+  border-radius : 5%;          /* 角丸       */
+  font-size     : 20pt;        /* 文字サイズ */
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 11px 30px;   /* 余白       */
+  background    : #00007f;     /* 背景色     */
+  color         : #ffffff;     /* 文字色     */
+  line-height   : 1em;         /* 1行の高さ  */
+  transition    : .3s;         /* なめらか変化 */
+  border        : 2px solid #00007f;    /* 枠の指定 */
+}
+.log-out:hover {
+  color         : #00007f;     /* 背景色     */
+  background    : #ffffff;     /* 文字色     */
 }
 
 .list-contents {
@@ -105,23 +153,65 @@ header {
   width: 100%;
   height: 100px;
   margin-top: 100px;
-  border: 1px solid white;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
 .main-list {
-  font-size: 30px;
-  margin-bottom: 20px;
-  color: white;
+  display       : inline-block;
+  border-radius : 5%;          /* 角丸       */
+  font-size     : 24pt;        /* 文字サイズ */
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 21px 59px;   /* 余白       */
+  background-color: rgba(255, 255, 255, 0.7);
+  color         : #00007f;     /* 文字色     */
+  line-height   : 1em;         /* 1行の高さ  */
+  transition    : .3s;         /* なめらか変化 */
+  border        : 2px solid #ffffff;    /* 枠の指定 */
+}
+.main-list:hover {
+  color         : #ffffff;     /* 背景色     */
+  background    : #00007f;     /* 文字色     */
 }
 
+
+.top-main-text {
+  width: 800px;
+  height: 350px;
+  margin-top: 50px;
+  margin-left: 200px;
+  padding: 30px 20px 20px;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.top-main-text-wrap {
+  width: 100%;
+  height: 100%;
+  
+}
+
+.top-main-text-wrap h3 {
+  font-size: 50px;
+  color: #000066;
+  font-weight: bolder;
+  margin-bottom: 20px;
+}
+
+.top-main-text-wrap p {
+  font-size: 20px;
+}
+
+.top-main-text-contents {
+  border: 2px solid #000066;
+  padding: 10px 0 10px;
+}
 
 .second-main-wrap {
   width: 100%;
   height: 300px;
-  background-color: black;
+  background-color: white;
   display: flex;
 }
 
@@ -134,11 +224,6 @@ header {
 .second-view-content {
   width: 100%;
   height: 100%;
+  
 }
 
-footer {
-  width: 100%;
-  height: 100px;
-  text-align: center;
-  background-color: black;
-}

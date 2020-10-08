@@ -5,7 +5,13 @@
     <%= form_with model: @user, url: user_registration_path, class: "registration", local: true do |f| %>
 
       <div class="registration-contents">
-       <%= render "devise/shared/error_messages"%>
+        <div class="registration-header-form-group">
+         <%= render "devise/shared/error_messages", model: f.object %>
+          <div class='form-header-text-wrap'>
+            <label class="registration-header-form-text">新規会員登録</label>
+          </div>
+        </div>
+
         <div class="registration-form-group">
           <div class='form-text-wrap'>
             <label class="registration-form-text">氏名（フルネーム）</label>
@@ -38,4 +44,3 @@
   </div>
 </div>
 <%= render "devise/shared/links" %>
-<%= render "shared/footer" %>

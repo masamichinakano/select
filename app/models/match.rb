@@ -19,8 +19,6 @@ class Match < ApplicationRecord
   has_one :front
   has_one :back
 
-  validates :match_name, :year_id, :month_id, :day_id, presence: true 
-  validates :year_id, :month_id, :day_id, numericality: { other_than: 0 }
 
 
 end

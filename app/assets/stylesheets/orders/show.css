@@ -3,7 +3,7 @@
   width: 550px;
   height: 550px;
   margin: 100px 50px 0 100px;
-  background-color: rgba(214, 182, 182, 0.5);
+  background-color: rgba(255, 255, 255, 0.7);
 
 }
 
@@ -132,7 +132,7 @@
   width: 550px;
   height: 550px;
   font-size: 20px;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgb(255, 255, 255);
   table-layout: fixed;
 }
 

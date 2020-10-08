@@ -11,11 +11,10 @@
 
 .registration-contents {
   margin-top: 0;
-  padding: 40px 0 0 50px;
-  margin-left: 950px;
-  width: 500px;
-  height: 600px;
-  background-color: rgba(214, 182, 182, 0.5);
+  padding: 40px 0 0 100px;
+  width: 600px;
+  height: 700px;
+  background-color: rgba(255, 255, 255, 0.7);
 
 }
 
@@ -36,11 +35,28 @@
 
 .registration-form-text {
   font-size: 15px;
-  color: white;
+  color: #00007f;
 
 }
 
+.registration-header-form-text {
+  font-size: 40px;
+  padding-left: 80px;
+  font-weight: bold;
+  color: #00007f;
+
+}
+
+
 .registration-form-group {
+  height: 100px;
+  width: 100%;
+  margin-top: 10px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
+.registration-header-form-group {
   height: 100px;
   width: 100%;
   margin-top: 10px;
@@ -53,6 +69,11 @@
   margin-top: 10px;
 }
 
+.form-header-text-wrap {
+  margin-top: 10px;
+}
+
+
 
 .small-field {
   width: 300px;
@@ -63,6 +84,7 @@
 .register-btn {
   height: 85px;
   width: 400px;
+  padding-left: 100px;
   margin-top: 30px;
 }
 

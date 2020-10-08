@@ -10,20 +10,27 @@ class MatchsController < ApplicationController
   end
   
   def create
-    # binding.pry
     @order = OrderDefence.new(order_params)
-    if @order.save
+    if @order.valid?
+      @order.save
       return redirect_to root_path
     else
       render "index"
     end
   end
 
+  # スタメン履歴一覧
   def ofence
     @matchs = Match.all.order("created_at DESC")
     @results = @p.result
     set_product_column
   end
+
+  # def history
+  #   @matchs = Match.all.order("created_at DESC")
+  #   @results = @p.result
+  #   set_product_column
+  # end
 
   def show
     @match = Match.find(params[:id])
@@ -41,21 +48,15 @@ class MatchsController < ApplicationController
 
   end
 
-  def only_order
-    @match = Match.find(params[:id])
-    if current_user.id != @match.user_id
-      redirect_to root_path
-    end
-  end
-
+  
   def search
     @results = @p.result
     set_product_column
-
+    
   end
-
-
-
+  
+  
+  
   private
   def order_params
     params.require(:order_defence).permit(:match_name, :year_id, :month_id, :day_id,
@@ -64,22 +65,28 @@ class MatchsController < ApplicationController
     :seventh_name_id, :seventh_position_id, :eighth_name_id, :eighth_position_id, :ninth_name_id, :ninth_position_id
     ).merge(user_id: current_user.id)
   end
-
+  
   def move_to_index
     unless user_signed_in?
       redirect_to "index"
     end
   end
-
+  
   def set_product_column
     @match_names = Match.select("match_name").distinct  # 重複なくnameカラムのデータを取り出す
   end
-
+  
   def search_product
     @p = Match.ransack(params[:q])  # 検索オブジェクトを生成
   end
-
-
+  
+  def only_order
+    @match = Match.find(params[:id])
+    if current_user.id != @match.user_id
+      redirect_to root_path
+    end
+  end
+  
 end
 
 

@@ -61,7 +61,7 @@ ActiveRecord::Schema.define(version: 2020_10_06_044519) do
   end
 
   create_table "eighths", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "eighth_name_id", null: false
+    t.integer "eighth_name_id"
     t.integer "eighth_position_id", null: false
     t.bigint "match_id", null: false
     t.datetime "created_at", precision: 6, null: false
@@ -70,7 +70,7 @@ ActiveRecord::Schema.define(version: 2020_10_06_044519) do
   end
 
   create_table "fifths", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "fifth_name_id", null: false
+    t.integer "fifth_name_id"
     t.integer "fifth_position_id", null: false
     t.bigint "match_id", null: false
     t.datetime "created_at", precision: 6, null: false
@@ -79,7 +79,7 @@ ActiveRecord::Schema.define(version: 2020_10_06_044519) do
   end
 
   create_table "firsts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "first_name_id", null: false
+    t.integer "first_name_id"
     t.integer "first_position_id", null: false
     t.bigint "match_id", null: false
     t.datetime "created_at", precision: 6, null: false
@@ -88,7 +88,7 @@ ActiveRecord::Schema.define(version: 2020_10_06_044519) do
   end
 
   create_table "fourths", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "fourth_name_id", null: false
+    t.integer "fourth_name_id"
     t.integer "fourth_position_id", null: false
     t.bigint "match_id", null: false
     t.datetime "created_at", precision: 6, null: false
@@ -150,7 +150,7 @@ ActiveRecord::Schema.define(version: 2020_10_06_044519) do
   end
 
   create_table "ninths", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "ninth_name_id", null: false
+    t.integer "ninth_name_id"
     t.integer "ninth_position_id", null: false
     t.bigint "match_id", null: false
     t.datetime "created_at", precision: 6, null: false
@@ -174,7 +174,7 @@ ActiveRecord::Schema.define(version: 2020_10_06_044519) do
   end
 
   create_table "seconds", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "second_name_id", null: false
+    t.integer "second_name_id"
     t.integer "second_position_id", null: false
     t.bigint "match_id", null: false
     t.datetime "created_at", precision: 6, null: false
@@ -183,7 +183,7 @@ ActiveRecord::Schema.define(version: 2020_10_06_044519) do
   end
 
   create_table "sevenths", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "seventh_name_id", null: false
+    t.integer "seventh_name_id"
     t.integer "seventh_position_id", null: false
     t.bigint "match_id", null: false
     t.datetime "created_at", precision: 6, null: false
@@ -192,7 +192,7 @@ ActiveRecord::Schema.define(version: 2020_10_06_044519) do
   end
 
   create_table "sixths", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "sixth_name_id", null: false
+    t.integer "sixth_name_id"
     t.integer "sixth_position_id", null: false
     t.bigint "match_id", null: false
     t.datetime "created_at", precision: 6, null: false
@@ -201,7 +201,7 @@ ActiveRecord::Schema.define(version: 2020_10_06_044519) do
   end
 
   create_table "thirds", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "third_name_id", null: false
+    t.integer "third_name_id"
     t.integer "third_position_id", null: false
     t.bigint "match_id", null: false
     t.datetime "created_at", precision: 6, null: false

@@ -2,7 +2,7 @@
   height: 100vh;
   padding: 20px;
 
-  background-image: url(https://i.gyazo.com/bacdcfdedca3b6df321e02d7179eb199.jpg);
+  background-image: url(https://i.gyazo.com/889775e4f3d7005fe7c14d5ed332a91d.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -37,9 +37,9 @@
 .new-match-form-group {
   padding: 20px;
   width: 550px;
-  height: 300px;
+  height: 400px;
   margin: 100px 50px 0 100px;
-  background-color: rgba(214, 182, 182, 0.5);
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 
@@ -120,6 +120,8 @@
   height: 50px;
   font-size: 30px;
   margin-left: 20px;
+  border: 3px solid #00007f;
+
 
 }
 
@@ -127,14 +129,18 @@
   width: 150px;
   height: 50px;
   font-size: 30px;
+  border: 3px solid #00007f;
+
 }
 
 
 
 .date-field {
-  width: 70px;
+  width: 100px;
   height: 50px;
   font-size: 30px;
+  border: 3px solid #00007f;
+
 }
 
 
@@ -147,6 +153,8 @@
 
 
 .offence-members {
+  border: 5px solid #00007f;
+
   width: 700px;
   height: 100%;
   font-size: 20px;
@@ -168,20 +176,20 @@ th,td {
 }
 
 .batting-order {
-  background-color: #000066;
-  color: yellow;
+  background-color: rgb(219, 219, 226);
+  color: #00007f;
   width: 80px;
   text-align: center;
-  border: 5px solid yellow;
+  border: 5px solid #00007f;
 
 }
 
 
 .start-order-names {
-  background-color: #000066;
-  color: yellow;
+  background-color: rgb(219, 219, 226);
+  color: #00007f;
   width: 200px;
-  border: 5px solid yellow;
+  border: 5px solid #00007f;
 
   text-align: center;
 
@@ -190,9 +198,9 @@ th,td {
 .positioning {
   width: 60px;
   text-align: center;
-  background-color: #000066;
-  color: yellow;
-  border: 5px solid yellow;
+  background-color: rgb(219, 219, 226);
+  color: #00007f;
+  border: 5px solid #00007f;
 
 }
 
