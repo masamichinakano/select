@@ -21,3 +21,16 @@
     <%= content_tag :div, "スタメンを削除しました。", class:"alert"%>
   <% end %>
 <% end %>
+
+<% flash.each do |key, value| %>
+  <% if flash[:destroy_member] %>
+    <%= content_tag :div, "選手を削除しました。", class:"alert"%>
+  <% end %>
+<% end %>
+
+
+<% flash.each do |key, value| %>
+  <% if flash[:edit] %>
+    <%= content_tag :div, "選手を削除しました。", class:"alert"%>
+  <% end %>
+<% end %>

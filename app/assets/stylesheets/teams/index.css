@@ -240,13 +240,14 @@ header {
 
 .top-main-text-contents {
 
-  border: 2px solid #000066;
+  border: 5px solid #000066;
   width: 500px;
-  padding: 10px 0 10px;
+  padding: 0 15px 10px;
 }
 
 .top-main-text-contents p {
   margin-top: 10px;
+  font-size: 23px;
 }
 
 
