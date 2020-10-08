@@ -13,13 +13,19 @@ class OrderDefence
   :ninth_name_id, :ninth_position_id,
   :user_id
 
-  # order.rbのバリデーション
-  # validates :match_name, :year_id, :month_id, :day_id, :first_order_id, :second_order_id, :third_order_id, :fourth_order_id, :fifth_order_id, :sixth_order_id, :seventh_order_id, :eighth_order_id, :ninth_order_id, presence: true
-  # validates :first_order_id, :second_order_id, :third_order_id, :fourth_order_id, :fifth_order_id, :sixth_order_id, :seventh_order_id, :eighth_order_id, :ninth_order_id, numericality: { other_than: 0 }
+  # match.rbのバリデーション
+  validates :match_name, :year_id, :month_id, :day_id, presence: true
 
-  # defence.rbのバリデーション
-  # validates :first_defence_id, :second_defence_id, :third_defence_id, :fourth_defence_id, :fifth_defence_id, :sixth_defence_id, :seventh_defence_id, :eighth_defence_id, :ninth_defence_id, presence: true
-  # validates :first_defence_id, :second_defence_id, :third_defence_id, :fourth_defence_id, :fifth_defence_id, :sixth_defence_id, :seventh_defence_id, :eighth_defence_id, :ninth_defence_id, numericality: { other_than: 0 } 
+  #ポシションごとのバリデーション
+  validates :first_name_id, :first_position_id, :second_name_id, :second_position_id, :third_name_id, :third_position_id, :fourth_name_id, :fourth_position_id, :fifth_name_id, :fifth_position_id, :sixth_name_id, :sixth_position_id, :seventh_name_id, :seventh_position_id, :eighth_name_id, :eighth_position_id, :ninth_name_id, :ninth_position_id, presence: true
+
+
+
+
+
+
+  validates :match_name, :year_id, :month_id, :day_id, :first_position_id, :second_position_id, :third_position_id, :fourth_position_id, :fifth_position_id, :sixth_position_id, :seventh_position_id, :eighth_position_id, :ninth_position_id, numericality: { other_than: 0 }
+
 
 
   def save

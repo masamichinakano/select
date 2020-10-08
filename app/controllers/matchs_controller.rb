@@ -11,7 +11,8 @@ class MatchsController < ApplicationController
   
   def create
     @order = OrderDefence.new(order_params)
-    if @order.save
+    if @order.valid?
+      @order.save
       return redirect_to root_path
     else
       render "index"
