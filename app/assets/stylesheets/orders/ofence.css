@@ -41,7 +41,7 @@
 
 .offence-data-wrap {
   width: 430px;
-  height: 430px;
+  height: 500px;
   text-align: center;
 }
 
@@ -185,6 +185,11 @@
   margin-top: 50px;
 }
 
+.search-root-btn-wrap {
+  width: 100%;
+}
+
+
 .match-search-btn {
   display       : inline-block;
   border-radius : 5%;          /* 角丸       */
@@ -199,6 +204,46 @@
   border        : 2px solid #000066;    /* 枠の指定 */
 }
 .match-search-btn:hover {
+  color         : #000066;     /* 背景色     */
+  background    : #ffffff;     /* 文字色     */
+}
+
+.match-history-search-btn {
+  display       : inline-block;
+  border-radius : 5%;          /* 角丸       */
+  font-size     : 18pt;        /* 文字サイズ */
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 12px 55px;   /* 余白       */
+  background    : #000066;     /* 背景色     */
+  color         : #ffffff;     /* 文字色     */
+  line-height   : 1em;         /* 1行の高さ  */
+  transition    : .3s;         /* なめらか変化 */
+  border        : 2px solid #000066;    /* 枠の指定 */
+}
+.match-history-search-btn:hover {
+  color         : #000066;     /* 背景色     */
+  background    : #ffffff;     /* 文字色     */
+}
+
+
+.offence-root-path-btn {
+  margin-top: 20px;
+  display       : inline-block;
+  border-radius : 5%;          /* 角丸       */
+  font-size     : 18pt;        /* 文字サイズ */
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 12px 35px;   /* 余白       */
+  background    : #000066;     /* 背景色     */
+  color         : #ffffff;     /* 文字色     */
+  line-height   : 1em;         /* 1行の高さ  */
+  transition    : .3s;         /* なめらか変化 */
+  border        : 2px solid #000066;    /* 枠の指定 */
+
+}
+
+.offence-root-path-btn:hover {
   color         : #000066;     /* 背景色     */
   background    : #ffffff;     /* 文字色     */
 }
