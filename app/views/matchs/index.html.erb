@@ -5,7 +5,9 @@
     <%= form_with model: @order, url: matchs_path, class: "defence-main-wrap", local: true do |f| %>
     <div class="offence-main-wrap">
       <div class="new-match-form-group">
-        <%= render 'shared/error_messages', model: f.object %>
+        <% if @order.errors.any? %>
+        <div class="match-error-message">※全ての項目を入力してください</div>
+        <% end %>
         <div class='new-match-form-text-wrap'>
           <p class="user-name"><%= current_user.name %></p>
           <label class="new-form-text"> VS </label>

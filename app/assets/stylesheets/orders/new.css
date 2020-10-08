@@ -51,7 +51,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
 
+.match-error-message {
+  color: red;
 }
 
 .match-form-text-wrap {
