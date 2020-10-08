@@ -3,6 +3,9 @@
     <%= render "shared/header" %>
     <%= form_with model: @back, url: match_backs_path, class: "registration", local: true do |f| %>
       <div class="front-main-wrap">
+        <% if @back.errors.any? %>
+          <div class="front-error-message">※９回まで入力してください</div>
+        <% end %>
         <div class="front-wrap">
           <table class="score-table">
             <tr>

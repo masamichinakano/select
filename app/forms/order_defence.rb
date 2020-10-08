@@ -24,7 +24,7 @@ class OrderDefence
 
 
 
-  validates :match_name, :year_id, :month_id, :day_id, :first_position_id, :second_position_id, :third_position_id, :fourth_position_id, :fifth_position_id, :sixth_position_id, :seventh_position_id, :eighth_position_id, :ninth_position_id, numericality: { other_than: 0 }
+  validates :year_id, :month_id, :day_id, :first_position_id, :second_position_id, :third_position_id, :fourth_position_id, :fifth_position_id, :sixth_position_id, :seventh_position_id, :eighth_position_id, :ninth_position_id, numericality: { other_than: 0 }
 
 
 

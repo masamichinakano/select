@@ -11,8 +11,10 @@ class MatchsController < ApplicationController
   
   def create
     @order = OrderDefence.new(order_params)
+    binding.pry
     if @order.valid?
       @order.save
+      flash[:start_member] = "スタメンを登録しました。"
       return redirect_to root_path
     else
       render "index"

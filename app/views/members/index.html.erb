@@ -31,6 +31,10 @@
           <li><%= link_to "試合結果", historys_path, class:"main-list"%></li> 
           <li><%= link_to "その他", ofence_matchs_path, class:"main-list"%></li> 
         </ul>
+        <div class="alert-wrap" id="alert-wrap">
+          <%= render partial: 'layouts/flash' %>
+          <%# <button type="button" class="close" data-dismiss="alert" id="arert-btn">&times;</button> %>
+        </div>
         <div class="top-main-text">
           <div class="top-main-text-wrap">
             <h3>今日の試合のメンバーは！？</h3>

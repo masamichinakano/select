@@ -22,6 +22,7 @@ class MembersController < ApplicationController
     # binding.pry
     @member = Member.new(member_params)
     if @member.save
+      flash[:success] = "選手を登録しました。"
       redirect_to root_path
     else
       render 'new'

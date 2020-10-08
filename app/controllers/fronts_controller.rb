@@ -9,6 +9,7 @@ class FrontsController < ApplicationController
     @match = Match.find(params[:match_id])
     @front = Front.new(front_params)
     if @front.save
+      flash[:front] = "試合結果を保存しました。"
       redirect_to root_path
     else
       render "index"

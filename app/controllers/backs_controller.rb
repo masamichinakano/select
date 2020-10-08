@@ -7,9 +7,9 @@ class BacksController < ApplicationController
 
   def create
     @match = Match.find(params[:match_id])
-    binding.pry
     @back = Back.new(back_params)
     if @back.save
+      flash[:front] = "試合結果を保存しました。"
       redirect_to root_path
     else
       render "index"
