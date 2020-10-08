@@ -133,6 +133,7 @@
   height: 550px;
   font-size: 20px;
   background-color: rgb(255, 255, 255);
+  border: 5px solid #00007f;
   table-layout: fixed;
 }
 
@@ -142,10 +143,10 @@
 
 
 .show-batting-orders {
-  background-color: #000066;
-  color: yellow;
+  background-color: rgb(219, 219, 226);
+  color: #00007f;
   text-align: center;
-  border: 5px solid yellow;
+  border: 5px solid #00007f;
   width: 50px;
 
 
@@ -158,9 +159,9 @@
 
 
 .show-start-order-names {
-  background-color: #000066;
-  color: yellow;
-  border: 5px solid yellow;
+  background-color: rgb(219, 219, 226);
+  color: #00007f;
+  border: 5px solid #00007f;
   text-align: center;
   width: 200px;
 
@@ -168,9 +169,9 @@
 
 .show-positioning {
   text-align: center;
-  background-color: #000066;
-  color: yellow;
-  border: 5px solid yellow;
+  background-color: rgb(219, 219, 226);
+  color: #00007f;
+  border: 5px solid #00007f;
   width: 50px;
 }
 

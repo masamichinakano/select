@@ -7,17 +7,17 @@ class Match < ApplicationRecord
 
   belongs_to :user
 
-  has_one :first
-  has_one :second
-  has_one :third
-  has_one :fourth
-  has_one :fifth
-  has_one :sixth
-  has_one :seventh
-  has_one :eighth
-  has_one :ninth
-  has_one :front
-  has_one :back
+  has_one :first, dependent: :destroy
+  has_one :second, dependent: :destroy
+  has_one :third, dependent: :destroy
+  has_one :fourth, dependent: :destroy
+  has_one :fifth, dependent: :destroy
+  has_one :sixth, dependent: :destroy
+  has_one :seventh, dependent: :destroy
+  has_one :eighth, dependent: :destroy
+  has_one :ninth, dependent: :destroy
+  has_one :front, dependent: :destroy
+  has_one :back, dependent: :destroy
 
 
 
