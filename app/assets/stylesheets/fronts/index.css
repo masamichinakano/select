@@ -18,9 +18,9 @@
 
 .front-main-wrap {
   width: 100%;
-  height: 400px; 
+  height: 350px; 
   padding: 20px;
-  margin-top: 150px;
+  margin-top: 30px;
   /* display: flex; */
 }
 
@@ -103,6 +103,57 @@
   text-align: center;
   margin-top: 40px;
 }
+
+
+.image-comment-wrap {
+  width: 650px;
+  height: 550px; 
+  padding: 10px;
+  border: 5px solid #00007f;
+  margin-left: 50px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.image-comment {
+  width: 100%;
+  height: 100%; 
+}
+
+.image-comment-header-wrap {
+  height: 100px;
+  text-align: center;
+}
+
+.image-comment-header-wrap p {
+  font-size: 50px;
+  color: #00007f;
+  font-weight: bold;
+}
+
+
+.history-image-wrap {
+  height: 100px;
+  padding: 0 20px 0 20px;
+  padding-top: 5px;
+}
+
+.history-image-text {
+  font-size: 30px;
+  color: #00007f;
+
+}
+
+.history-comment-wrap {
+  height: 300px;
+  padding: 0 20px 0 20px;
+  margin-top: 20px;
+}
+
+.comment-field {
+  width: 100%;
+  height: 230px;
+}
+
 
 
 .front-set-btn {

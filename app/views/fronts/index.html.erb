@@ -1,7 +1,7 @@
-<div class="front-main-image">
+<div class="history-main-image">
   <div class="top-session-wrap">
     <%= render "shared/header" %>
-    <%= form_with model: @front, url: match_fronts_path, class: "registration", local: true do |f| %>
+    <%= form_with model: @front, url: match_fronts_path, class: "registration-history", local: true do |f| %>
       <div class="front-main-wrap">
         <% if @front.errors.any? %>
           <div class="front-error-message">※９回まで入力してください</div>
@@ -116,6 +116,166 @@
             </tr>
           </table>
         </div>
+        <div class="history-order-offence-wrap">
+          <table class="show-offence-members">
+            <tr class="show-offence-contents">
+              <th class="show-batting-orders">打順</th>　
+              <th class="show-start-order-names">選手名</th>
+            　<th class="show-positioning">守備</th>
+            </tr>
+            <tr class="show-offence-contents">
+              <td class="show-batting-order">１</td>
+              <% @members.each do |member| %>
+                <% @firsts.each do |first| %>
+                  <% if @match.id == first.match_id && first.first_name_id == member.id %>
+                  <td class="show-member-select"><%= member.name %></td>
+                  <% end %>
+                <% end %>
+              <% end %>
+              <% @firsts.each do |first| %>
+                <% if @match.id == first.match_id %>
+                <td class="show-position-select"><%= first.first_position.name %></td>
+                <% end %>
+              <% end %>
+            </tr>
+            <tr class="show-offence-contents">
+              <td class="show-batting-order">２</td>
+              <% @members.each do |member| %>
+                <% @seconds.each do |second| %>
+                  <% if @match.id == second.match_id && second.second_name_id == member.id %>
+                  <td class="show-member-select"><%= member.name %></td>
+                  <% end %>
+                <% end %>
+              <% end %>
+              <% @seconds.each do |second| %>
+                <% if @match.id == second.match_id %>
+                <td class="show-position-select"><%= second.second_position.name %></td>
+                <% end %>
+              <% end %>
+            </tr>
+            <tr class="show-offence-contents">
+              <td class="show-batting-order">３</td>
+              <% @members.each do |member| %>
+                <% @thirds.each do |third| %>
+                  <% if @match.id == third.match_id && third.third_name_id == member.id %>
+                  <td class="show-member-select"><%= member.name %></td>
+                  <% end %>
+                <% end %>
+              <% end %>
+              <% @thirds.each do |third| %>
+                <% if @match.id == third.match_id %>
+                <td class="show-position-select"><%= third.third_position.name %></td>
+                <% end %>
+              <% end %>
+            </tr>
+            <tr class="show-offence-contents">
+              <td class="show-batting-order">４</td>
+              <% @members.each do |member| %>
+                <% @fourths.each do |fourth| %>
+                  <% if @match.id == fourth.match_id && fourth.fourth_name_id == member.id %>
+                  <td class="show-member-select"><%= member.name %></td>
+                  <% end %>
+                <% end %>
+              <% end %>
+              <% @fourths.each do |fourth| %>
+                <% if @match.id == fourth.match_id %>
+                <td class="show-position-select"><%= fourth.fourth_position.name %></td>
+                <% end %>
+              <% end %>
+            </tr>
+            <tr class="show-offence-contents">
+              <td class="show-batting-order">５</td>
+              <% @members.each do |member| %>
+                <% @fifths.each do |fifth| %>
+                  <% if @match.id == fifth.match_id && fifth.fifth_name_id == member.id %>
+                  <td class="show-member-select"><%= member.name %></td>
+                  <% end %>
+                <% end %>
+              <% end %>
+              <% @fifths.each do |fifth| %>
+                <% if @match.id == fifth.match_id %>
+                <td class="show-position-select"><%= fifth.fifth_position.name %></td>
+                <% end %>
+              <% end %>
+            </tr>
+            <tr class="show-offence-contents">
+              <td class="show-batting-order">６</td>
+              <% @members.each do |member| %>
+                <% @sixths.each do |sixth| %>
+                  <% if @match.id == sixth.match_id && sixth.sixth_name_id == member.id %>
+                  <td class="show-member-select"><%= member.name %></td>
+                  <% end %>
+                <% end %>
+              <% end %>
+              <% @sixths.each do |sixth| %>
+                <% if @match.id == sixth.match_id %>
+                <td class="show-position-select"><%= sixth.sixth_position.name %></td>
+                <% end %>
+              <% end %>
+            </tr>
+            <tr class="show-offence-contents">
+              <td class="show-batting-order">７</td>
+              <% @members.each do |member| %>
+                <% @sevenths.each do |seventh| %>
+                  <% if @match.id == seventh.match_id && seventh.seventh_name_id == member.id %>
+                  <td class="show-member-select"><%= member.name %></td>
+                  <% end %>
+                <% end %>
+              <% end %>
+              <% @sevenths.each do |seventh| %>
+                <% if @match.id == seventh.match_id %>
+                <td class="show-position-select"><%= seventh.seventh_position.name %></td>
+                <% end %>
+              <% end %>
+            </tr>
+            <tr class="show-offence-contents">
+              <td class="show-batting-order">８</td>
+              <% @members.each do |member| %>
+                <% @eighths.each do |eighth| %>
+                  <% if @match.id == eighth.match_id && eighth.eighth_name_id == member.id %>
+                  <td class="show-member-select"><%= member.name %></td>
+                  <% end %>
+                <% end %>
+              <% end %>
+              <% @eighths.each do |eighth| %>
+                <% if @match.id == eighth.match_id %>
+                <td class="show-position-select"><%= eighth.eighth_position.name %></td>
+                <% end %>
+              <% end %>
+            </tr>
+            <tr class="show-offence-contents">
+              <td class="show-batting-order">９</td>
+              <% @members.each do |member| %>
+                <% @ninths.each do |ninth| %>
+                  <% if @match.id == ninth.match_id && ninth.ninth_name_id == member.id %>
+                  <td class="show-member-select"><%= member.name %></td>
+                  <% end %>
+                <% end %>
+              <% end %>
+              <% @ninths.each do |ninth| %>
+                <% if @match.id == ninth.match_id %>
+                <td class="show-position-select"><%= ninth.ninth_position.name %></td>
+                <% end %>
+              <% end %>
+            </tr>
+          </table>
+          <div class="image-comment-wrap">
+            <div class="image-comment">
+              <div class="image-comment-header-wrap">
+                <p>試合詳細</p>
+              </div>
+              <div class="history-image-wrap">
+                <div class="history-image-text">スコアブック画像</div>
+                <%= f.file_field :image, class:"score-image", id:"member_image" %>
+              </div>
+              <div class="history-comment-wrap">
+                <div class="history-image-text">フリーコメント</div>
+                <%= f.text_area :comment, placeholder:"試合の細かな詳細やスコアブックに載らないエラーや出来事を自由に記入してください。", class:"comment-field"%>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div class="front-set-wrap">
           <input type="submit" value="保存する" class="front-set-btn">
         </div>

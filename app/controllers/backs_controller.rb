@@ -2,6 +2,17 @@ class BacksController < ApplicationController
   def index
     @back = Back.new
     @match = Match.find(params[:match_id])
+    @members = Member.all
+    @firsts = First.all
+    @seconds = Second.all
+    @thirds = Third.all
+    @fourths = Fourth.all
+    @fifths = Fifth.all
+    @sixths = Sixth.all
+    @sevenths = Seventh.all
+    @eighths = Eighth.all
+    @ninths = Ninth.all
+
   end
 
 
