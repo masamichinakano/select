@@ -1,40 +1,32 @@
 class HistorysController < ApplicationController
   before_action :search_product, only: [:index, :search]
+  before_action :set_product_column, only: [:index, :search]
+  before_action :set_front_back, only: [:index, :search, :show, :destroy]
+  before_action :set_contents, only: [:show, :destroy]
+  before_action :set_match, only: [:show, :destroy]
+
 
   def index
     @matchs = Match.all.order("created_at DESC")
     @results = @p.result
-    set_product_column
-    @fronts = Front.all
-    @backs = Back.all
-
-
   end
   
   def search
     @results = @p.result.order("created_at DESC")
-    set_product_column
-    @fronts = Front.all
-    @backs = Back.all
-
-    
   end
   
   def show
-    @match = Match.find(params[:id])
-    @fronts = Front.all
-    @backs = Back.all
-    @members = Member.all
-    @firsts = First.all
-    @seconds = Second.all
-    @thirds = Third.all
-    @fourths = Fourth.all
-    @fifths = Fifth.all
-    @sixths = Sixth.all
-    @sevenths = Seventh.all
-    @eighths = Eighth.all
-    @ninths = Ninth.all
-    # set_product_column
+  end
+
+  
+  def destroy
+    if @match.destroy
+      flash[:history_destroy] = "試合履歴を削除しました。"
+      redirect_to root_path
+    else
+      render 'show'
+    end
+
   end
 
 
@@ -48,5 +40,29 @@ class HistorysController < ApplicationController
   def search_product
     @p = Match.ransack(params[:q])  # 検索オブジェクトを生成
   end
+
+  def set_front_back
+    @fronts = Front.all
+    @backs = Back.all
+  end
+
+  def set_contents
+    @members = Member.all
+    @firsts = First.all
+    @seconds = Second.all
+    @thirds = Third.all
+    @fourths = Fourth.all
+    @fifths = Fifth.all
+    @sixths = Sixth.all
+    @sevenths = Seventh.all
+    @eighths = Eighth.all
+    @ninths = Ninth.all
+  end
+
+  def set_match
+    @match = Match.find(params[:id])
+  end
+
+
 
 end

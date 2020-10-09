@@ -2,6 +2,9 @@ class MatchsController < ApplicationController
   before_action :move_to_index, except: [:index, :ofence]
   before_action :only_order, only: [:show]
   before_action :search_product, only: [:ofence, :search]
+  before_action :set_contents, only: [:show]
+  before_action :set_product_column, only: [:ofence, :search]
+
 
 
 
@@ -24,28 +27,13 @@ class MatchsController < ApplicationController
   def ofence
     @matchs = Match.all.order("created_at DESC")
     @results = @p.result
-    set_product_column
   end
 
   def show
-    @match = Match.find(params[:id])
-    @members = Member.all
-    @firsts = First.all
-    @seconds = Second.all
-    @thirds = Third.all
-    @fourths = Fourth.all
-    @fifths = Fifth.all
-    @sixths = Sixth.all
-    @sevenths = Seventh.all
-    @eighths = Eighth.all
-    @ninths = Ninth.all
-    set_product_column
-
   end
   
   def search
     @results = @p.result
-    set_product_column
     
   end
 
@@ -91,6 +79,21 @@ class MatchsController < ApplicationController
       redirect_to root_path
     end
   end
+
+  def set_contents
+    @members = Member.all
+    @firsts = First.all
+    @seconds = Second.all
+    @thirds = Third.all
+    @fourths = Fourth.all
+    @fifths = Fifth.all
+    @sixths = Sixth.all
+    @sevenths = Seventh.all
+    @eighths = Eighth.all
+    @ninths = Ninth.all
+  end
+
+
   
 end
 
