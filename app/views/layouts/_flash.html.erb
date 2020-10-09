@@ -31,6 +31,12 @@
 
 <% flash.each do |key, value| %>
   <% if flash[:edit] %>
-    <%= content_tag :div, "選手を削除しました。", class:"alert"%>
+    <%= content_tag :div, "選手を編集しました。", class:"alert"%>
+  <% end %>
+<% end %>
+
+<% flash.each do |key, value| %>
+  <% if flash[:history_destroy] %>
+    <%= content_tag :div, "試合履歴を削除しました。", class:"alert"%>
   <% end %>
 <% end %>

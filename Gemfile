@@ -63,5 +63,3 @@ group :production do
 end
 gem "aws-sdk-s3", require: false
 gem 'rails-i18n'
-gem 'jquery-rails'
-gem 'bootstrap', '~> 4.1.1'
