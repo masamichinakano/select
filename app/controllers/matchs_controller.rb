@@ -1,9 +1,12 @@
 class MatchsController < ApplicationController
+  before_action :authenticate_user!
   before_action :move_to_index, except: [:index, :ofence]
   before_action :only_order, only: [:show]
   before_action :search_product, only: [:ofence, :search]
   before_action :set_contents, only: [:show]
   before_action :set_product_column, only: [:ofence, :search]
+  before_action :only_match, only: [:show]
+
 
 
 
@@ -92,6 +95,14 @@ class MatchsController < ApplicationController
     @eighths = Eighth.all
     @ninths = Ninth.all
   end
+
+  def only_match
+    @match = Match.find(params[:id])
+    if current_user.id != @match.user_id
+      redirect_to root_path
+    end
+  end
+
 
 
   

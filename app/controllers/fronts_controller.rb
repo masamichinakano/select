@@ -1,4 +1,5 @@
 class FrontsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_match, only: [:index, :create]
   before_action :set_contents, only: [:index, :create]
 

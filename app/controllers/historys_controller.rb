@@ -1,9 +1,11 @@
 class HistorysController < ApplicationController
+  before_action :authenticate_user!
   before_action :search_product, only: [:index, :search]
   before_action :set_product_column, only: [:index, :search]
   before_action :set_front_back, only: [:index, :search, :show, :destroy]
   before_action :set_contents, only: [:show, :destroy]
   before_action :set_match, only: [:show, :destroy]
+  before_action :only_history, only: [:show]
 
 
   def index
@@ -63,6 +65,12 @@ class HistorysController < ApplicationController
     @match = Match.find(params[:id])
   end
 
+  def only_history
+    @match = Match.find(params[:id])
+    if current_user.id != @match.user_id
+      redirect_to root_path
+    end
+  end
 
 
 end
