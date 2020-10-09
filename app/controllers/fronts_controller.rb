@@ -2,6 +2,16 @@ class FrontsController < ApplicationController
   def index
     @front = Front.new
     @match = Match.find(params[:match_id])
+    @members = Member.all
+    @firsts = First.all
+    @seconds = Second.all
+    @thirds = Third.all
+    @fourths = Fourth.all
+    @fifths = Fifth.all
+    @sixths = Sixth.all
+    @sevenths = Seventh.all
+    @eighths = Eighth.all
+    @ninths = Ninth.all
   end
 
 
@@ -9,6 +19,7 @@ class FrontsController < ApplicationController
     @match = Match.find(params[:match_id])
     @front = Front.new(front_params)
     if @front.save
+      flash[:front] = "試合結果を保存しました。"
       redirect_to root_path
     else
       render "index"

@@ -22,6 +22,7 @@ class MembersController < ApplicationController
     # binding.pry
     @member = Member.new(member_params)
     if @member.save
+      flash[:success] = "選手を登録しました。"
       redirect_to root_path
     else
       render 'new'
@@ -65,6 +66,7 @@ class MembersController < ApplicationController
     # binding.pry
     @member = Member.find(params[:id])
     if @member.update(member_params)
+      flash[:edit] = "選手を編集しました。"
       redirect_to root_path
     else
       render 'edit'
@@ -74,6 +76,7 @@ class MembersController < ApplicationController
   def destroy
     @member = Member.find(params[:id])
     if @member.destroy
+      flash[:destroy_member] = "選手を登録しました。"
       redirect_to root_path
     else
       render 'show'

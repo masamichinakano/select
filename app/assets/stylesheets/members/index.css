@@ -15,13 +15,14 @@
 .players-wrap {
   width: 100%;
   display: flex;
+
 }
 
 
 .players-contents {
   width: 300px;
-  height: 570px;
-  margin: 100px 100px 0 100px;
+  height: 650px;
+  margin: 50px 100px 0 100px;
   background-color: rgba(255, 255, 255, 0.7);
   display: flex;
   justify-content: center;
@@ -29,8 +30,8 @@
 
 .member-contents-wrap {
   overflow: scroll;
-  margin-top: 100px;
-  height: 570px;
+  margin-top: 50px;
+  height: 650px;
   width: 900px;
   background-color: rgba(255, 255, 255, 0.7);
 }
@@ -41,7 +42,7 @@
 .member-header {
   width: 100%;
   margin-top: 20px;
-  padding-left: 25px;
+  padding-left: 50px;
 }
 
 .member-header p {
@@ -73,7 +74,7 @@ ul {
   width: 150px;
   height: 44px;
   font-size: 30px;
-  margin: 10px 50px 30px;
+  margin: 10px 30px 30px 80px;
 }
 
 .member-contents {
@@ -122,13 +123,36 @@ ul {
   transition    : .3s;         /* なめらか変化 */
   box-shadow    : 6px 6px 3px #666666;  /* 影の設定 */
   border        : 2px solid #000066;    /* 枠の指定 */
-  margin-left: 25px;
+  margin-left: 50px;
 }
 .p-member-registration-btn:hover {
   box-shadow    : none;        /* カーソル時の影消去 */
   color         : #000066;     /* 背景色     */
   background    : #ffffff;     /* 文字色     */
 }
+
+.member-root-path-btn {
+  margin-top: 30px;
+  display       : inline-block;
+  border-radius : 5%;          /* 角丸       */
+  font-size     : 18pt;        /* 文字サイズ */
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 12px 27px;   /* 余白       */
+  background    : #000066;     /* 背景色     */
+  color         : #ffffff;     /* 文字色     */
+  line-height   : 1em;         /* 1行の高さ  */
+  transition    : .3s;         /* なめらか変化 */
+  box-shadow    : 6px 6px 3px #666666;  /* 影の設定 */
+  border        : 2px solid #000066;    /* 枠の指定 */
+  margin-left: 50px;
+}
+.member-root-path-btn:hover {
+  box-shadow    : none;        /* カーソル時の影消去 */
+  color         : #000066;     /* 背景色     */
+  background    : #ffffff;     /* 文字色     */
+}
+
 
 .pitch-players-btn {
   display       : inline-block;
