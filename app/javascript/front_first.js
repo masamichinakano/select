@@ -5,17 +5,14 @@
 window.addEventListener("load", function() {
   var score = document.getElementById("first-fa-score-field");
   score.addEventListener("input", function() {
-    console.log(score)
     var first_fa_score = parseInt(score.value);
     var fa_total = document.getElementById("fa-total");
-    console.log(first_fa_score)
 
     fa_total.innerHTML = first_fa_score;
   });  
   // 二回表
   var second_score = document.getElementById("second-fa-score-field");
   second_score.addEventListener("input", function() {
-    console.log(second_score)
 
     var second_fa_score = parseInt(second_score.value);
     var score = document.getElementById("first-fa-score-field");
