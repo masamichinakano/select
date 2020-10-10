@@ -8,7 +8,7 @@ require("@rails/ujs").start()
 require("@rails/activestorage").start()
 require("channels")
 require("../front_first")
-require("../front_second")
+// require("../front_second")
 require("../back_first")
 require("../back_second")
 
