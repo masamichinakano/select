@@ -52,7 +52,7 @@ ActiveRecord::Schema.define(version: 2020_10_06_044519) do
     t.integer "back_seventh_sa_inning", null: false
     t.integer "back_eighth_sa_inning", null: false
     t.integer "back_ninth_sa_inning", null: false
-    t.string "comment", null: false
+    t.text "text"
     t.bigint "user_id", null: false
     t.bigint "match_id", null: false
     t.datetime "created_at", precision: 6, null: false
