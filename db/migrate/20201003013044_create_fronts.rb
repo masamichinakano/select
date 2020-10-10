@@ -19,7 +19,7 @@ class CreateFronts < ActiveRecord::Migration[6.0]
       t.integer :seventh_sa_inning, null: false
       t.integer :eighth_sa_inning, null: false
       t.integer :ninth_sa_inning, null: false
-      t.string :comment, null: false
+      t.text :text
       t.references :user, null: false, foreign_key: true            
       t.references :match, null: false, foreign_key: true            
       t.timestamps
