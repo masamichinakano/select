@@ -8,7 +8,7 @@
         <div class="registration-edit-member-wrap">
           <div class="member-form-wrap">
             <%= render 'shared/error_messages', model: f.object %>
-            <div class="form-header-text">
+            <div class="form-header-member-text">
               選手情報入力
             </div>
           </div>
@@ -51,20 +51,20 @@
 
           <div class="edit-form-group">
             <div class="member-position-check">
-              <div>
-                <label class="member-form-text">投手</label>
+              <div class="member-position-check-content">
+                <label class="member-check-text-p">投手</label>
                 <%= f.check_box :pitcher_position_id, class:"check-box" %>
               </div>
-              <div>
-                <label class="member-form-text">捕手</label>  
+              <div class="member-position-check-content">
+                <label class="member-check-text-p">捕手</label>  
                 <%= f.check_box :catcher_position_id, class:"check-box" %>
               </div>
-              <div>
-                <label class="member-form-text">内野手</label>
+              <div class="member-position-check-content">
+                <label class="member-check-text">内野手</label>
                 <%= f.check_box :inside_position_id, class:"check-box" %>
               </div>
-              <div>
-                <label class="member-form-text">外野手</label>
+              <div class="member-position-check-content">
+                <label class="member-check-text">外野手</label>
                 <%= f.check_box :outside_position_id, class:"check-box" %>
               </div>
             </div>
