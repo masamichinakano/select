@@ -1,13 +1,23 @@
 <div class="player-main-image">
   <div class="top-session-wrap">
-
+    <div class="player-header-wrap">
+      <%= render "shared/second_header" %>
+      <div class="player-header-contents">
+        <div class="session-header-logo-warap">
+          <h1><%= link_to "select", root_path, class:"player-header-logo" %></h1>
+        </div>
+      </div>
+    </div>
     <%= render "shared/header" %>
-
     <div class="member-show-wrap">
       <div class="member-only-content">
         <div class="member-show-header">
           <p>選手詳細</p>
         </div>
+        <div class="sub-member-only-image">
+          <%= image_tag @member.image.variant(resize:'500x500'), class:"sub-only-image" %>
+        </div>
+
         <div class="only-data-content">
           <div class="only-data-list">
             <p>名前：</p>

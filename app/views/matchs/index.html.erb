@@ -1,6 +1,13 @@
-<div class="order-main-image">
+<div class="member-main-image">
   <div class="top-session-wrap">
-
+    <div class="player-header-wrap">
+      <%= render "shared/second_header" %>
+      <div class="player-header-contents">
+        <div class="session-header-logo-warap">
+          <h1><%= link_to "select", root_path, class:"player-header-logo" %></h1>
+        </div>
+      </div>
+    </div>
     <%= render "shared/header" %>
     <%= form_with model: @order, url: matchs_path, class: "defence-main-wrap", local: true do |f| %>
     <div class="offence-main-wrap">
@@ -21,9 +28,11 @@
           <%= f.collection_select(:day_id, Day.all, :id, :name, {}, {class:"date-field"}) %>
           <label class="form-text">日</label>
         </div>
+        <%# <%= render "shared/sub_offence" %>
+
         <div class="new-offence-set-wrap">
           <input type="submit" value="保存する" class="order-create-btn">
-          <%= link_to "トップへ戻る", root_path, class:"member-root-path-btn"%>
+          <%= link_to "トップへ戻る", root_path, class:"matches-root-path-btn"%>
         </div>
       </div>
         
