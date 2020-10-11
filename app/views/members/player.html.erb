@@ -1,11 +1,16 @@
 <div class="player-main-image">
   <div class="top-session-wrap">
 
-    <%= render "shared/header" %>
+    <%= render "shared/sub_header" %>
+    <div class="session-header-contents">
+      <div class="session-header-logo-warap">
+        <h1><%= link_to "select", root_path, class:"session-header-logo" %></h1>
+      </div>
+    </div>
     <div class="main-players-wrap">
       <div class="players-wrap">
         <div class="players-contents">
-          <div>
+          <div class="players-contents-wrap">
             <div class="member-header">
               <p>選手一覧</p>
             </div>
