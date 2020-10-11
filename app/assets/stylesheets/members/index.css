@@ -289,6 +289,10 @@ ul {
   box-shadow    : 8px 8px #666666;  /* 影の設定 */
 }
 
+.player-header-wrap {
+  display: none;
+}
+
 @media (max-width: 500px) {
 
 
@@ -589,6 +593,8 @@ ul {
     margin: 0 auto;
   }
   
-  
+  .m_header {
+    display: none;
+  }
   
 }
