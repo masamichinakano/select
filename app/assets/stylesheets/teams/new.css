@@ -248,6 +248,15 @@
     height: 70px;
     text-align: center;
   }
+
+  .edit-form-header-text {
+    font-weight: bold;
+    color: #000066;
+    font-size: 30px;
+    font-weight: bold;
+
+  }
+  
   
   .member-form-text {
     width: 50%;
@@ -364,11 +373,6 @@
     border        : none;    /* 枠の指定 */
   }
   
-  .member-registration-send:hover {
-    box-shadow    : none;        /* カーソル時の影消去 */
-    color         : none;     /* 背景色     */
-    background    : none;     /* 文字色     */
-  }
  
   .root-path-send {
     width: 160px;
@@ -385,11 +389,6 @@
     border        : none;    /* 枠の指定 */
   }
   
-  .root-path-send:hover {
-    box-shadow    : none;        /* カーソル時の影消去 */
-    color         : none;     /* 背景色     */
-    background    : none;     /* 文字色     */
-  }
   
 
 }

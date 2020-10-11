@@ -18,31 +18,14 @@
           <% end %>
         </div>
         <div>
-          <div class="sub-member-header">
-            <p>選手一覧</p>
-          </div>
-
-          <ul class="sub-position-lists">
-            <li class="sub-position-list">
-              <%= link_to "投手", pitch_members_path, class:"sub-pitch-players-btn" %>
-            </li>
-            <li class="sub-position-list">
-              <%= link_to "捕手", catch_members_path, class:"sub-catch-players-btn" %>
-            </li>
-            <li class="sub-position-list">
-              <%= link_to "内野手", inside_members_path, class:"sub-inside-players-btn" %>
-            </li>
-            <li class="sub-position-list">
-              <%= link_to "外野手", outside_members_path, class:"sub-outside-players-btn" %>
-            </li>
-            <li class="sub-position-list">
-              <%= link_to "選手一覧", player_members_path, class:"sub-select-all-players-btn" %>
-            </li>
-
+          <ul class="sub-main-menu-lists">
+            <li><%= link_to "選手登録", new_member_path, class:"sub-main-list"%></li> 
+            <li><%= link_to "選手一覧", player_members_path, class:"sub-main-list" %></li>
+            <li><%= link_to "スタメン設定", matchs_path, class:"sub-main-list" %></li>
+            <li><%= link_to "スタメン確認", ofence_matchs_path, class:"sub-main-list"%></li> 
+            <li><%= link_to "試合結果", historys_path, class:"sub-main-list"%></li> 
           </ul>
         </div>  
-
-
       </div>
     </div>
 </header>

@@ -9,7 +9,7 @@ window.addEventListener("load", function() {
     var b_sa_total = document.getElementById("backs-sa-total");
 
     b_sa_total.innerHTML = b_sa_first_fa_score;
-  })  
+  });
   // 二回裏
   var b_sa_second_score = document.getElementById("backs-second-sa-score-field");
   b_sa_second_score.addEventListener("input", function() {
@@ -19,8 +19,8 @@ window.addEventListener("load", function() {
     var b_sa_total = document.getElementById("backs-sa-total");
 
     b_sa_second_total_score = (b_sa_first_fa_score + b_sa_second_fa_score);
-    b_sa_total.innerHTML = b_sa_second_total_score 
-  })
+    b_sa_total.innerHTML = b_sa_second_total_score;
+  });
   
   // 三回裏
   var b_sa_third_score = document.getElementById("backs-third-sa-score-field");
@@ -32,10 +32,10 @@ window.addEventListener("load", function() {
     var b_sa_second_fa_score = parseInt(b_sa_second_score.value);
     var b_sa_total = document.getElementById("backs-sa-total");
 
-    b_sa_third_total_score = (b_sa_first_fa_score + b_sa_second_fa_score + b_sa_third_fa_score)
-    b_sa_total.innerHTML = b_sa_third_total_score 
-    
-  })
+    b_sa_third_total_score = (b_sa_first_fa_score + b_sa_second_fa_score + b_sa_third_fa_score);
+    b_sa_total.innerHTML = b_sa_third_total_score;
+  });
+
   // 四回裏
   var b_sa_fourth_score = document.getElementById("backs-fourth-sa-score-field");
   b_sa_fourth_score.addEventListener("input", function() {
@@ -48,8 +48,8 @@ window.addEventListener("load", function() {
     var b_sa_third_fa_score = parseInt(b_sa_third_score.value);
     var b_sa_total = document.getElementById("backs-sa-total");
 
-    b_sa_fourth_total_score = (b_sa_first_fa_score + b_sa_second_fa_score + b_sa_third_fa_score + b_sa_fourth_fa_score)
-    b_sa_total.innerHTML = b_sa_fourth_total_score 
+    b_sa_fourth_total_score = (b_sa_first_fa_score + b_sa_second_fa_score + b_sa_third_fa_score + b_sa_fourth_fa_score);
+    b_sa_total.innerHTML = b_sa_fourth_total_score;
   })
 
   // 五回裏
