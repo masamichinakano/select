@@ -5,7 +5,7 @@ class HistorysController < ApplicationController
   before_action :set_front_back, only: [:index, :search, :show, :destroy]
   before_action :set_contents, only: [:show, :destroy]
   before_action :set_match, only: [:show, :destroy]
-  before_action :only_history, only: [:show]
+  # before_action :only_history, only: [:show]
 
 
   def index
