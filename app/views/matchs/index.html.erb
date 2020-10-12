@@ -38,52 +38,52 @@
         
       <div class="offence-wrap">
         <table class="offence-members">
-          <tr>
+          <tr class="new-offence-contents">
             <th class="batting-order">打順</th>　
             <th class="start-order-names">選手名</th>
           　<th class="positioning">守備</th>
           </tr>
-          <tr>
+          <tr class="new-offence-content">
             <td>１</td>
             <td><%= f.collection_select(:first_name_id, Member.where(user_id: current_user.id), :id, :name, {include_blank: "選手を選択"}, {class:"member-select"})%></td>
             <td><%= f.collection_select(:first_position_id, FirstPosition.all, :id, :name, {}, {class:"position-select"}) %></td>
           </tr>
-          <tr>
+          <tr class="new-offence-content">
             <td>２</td>
             <td><%= f.collection_select(:second_name_id, Member.where(user_id: current_user.id), :id, :name, {include_blank: "選手を選択"}, {class:"member-select"})%></td>
             <td><%= f.collection_select(:second_position_id, SecondPosition.all, :id, :name, {}, {class:"position-select"}) %></td>
           </tr>
-          <tr>
+          <tr class="new-offence-content">
             <td>３</td>
             <td><%= f.collection_select(:third_name_id, Member.where(user_id: current_user.id), :id, :name, {include_blank: "選手を選択"}, {class:"member-select"})%></td>
             <td><%= f.collection_select(:third_position_id, ThirdPosition.all, :id, :name, {}, {class:"position-select"}) %></td>
           </tr>
-          <tr>
+          <tr class="new-offence-content">
             <td>4</td>
             <td><%= f.collection_select(:fourth_name_id, Member.where(user_id: current_user.id), :id, :name, {include_blank: "選手を選択"}, {class:"member-select"})%></td>
             <td><%= f.collection_select(:fourth_position_id, FourthPosition.all, :id, :name, {}, {class:"position-select"}) %></td>
           </tr>
-          <tr>
+          <tr class="new-offence-content">
             <td>5</td>
             <td><%= f.collection_select(:fifth_name_id, Member.where(user_id: current_user.id), :id, :name, {include_blank: "選手を選択"}, {class:"member-select"})%></td>
             <td><%= f.collection_select(:fifth_position_id, FifthPosition.all, :id, :name, {}, {class:"position-select"}) %></td>
           </tr>
-          <tr>
+          <tr class="new-offence-content">
             <td>6</td>
             <td><%= f.collection_select(:sixth_name_id, Member.where(user_id: current_user.id), :id, :name, {include_blank: "選手を選択"}, {class:"member-select"})%></td>
             <td><%= f.collection_select(:sixth_position_id, SixthPosition.all, :id, :name, {}, {class:"position-select"}) %></td>
           </tr>
-          <tr>
+          <tr class="new-offence-content">
             <td>7</td>
             <td><%= f.collection_select(:seventh_name_id, Member.where(user_id: current_user.id), :id, :name, {include_blank: "選手を選択"}, {class:"member-select"})%></td>
             <td><%= f.collection_select(:seventh_position_id, SeventhPosition.all, :id, :name, {}, {class:"position-select"}) %></td>
           </tr>
-          <tr>
+          <tr class="new-offence-content">
             <td>8</td>
             <td><%= f.collection_select(:eighth_name_id, Member.where(user_id: current_user.id), :id, :name, {include_blank: "選手を選択"}, {class:"member-select"})%></td>
             <td><%= f.collection_select(:eighth_position_id, EighthPosition.all, :id, :name, {}, {class:"position-select"}) %></td>
           </tr>
-          <tr>
+          <tr class="new-offence-content">
             <td>9</td>
             <td><%= f.collection_select(:ninth_name_id, Member.where(user_id: current_user.id), :id, :name, {include_blank: "選手を選択"}, {class:"member-select"})%></td>
             <td><%= f.collection_select(:ninth_position_id, NinthPosition.all, :id, :name, {}, {class:"position-select"}) %></td>
