@@ -1,9 +1,17 @@
-<div class="order-main-image">
+<div class="member-main-image">
   <div class="top-session-wrap">
+    <div class="player-header-wrap">
+      <%= render "shared/second_header" %>
+      <div class="player-header-contents">
+        <div class="session-header-logo-warap">
+          <h1><%= link_to "select", root_path, class:"player-header-logo" %></h1>
+        </div>
+      </div>
+    </div>
 
     <%= render "shared/header" %>
     <div class="defence-main-wrap">
-      <div class="offence-main-wrap">
+      <div class="sub-offence-main-wrap">
         <div class="show-match-form-group">
           <div class='show-match-form-text-wrap'>
             <p class="show-user-name"><%= current_user.name %></p>
@@ -23,22 +31,22 @@
             <%= link_to "後攻で試合", match_backs_path(@match.id), class:"show-order-create-btn"%>          
           </div>
           <div class="show-offence-edit-wrap">
-            <%= link_to "削除", match_path(@match.id), method: :delete, class:"show-order-create-btn"%>
+            <%= link_to "削除", match_path(@match.id), method: :delete, class:"sub-show-order-create-btn"%>
           </div>
           <div class="show-offence-edit-wrap">
-            <%= link_to "戻る", ofence_matchs_path, class:"show-order-create-btn"%>
+            <%= link_to "戻る", ofence_matchs_path, class:"sub-show-order-create-btn"%>
           </div>
 
         </div>
           
         <div class="show-offence-wrap">
-          <table class="show-offence-members">
-            <tr class="show-offence-contents">
+          <table class="sub-show-offence-members">
+            <tr class="sub-show-offence-contents">
               <th class="show-batting-orders">打順</th>　
               <th class="show-start-order-names">選手名</th>
             　<th class="show-positioning">守備</th>
             </tr>
-            <tr class="show-offence-contents">
+            <tr class="sub-show-offence-contents">
               <td class="show-batting-order">１</td>
               <% @members.each do |member| %>
                 <% @firsts.each do |first| %>
@@ -53,7 +61,7 @@
                 <% end %>
               <% end %>
             </tr>
-            <tr class="show-offence-contents">
+            <tr class="sub-show-offence-contents">
               <td class="show-batting-order">２</td>
               <% @members.each do |member| %>
                 <% @seconds.each do |second| %>
@@ -68,7 +76,7 @@
                 <% end %>
               <% end %>
             </tr>
-            <tr class="show-offence-contents">
+            <tr class="sub-show-offence-contents">
               <td class="show-batting-order">３</td>
               <% @members.each do |member| %>
                 <% @thirds.each do |third| %>
@@ -83,7 +91,7 @@
                 <% end %>
               <% end %>
             </tr>
-            <tr class="show-offence-contents">
+            <tr class="sub-show-offence-contents">
               <td class="show-batting-order">４</td>
               <% @members.each do |member| %>
                 <% @fourths.each do |fourth| %>
@@ -98,7 +106,7 @@
                 <% end %>
               <% end %>
             </tr>
-            <tr class="show-offence-contents">
+            <tr class="sub-show-offence-contents">
               <td class="show-batting-order">５</td>
               <% @members.each do |member| %>
                 <% @fifths.each do |fifth| %>
@@ -113,7 +121,7 @@
                 <% end %>
               <% end %>
             </tr>
-            <tr class="show-offence-contents">
+            <tr class="sub-show-offence-contents">
               <td class="show-batting-order">６</td>
               <% @members.each do |member| %>
                 <% @sixths.each do |sixth| %>
@@ -128,7 +136,7 @@
                 <% end %>
               <% end %>
             </tr>
-            <tr class="show-offence-contents">
+            <tr class="sub-show-offence-contents">
               <td class="show-batting-order">７</td>
               <% @members.each do |member| %>
                 <% @sevenths.each do |seventh| %>
@@ -143,7 +151,7 @@
                 <% end %>
               <% end %>
             </tr>
-            <tr class="show-offence-contents">
+            <tr class="sub-show-offence-contents">
               <td class="show-batting-order">８</td>
               <% @members.each do |member| %>
                 <% @eighths.each do |eighth| %>
@@ -158,7 +166,7 @@
                 <% end %>
               <% end %>
             </tr>
-            <tr class="show-offence-contents">
+            <tr class="sub-show-offence-contents">
               <td class="show-batting-order">９</td>
               <% @members.each do |member| %>
                 <% @ninths.each do |ninth| %>
