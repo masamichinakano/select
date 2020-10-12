@@ -1,5 +1,13 @@
-<div class="order-main-image">
+<div class="member-main-image">
   <div class="top-session-wrap">
+    <div class="player-header-wrap">
+      <%= render "shared/second_header" %>
+      <div class="player-header-contents">
+        <div class="session-header-logo-warap">
+          <h1><%= link_to "select", root_path, class:"player-header-logo" %></h1>
+        </div>
+      </div>
+    </div>
 
     <%= render "shared/header" %>
     <div class="main-ofence-contents-wrap">
@@ -41,9 +49,7 @@
                 </div>
               </div>
               <div class="search-btn-wrap">
-                <%= f.submit "試合検索", class: "match-history-search-btn" %>
-              </div>
-              <div class="search-root-btn-wrap">
+                <%= f.submit "試合検索", class: "match-search-btn" %>
                 <%= link_to "トップへ戻る", root_path, class:"offence-root-path-btn"%>
               </div>
             <% end %>

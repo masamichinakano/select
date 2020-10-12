@@ -1,5 +1,13 @@
-<div class="order-main-image">
+<div class="member-main-image">
   <div class="top-session-wrap">
+    <div class="player-header-wrap">
+      <%= render "shared/second_header" %>
+      <div class="player-header-contents">
+        <div class="session-header-logo-warap">
+          <h1><%= link_to "select", root_path, class:"player-header-logo" %></h1>
+        </div>
+      </div>
+    </div>
 
     <%= render "shared/header" %>
     <div class="main-offence-contents-wrap">
@@ -41,9 +49,7 @@
                 </div>
               </div>
               <div class="search-btn-wrap">
-                <%= f.submit "試合検索", class: "match-history-search-btn" %>
-              </div>
-              <div class="search-root-btn-wrap">
+                <%= f.submit "試合検索", class: "match-search-btn" %>
                 <%= link_to "トップへ戻る", root_path, class:"offence-root-path-btn"%>
               </div>
 
@@ -64,9 +70,9 @@
                   <p class="offence-match-name"><%= match.match_name %></p>
                 </div>
                 <div class="match-date-wrap">
-                  <p class="offence-match-year"><%= match.year.name %>年</p>
-                  <p class="offence-match-month"><%= match.month.name %>月</p>
-                  <p class="offence-match-day"><%= match.day.name %>日</p>
+                  <p class="sub-offence-match-year"><%= match.year.name %>年</p>
+                  <p class="sub-offence-match-month"><%= match.month.name %>月</p>
+                  <p class="sub-offence-match-day"><%= match.day.name %>日</p>
                   <% @fronts.each do |front| %>
                     <% if match.id == front.match_id %>
                       <% a = front.first_fa_inning + front.second_fa_inning + front.third_fa_inning + front.fourth_fa_inning + front.fifth_fa_inning + front.sixth_fa_inning + front.seventh_fa_inning + front.eighth_fa_inning + front.ninth_fa_inning %>

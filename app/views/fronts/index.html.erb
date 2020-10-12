@@ -1,5 +1,14 @@
 <div class="history-main-image">
   <div class="top-session-wrap">
+    <div class="player-header-wrap">
+      <%= render "shared/second_header" %>
+      <div class="player-header-contents">
+        <div class="session-header-logo-warap">
+          <h1><%= link_to "select", root_path, class:"player-header-logo" %></h1>
+        </div>
+      </div>
+    </div>
+
     <%= render "shared/header" %>
     <%= form_with model: @front, url: match_fronts_path, class: "registration-history", local: true do |f| %>
       <div class="front-main-wrap">
@@ -116,19 +125,19 @@
             </tr>
           </table>
         </div>
-        <div class="history-order-offence-wrap">
-          <table class="show-offence-members">
-            <tr class="show-offence-contents">
+        <div class="front-history-order-offence-wrap">
+          <table class="front-show-offence-members">
+            <tr class="sub-show-offence-contents">
               <th class="show-batting-orders">打順</th>　
               <th class="show-start-order-names">選手名</th>
             　<th class="show-positioning">守備</th>
             </tr>
-            <tr class="show-offence-contents">
+            <tr class="sub-show-offence-contents">
               <td class="show-batting-order">１</td>
               <% @members.each do |member| %>
                 <% @firsts.each do |first| %>
                   <% if @match.id == first.match_id && first.first_name_id == member.id %>
-                  <td class="show-member-select"><%= member.name %></td>
+                  <td class="sub-show-member-select"><%= member.name %></td>
                   <% end %>
                 <% end %>
               <% end %>
@@ -138,7 +147,7 @@
                 <% end %>
               <% end %>
             </tr>
-            <tr class="show-offence-contents">
+            <tr class="sub-show-offence-contents">
               <td class="show-batting-order">２</td>
               <% @members.each do |member| %>
                 <% @seconds.each do |second| %>
@@ -153,7 +162,7 @@
                 <% end %>
               <% end %>
             </tr>
-            <tr class="show-offence-contents">
+            <tr class="sub-show-offence-contents">
               <td class="show-batting-order">３</td>
               <% @members.each do |member| %>
                 <% @thirds.each do |third| %>
@@ -168,7 +177,7 @@
                 <% end %>
               <% end %>
             </tr>
-            <tr class="show-offence-contents">
+            <tr class="sub-show-offence-contents">
               <td class="show-batting-order">４</td>
               <% @members.each do |member| %>
                 <% @fourths.each do |fourth| %>
@@ -183,7 +192,7 @@
                 <% end %>
               <% end %>
             </tr>
-            <tr class="show-offence-contents">
+            <tr class="sub-show-offence-contents">
               <td class="show-batting-order">５</td>
               <% @members.each do |member| %>
                 <% @fifths.each do |fifth| %>
@@ -198,7 +207,7 @@
                 <% end %>
               <% end %>
             </tr>
-            <tr class="show-offence-contents">
+            <tr class="sub-show-offence-contents">
               <td class="show-batting-order">６</td>
               <% @members.each do |member| %>
                 <% @sixths.each do |sixth| %>
@@ -213,7 +222,7 @@
                 <% end %>
               <% end %>
             </tr>
-            <tr class="show-offence-contents">
+            <tr class="sub-show-offence-contents">
               <td class="show-batting-order">７</td>
               <% @members.each do |member| %>
                 <% @sevenths.each do |seventh| %>
@@ -228,7 +237,7 @@
                 <% end %>
               <% end %>
             </tr>
-            <tr class="show-offence-contents">
+            <tr class="sub-show-offence-contents">
               <td class="show-batting-order">８</td>
               <% @members.each do |member| %>
                 <% @eighths.each do |eighth| %>
@@ -243,7 +252,7 @@
                 <% end %>
               <% end %>
             </tr>
-            <tr class="show-offence-contents">
+            <tr class="sub-show-offence-contents">
               <td class="show-batting-order">９</td>
               <% @members.each do |member| %>
                 <% @ninths.each do |ninth| %>

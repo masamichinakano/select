@@ -153,37 +153,17 @@
   color: #00007f;
 }
 
-.match-win {
-  width: 200px;
-  height: 70px;
-  font-size: 35px;
-  font-weight: bold;
-  color: red;
-  margin-bottom: 20px;
-}
-
-.match-lose {
-  width: 200px;
-  height: 70px;
-  font-size: 35px;
-  font-weight: bold;
-  color: blue;
-  margin-bottom: 20px;
-}
-
-.match-draw {
-  width: 200px;
-  height: 70px;
-  font-size: 35px;
-  font-weight: bold;
-  color: green;
-  margin-bottom: 20px;
-}
 
 .search-btn-wrap {
   width: 100%;
   margin-top: 50px;
 }
+
+.history-search-btn-wrap {
+  width: 100%;
+  margin-top: 50px;
+}
+
 
 .search-root-btn-wrap {
   width: 100%;
@@ -247,6 +227,8 @@
   color         : #000066;     /* 背景色     */
   background    : #ffffff;     /* 文字色     */
 }
+
+
 
 @media (max-width: 500px) {
 
@@ -313,12 +295,25 @@
     display: flex;
     justify-content: space-around;
   }
+
+  .history-search-btn-wrap {
+    height: 30px;
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .search-root-btn-wrap {
+    margin-top: 20px;
+    width: 100%;
+  }
   
+
   .match-search-btn {
     width: 120px;
     height: 40px;
     margin-right: 5px;
-
     display       : inline-block;
     border-radius : 0;          /* 角丸       */
     font-size     : 15px;        /* 文字サイズ */
@@ -332,6 +327,24 @@
     border        : none;    /* 枠の指定 */
   }
   
+  .match-history-search-btn {
+    width: 120px;
+    height: 40px;
+    margin-right: 5px;
+
+    display       : inline-block;
+    border-radius : 0;          /* 角丸       */
+    font-size     : 15px;        /* 文字サイズ */
+    text-align    : center;      /* 文字位置   */
+    cursor        : pointer;     /* カーソル   */
+    padding       : 20px 0;   /* 余白       */
+    background    : #000066;     /* 背景色     */
+    color         : #ffffff;     /* 文字色     */
+    line-height   : 0;         /* 1行の高さ  */
+    transition    : 0;         /* なめらか変化 */
+    border        : none;    /* 枠の指定 */
+  }
+
   .offence-root-path-btn {
     width: 120px;
     height: 40px;
@@ -435,5 +448,6 @@
     font-size: 15px;
     color: #00007f;
   }
+  
   
 }
