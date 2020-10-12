@@ -375,8 +375,8 @@
     height: 180px;
     border: 5px solid #00007f;
     background-color: white;
-    word-wrap: break-all;
-    overflow-y: scroll;  /* 横スクロールの指定 */
+    white-space: pre-wrap;
+    overflow-y: scroll;  
     -webkit-overflow-scrolling: touch;  
   }
 
