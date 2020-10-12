@@ -524,12 +524,12 @@
                 <div class="history-image-text">フリーコメント</div>
                 <% @fronts.each do |front| %>
                   <% if @match.id == front.match_id %>
-                  <div class="comment-field"><%= front.comment %></div>
+                  <div class="comment-field"><%= front.fornt_comment %></div>
                   <% end %>
                 <% end %>
                 <% @backs.each do |back| %>
                   <% if @match.id == back.match_id %>
-                  <div class="comment-field-history"><%= back.comment %></div>
+                  <div class="comment-field-history"><%= back.back_comment %></div>
                   <% end %>
                 <% end %>
 
