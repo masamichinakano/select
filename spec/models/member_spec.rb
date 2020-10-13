@@ -9,17 +9,33 @@ RSpec.describe Member, type: :model do
     it "全ての項目がが存在すれば登録できること" do
       expect(@member).to be_valid
     end
-
-    it "nameが空では登録できないこと" do
-
+    it 'nemeが存在しないと出品できない' do
+      @member.name = ''
+      @member.valid?
+      expect(@member.errors.full_messages).to include("Name can't be blank")
+    end
+    it 'ageが存在しないと出品できない' do
+      @member.age = ''
+      @member.valid?
+      expect(@member.errors.full_messages).to include("Age can't be blank")
+    end
+    it 'style_idが存在しないと出品できない' do
+      @member.style_id = 0
+      @member.valid?
+      expect(@member.errors.full_messages).to include("Style must be other than 0")
+    end
+    it 'numberが存在しないと出品できない' do
+      @member.number = ''
+      @member.valid?
+      expect(@member.errors.full_messages).to include("Number can't be blank")
+    end
+    it 'imageが存在しないと出品できない' do
+      @member.image = nil
+      @member.valid?
+      expect(@member.errors.full_messages).to include("Image can't be blank")
     end
 
-    it "emailが空では登録できないこと" do
 
-    end
 
-    it "passwordが空では登録できないこと" do
-
-    end
   end
 end
