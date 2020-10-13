@@ -23,14 +23,14 @@
 
 .history-front-wrap {
   width: 80vw;
-  height: 300px;
+  height: 150px;
   margin-left: 100px;
   background-color: green;
 }
 
 .history-date-wrap {
   width: 80vw;
-  height: 50px;
+  height: 30px;
   margin-left: 100px;
   display: flex;
   align-items: center;
@@ -60,7 +60,7 @@
 .comment-field-history {
   padding: 10px;
   width: 100%;
-  height: 350px;
+  height: 260px;
   border: 5px solid #00007f;
   background-color: white;
 }
@@ -163,7 +163,7 @@
 
 .s-history-order-offence-wrap {
   width: 100%;
-  height: 550px; 
+  height: 430px; 
   margin-top: 30px;
   display: flex;
   /* justify-content: space-around; */
@@ -171,7 +171,7 @@
 
 .s-show-offence-members {
   width: 550px;
-  height: 550px;
+  height: 430px;
   font-size: 20px;
   margin-left: 100px;
   background-color: rgb(255, 255, 255);
@@ -180,12 +180,12 @@
 }
 
 .s-show-offence-contents {
-  height: 50px;
+  height: 40px;
 }
 
 .history-image-comment-wrap {
   width: 650px;
-  height: 550px; 
+  height: 430px; 
   padding: 10px;
   border: 5px solid #00007f;
   margin-left: 50px;
@@ -380,4 +380,28 @@
     -webkit-overflow-scrolling: touch;  
   }
 
+
+  .history-set-wrap {
+    width: 100%;
+    height: 50px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .history-set-btn {
+    display       : inline-block;
+    border-radius : 0;          /* 角丸       */
+    font-size     : 15px;        /* 文字サイズ */
+    text-align    : center;      /* 文字位置   */
+    cursor        : pointer;     /* カーソル   */
+    padding       : 25px 20px;   /* 余白       */
+    background    : #000066;     /* 背景色     */
+    color         : #ffffff;     /* 文字色     */
+    line-height   : 0;         /* 1行の高さ  */
+    transition    : 0;         /* なめらか変化 */
+    border        : none;    /* 枠の指定 */
+  }
+  
+  
 }

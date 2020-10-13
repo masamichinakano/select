@@ -563,21 +563,19 @@ ul {
   }
   
   .member-contents-wrap {
-    overflow: scroll;
     margin-top: 20px;
     height: 540px;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.7);
+    overflow-y: scroll;
   }
-
+  
   .member-contents {
     width: 100%;
     height: 100%;
     padding: 10px 0 0 0;
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: space-around; */
-    overflow:hidden;
     list-style-type:none;
   }
 
