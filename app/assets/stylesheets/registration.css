@@ -112,6 +112,15 @@
   color: white;
 }
 
+.registration-send {
+  width: 200px;
+  height: 40px;
+  background    : #000066;     /* 背景色     */
+  color         : #ffffff;     /* 文字色     */
+  
+}
+
+
 @media (max-width: 500px) {
   .registration-contents {
     margin-top: 100px;
