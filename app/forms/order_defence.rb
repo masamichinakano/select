@@ -19,6 +19,7 @@ class OrderDefence
   #ポシションごとのバリデーション
   validates :first_name_id, :first_position_id, :second_name_id, :second_position_id, :third_name_id, :third_position_id, :fourth_name_id, :fourth_position_id, :fifth_name_id, :fifth_position_id, :sixth_name_id, :sixth_position_id, :seventh_name_id, :seventh_position_id, :eighth_name_id, :eighth_position_id, :ninth_name_id, :ninth_position_id, presence: true
 
+  
 
 
 
