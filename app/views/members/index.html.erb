@@ -18,6 +18,8 @@
                 <ul class="sub-list-contents">
                   <li><%= link_to "ログイン", user_session_path, class:"sub-log-in" %></li>
                   <li><%= link_to "新規登録", new_user_registration_path, class:"sub-session" %></li>
+                  <li><%= link_to 'Facebookで登録', user_facebook_omniauth_authorize_path, method: :post%></li>
+                  <li><%= link_to 'Googleで登録', user_google_oauth2_omniauth_authorize_path, method: :post%></li>
                 </ul>
               <% end %>
             </div>
@@ -51,6 +53,9 @@
             <ul class="list-contents">
               <li><%= link_to "ログイン", user_session_path, class:"log-in" %></li>
               <li><%= link_to "新規登録", new_user_registration_path, class:"session" %></li>
+              <li><%= link_to 'Facebookで登録', user_facebook_omniauth_authorize_path, method: :post%></li>
+              <li><%= link_to 'Googleで登録', user_google_oauth2_omniauth_authorize_path, method: :post%></li>
+
             </ul>
           <% end %>
         </div>
