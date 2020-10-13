@@ -69,9 +69,9 @@
                   <p class="offence-match-name"><%= result.match_name %></p>
                 </div>
                 <div class="match-date-wrap">
-                  <p class="offence-match-year"><%= result.year.name %>年</p>
-                  <p class="offence-match-month"><%= result.month.name %>月</p>
-                  <p class="offence-match-day"><%= result.day.name %>日</p>
+                  <p class="sub-offence-match-year"><%= result.year.name %>年</p>
+                  <p class="sub-offence-match-month"><%= result.month.name %>月</p>
+                  <p class="sub-offence-match-day"><%= result.day.name %>日</p>
                   <% @fronts.each do |front| %>
                     <% if result.id == front.match_id %>
                       <% a = front.first_fa_inning + front.second_fa_inning + front.third_fa_inning + front.fourth_fa_inning + front.fifth_fa_inning + front.sixth_fa_inning + front.seventh_fa_inning + front.eighth_fa_inning + front.ninth_fa_inning %>
