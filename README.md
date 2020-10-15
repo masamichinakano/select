@@ -56,7 +56,7 @@ https://select-9.herokuapp.com/
 
 
 ## ER図
-画像link（https://app.lucidchart.com/invitations/accept/3355c4f3-88e1-4d63-bbdc-c16e8263e318）
+画像link（https://i.gyazo.com/348d07a4c80c6df19819d9ad318b981b.png）
 
 ## 
 
