@@ -326,14 +326,14 @@ ul {
     color          : #ffffff;            /* 文字の色 */
     letter-spacing : 13px;                /* 文字間 */
     text-shadow    : 
-    5px  5px 1px #00007f,
-    -5px  5px 1px #00007f,
-     5px -5px 1px #00007f,
-    -5px -5px 1px #00007f,
-     5px  0px 1px #00007f,
-     0px  5px 1px #00007f,
-    -5px  0px 1px #00007f,
-     0px -5px 1px #00007f;
+    2px  2px 0px #003366,
+    -2px  2px 0px #003366,
+     2px -2px 0px #003366,
+    -2px -2px 0px #003366,
+     2px  0px 0px #003366,
+     0px  2px 0px #003366,
+    -2px  0px 0px #003366,
+     0px -2px 0px #003366; 
   }
 
 
