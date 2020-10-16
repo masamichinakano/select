@@ -10,46 +10,40 @@
     </div>
 
     <%= render "shared/header" %>
-    <div class="main-ofence-contents-wrap">
+    <div class="main-offence-contents-wrap">
       <div class="offence-contents-wrap">
         <div class="offence-contents">
           <div class="offence-data-wrap">
             <div class="offence-search-wrap">
-            <%= search_form_for @p, url: search_matchs_path do |f| %>
+            <%= search_form_for @x, url: search_schedules_path do |f| %>
               <div class="search-content">
                 <div class="search-input">
-                  <%= f.label :match_name_eq, '対戦相手' %>
+                  <%= f.label :plan_name_eq, "大会名" %>
                 </div>
                 <div class="offence-search-form" >
-                  <%= f.collection_select :match_name_eq, @match_names.where(user_id: current_user.id), :match_name, :match_name,  {include_blank: '指定なし'}, {class:"offence-search-form"} %>
+                  <%= f.collection_select :plan_name_eq, @schedule_names.where(user_id: current_user.id), :plan_name, :plan_name,  {include_blank: '指定なし'}, {class:"offence-search-form"} %>
                 </div>
               </div>
               <div class="search-content">
                 <div class="search-input">
-                  <%= f.label :year_id_eq, '対戦 年', class: "search-input" %>
+                  <%= f.label :plan_match_eq, '対戦相手' %>
+                </div>
+                <div class="offence-search-form" >
+                  <%= f.collection_select :plan_match_eq, @schedule_matchs.where(user_id: current_user.id), :plan_match, :plan_match,  {include_blank: '指定なし'}, {class:"offence-search-form"} %>
+                </div>
+              </div>
+              <div class="search-content">
+                <div class="search-input">
+                  <%= f.label :plan_date_eq, '対戦 年', class: "search-input" %>
                 </div>            
                 <div class="offence-search-form" >
-                  <%= f.collection_select :year_id_eq, Year.all, :id, :name,  {include_blank: '指定なし'}, {class:"offence-search-form"} %>
+                  <%= f.date_field :plan_date_eq, class:"offence-search-form" %>
                 </div>
               </div>
-              <div class="search-content">
-                <div class="search-input">
-                  <%= f.label :month_id_eq, '対戦 月', class: "search-input" %>
-                </div>
-                <div class="offence-search-form" >
-                  <%= f.collection_select :month_id_eq, Month.all, :id, :name, {include_blank: '指定なし'}, {class:"offence-search-form"} %>
-                </div>
-              </div>
-              <div class="search-content">
-                <div class="search-input">
-                  <%= f.label :day_id_eq, '対戦 日', class: "search-input" %>
-                </div>
-                <div class="offence-search-form" >
-                  <%= f.collection_select :day_id_eq, Day.all, :id, :name,{include_blank: '指定なし'}, {class:"offence-search-form"} %>
-                </div>
-              </div>
+
               <div class="search-btn-wrap">
                 <%= f.submit "スタメン検索", class: "match-search-btn" %>
+                <%= link_to "試合予定登録", new_schedule_path, class:"offence-root-path-btn"%>
                 <%= link_to "トップへ戻る", root_path, class:"offence-root-path-btn"%>
               </div>
             <% end %>
@@ -59,19 +53,19 @@
 
         <div class="offence-contents-history">
           <div class="offence-history-wrap">
-            <% @results_schedule.each do |result| %>
-              <% if current_user.id == result.user_id && result.front == nil && result.back == nil %>
+            <% @schedules.each do |schedule| %>
+              <% if current_user.id == schedule.user_id %>
               <div class="offence-history">
-                <%= link_to match_path(result.id) do %>
+                <%= link_to schedule_path(schedule.id) do %>
                 <div class="match-name-wrap">
                   <p class="offence-user-name"><%= current_user.name %></p>
-                  <label class="offence-form-text"> VS </label>
-                  <p class="offence-match-name"><%= result.match_name %></p>
+                  <label class="ofence-form-text"> VS </label>
+                  <p class="offence-match-name"><%= schedule.plan_match %></p>
                 </div>
                 <div class="match-date-wrap">
-                  <p class="offence-match-year"><%= result.year.name %>年</p>
-                  <p class="offence-match-month"><%= result.month.name %>月</p>
-                  <p class="offence-match-day"><%= result.day.name %>日</p>
+                  <p class="offence-match-year"><%= schedule.plan_date %>年</p>
+                  <p class="offence-match-month"><%= schedule.place %>月</p>
+                  <p class="offence-match-day"><%=  %>日</p>
                 </div>
                 <% end %>
               </div>

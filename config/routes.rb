@@ -23,6 +23,11 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :schedules
+  resources :schedules do
+    collection do
+      get "search"
+    end
+
+  end
   
 end
