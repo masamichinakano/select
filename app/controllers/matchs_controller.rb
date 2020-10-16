@@ -5,7 +5,7 @@ class MatchsController < ApplicationController
   before_action :search_product, only: [:ofence, :search]
   before_action :set_contents, only: [:show]
   before_action :set_product_column, only: [:ofence, :search]
-  before_action :only_match, only: [:show]
+  # before_action :only_match, only: [:show]
 
 
 
