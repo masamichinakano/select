@@ -33,7 +33,7 @@
                 <label class="member-form-text">対戦相手</label>
               </div>
               <div>
-                <%= f.text_field :plan_match, placeholder:"全角かな、カナ、漢字で入力してください", class:"member-field"%> 
+                <%= f.text_field :plan_match, placeholder:"全角で入力してください", class:"member-field"%> 
               </div>
             </div>
           </div>
@@ -51,23 +51,23 @@
                 <label class="member-form-text">場所</label>
               </div>
               <div>
-                <%= f.text_field :place, placeholder:"全角かな、カナ、漢字で入力してください", class:"member-field" %>
+                <%= f.text_field :place, placeholder:"試合会場名を入力", class:"member-field" %>
               </div>
             </div>
-            <div class="edit-form">
-              <div>
-                <label class="member-form-text">コメント</label>
+          </div>
+            <div class="schedule-comment-form">
+              <div class="schedule-comment-form-wrap">
+                <label class="schedule-form-text">コメント</label>
               </div>
-              <div>
-                <%= f.text_area :plan_comment, placeholder:"全角かな、カナ、漢字で入力してください", class:"member-field" %>
+              <div class="schedule-comment-form-wrap">
+                <%= f.text_area :plan_comment, placeholder:"連絡事項、試合会場の住所など", class:"schedule-comment-field" %>
               </div>
             </div>
 
-          </div>
 
           <div class="member-registration-group">
             <div class='member-registration'>
-              <%= f.submit "試合予定登録", class:"member-registration-send" %>
+              <%= f.submit "試合予定登録", class:"schedule-registration-send" %>
               <%= link_to "トップに戻る", root_path, class:"root-path-send" %>
             </div>
           </div>

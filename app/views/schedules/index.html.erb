@@ -17,7 +17,7 @@
             <div class="offence-search-wrap">
             <%= search_form_for @x, url: search_schedules_path do |f| %>
               <div class="search-content">
-                <div class="search-input">
+                <div class="schedule-search-input">
                   <%= f.label :plan_name_eq, "大会名" %>
                 </div>
                 <div class="offence-search-form" >
@@ -25,7 +25,7 @@
                 </div>
               </div>
               <div class="search-content">
-                <div class="search-input">
+                <div class="schedule-search-input">
                   <%= f.label :plan_match_eq, '対戦相手' %>
                 </div>
                 <div class="offence-search-form" >
@@ -33,8 +33,8 @@
                 </div>
               </div>
               <div class="search-content">
-                <div class="search-input">
-                  <%= f.label :plan_date_eq, '対戦 年', class: "search-input" %>
+                <div class="schedule-search-input">
+                  <%= f.label :plan_date_eq, '日程' %>
                 </div>            
                 <div class="offence-search-form" >
                   <%= f.date_field :plan_date_eq, class:"offence-search-form" %>
@@ -55,18 +55,22 @@
           <div class="offence-history-wrap">
             <% @schedules.each do |schedule| %>
               <% if current_user.id == schedule.user_id %>
-              <div class="offence-history">
+              <div class="schedule-history">
                 <%= link_to schedule_path(schedule.id) do %>
                 <div class="match-name-wrap">
                   <p class="offence-user-name"><%= current_user.name %></p>
                   <label class="ofence-form-text"> VS </label>
                   <p class="offence-match-name"><%= schedule.plan_match %></p>
                 </div>
-                <div class="match-date-wrap">
-                  <p class="offence-match-year"><%= schedule.plan_date %>年</p>
-                  <p class="offence-match-month"><%= schedule.place %>月</p>
-                  <p class="offence-match-day"><%=  %>日</p>
+                <div class="schedule-date-wrap">
+                  <p class="schedule-match-year">試合会場：</p>
+                  <p class="schedule-match"><%= schedule.place %></p>
                 </div>
+                <div class="schedule-date-wrap">
+                  <p class="schedule-match-year">試合日程：</p>
+                  <p class="schedule-match"><%= schedule.plan_date %></p>
+                </div>
+
                 <% end %>
               </div>
               <% end %>
