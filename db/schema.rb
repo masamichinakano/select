@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_13_110556) do
+ActiveRecord::Schema.define(version: 2020_10_16_075240) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -160,6 +160,18 @@ ActiveRecord::Schema.define(version: 2020_10_13_110556) do
     t.index ["match_id"], name: "index_ninths_on_match_id"
   end
 
+  create_table "schedules", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "plan_name", null: false
+    t.string "plan_match"
+    t.string "plan_date", null: false
+    t.string "place", null: false
+    t.text "plan_comment"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_schedules_on_user_id"
+  end
+
   create_table "scores", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "f_attack", null: false
     t.integer "s_attack", null: false
@@ -245,6 +257,7 @@ ActiveRecord::Schema.define(version: 2020_10_13_110556) do
   add_foreign_key "matches", "users"
   add_foreign_key "members", "users"
   add_foreign_key "ninths", "matches"
+  add_foreign_key "schedules", "users"
   add_foreign_key "scores", "matches"
   add_foreign_key "seconds", "matches"
   add_foreign_key "sevenths", "matches"
