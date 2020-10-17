@@ -155,6 +155,7 @@
 .comment-field {
   width: 100%;
   height: 350px;
+  white-space: pre-wrap;
 }
 
 

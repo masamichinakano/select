@@ -26,7 +26,18 @@
   border: 5px solid #000066;
   background-color: white;
   font-size: 20px;
+  padding: 10px;
   color: #000066;
+  display: flex;
+  justify-content: flex-start;
+  white-space: pre-wrap;
+  overflow-y: scroll;  
+  -webkit-overflow-scrolling: touch;  
+}
+
+.show-schedule-comment p {
+  text-align: left;
+  
 }
 
 .schedule-show-content {
@@ -71,4 +82,47 @@
 .show-schedule-root-path-btn:hover {
   color         : #000066;     /* 背景色     */
   background    : #ffffff;     /* 文字色     */
+}
+
+.show-attend-contents-history {
+  width: 500px;
+  height: 550px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 5px solid #000066;
+  margin-right: 50px;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+}
+
+.show-attend-history-wrap {
+  width: 450px;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.show-attend-header-wrap {
+  width: 100%;
+  height: 100px;
+  overflow: scroll;
+}
+
+.show-attend-header-wrap p {
+  font-size: 40px;
+  color: #000066;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+
+.show-attend-wrap {
+  width: 400px;
+  border: 2px solid #000066;
+  height: 400px;
+  overflow: scroll;
+
 }

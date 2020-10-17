@@ -52,7 +52,7 @@
                   コメント
                 </div>            
                 <div class="show-schedule-comment" >
-                  <%= @schedule.plan_comment %>
+                  <p><%= @schedule.plan_comment %></p>
                 </div>
               </div>
 
@@ -66,8 +66,18 @@
           </div>
         </div>
 
-        <div class="offence-contents-history">
-          <div class="offence-history-wrap">
+        <div class="show-attend-contents-history">
+          <div class="show-attend-history-wrap">
+            <div class="show-attend-header-wrap">
+              <p>出席者一覧</p>
+            </div>
+            <div class="show-attend-wrap">
+
+            </div>
+            <div class="show-schedule-btn-wrap">
+              <%= link_to "出席する", edit_schedule_path, method: :get, class:"show-schedule-root-path-btn"%>
+              <%= link_to "出席者コメント一覧", schedule_path, method: :delete, class:"show-schedule-root-path-btn"%>
+            </div>
           </div>
         </div>
       </div>
