@@ -24,6 +24,7 @@ Rails.application.routes.draw do
   end
 
   resources :schedules do
+    resources :attends
     collection do
       get "search"
     end

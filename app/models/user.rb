@@ -9,6 +9,8 @@ class User < ApplicationRecord
   has_many :fronts
   has_many :backs
   has_many :schedules
+  has_many :attends
+
 
   has_many :sns_credentials
 
