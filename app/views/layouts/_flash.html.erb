@@ -46,3 +46,15 @@
     <%= content_tag :div, "試合予定を登録しました。", class:"alert"%>
   <% end %>
 <% end %>
+
+<% flash.each do |key, value| %>
+  <% if flash[:schedule_edit] %>
+    <%= content_tag :div, "試合予定を編集しました。", class:"alert"%>
+  <% end %>
+<% end %>
+
+<% flash.each do |key, value| %>
+  <% if flash[:destroy_schedule] %>
+    <%= content_tag :div, "試合予定を削除しました。", class:"alert"%>
+  <% end %>
+<% end %>

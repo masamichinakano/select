@@ -1,0 +1,78 @@
+<div class="member-main-image">
+  <div class="top-session-wrap">
+    <div class="player-header-wrap">
+      <%= render "shared/second_header" %>
+      <div class="player-header-contents">
+        <div class="session-header-logo-warap">
+          <h1><%= link_to "select", root_path, class:"player-header-logo" %></h1>
+        </div>
+      </div>
+    </div>
+
+    <%= render "shared/header" %>
+    <div class="main-offence-contents-wrap">
+      <div class="offence-contents-wrap">
+        <div class="offence-contents">
+          <div class="offence-data-wrap">
+            <div class="schedule-wrap">
+              <div class="schedule-show-content">
+                <div class="schedule-search-input">
+                  大会名
+                </div>
+                <div class="show-schedule-form">
+                  <%= @schedule.plan_name %>
+                </div>
+              </div>
+              <div class="schedule-show-content">
+                <div class="schedule-search-input">
+                  対戦相手
+                </div>
+                <div class="show-schedule-form">
+                  <%= @schedule.plan_match %>
+                </div>
+              </div>
+              <div class="schedule-show-content">
+                <div class="schedule-search-input">
+                  日程
+                </div>            
+                <div class="show-schedule-form">
+                  <%= @schedule.plan_date %>
+                </div>
+              </div>
+              <div class="schedule-show-content">
+                <div class="schedule-search-input">
+                  試合会場
+                </div>            
+                <div class="show-schedule-form" >
+                  <%= @schedule.place %>
+                </div>
+              </div>
+              <div class="show-schedule-comment-wrap">
+                <div class="schedule-search-input">
+                  コメント
+                </div>            
+                <div class="show-schedule-comment" >
+                  <%= @schedule.plan_comment %>
+                </div>
+              </div>
+
+
+              <div class="show-schedule-btn-wrap">
+                <%= link_to "編集", edit_schedule_path, method: :get, class:"show-schedule-root-path-btn"%>
+                <%= link_to "削除", schedule_path, method: :delete, class:"show-schedule-root-path-btn"%>
+                <%= link_to "一覧に戻る", schedules_path, class:"show-schedule-root-path-btn"%>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="offence-contents-history">
+          <div class="offence-history-wrap">
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</div>

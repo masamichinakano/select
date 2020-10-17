@@ -30,6 +30,34 @@ class SchedulesController < ApplicationController
   end
 
 
+  def show
+    @schedule = Schedule.find(params[:id])
+  end
+
+  def edit
+    @schedule = Schedule.find(params[:id])
+  end
+
+  def update
+    @schedule = Schedule.find(params[:id])
+    if @schedule.update(schedule_params)
+      flash[:schedule_edit] = "試合予定を編集しました。"
+      redirect_to root_path
+    else
+      render 'edit'
+    end
+  end
+
+  def destroy
+    @schedule = Schedule.find(params[:id])
+    if @schedule.destroy
+      flash[:destroy_schedule] = "試合予定をを削除しました。"
+      redirect_to root_path
+    else
+      render 'show'
+    end
+
+  end
 
   private
 

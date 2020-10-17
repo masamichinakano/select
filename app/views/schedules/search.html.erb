@@ -53,19 +53,22 @@
 
         <div class="offence-contents-history">
           <div class="offence-history-wrap">
-            <% @results.each do |result| %>
+            <% @results_schedule.each do |result| %>
               <% if current_user.id == result.user_id %>
-              <div class="offence-history">
+              <div class="schedule-history">
                 <%= link_to schedule_path(result.id) do %>
                 <div class="match-name-wrap">
                   <p class="offence-user-name"><%= current_user.name %></p>
                   <label class="ofence-form-text"> VS </label>
                   <p class="offence-match-name"><%= result.plan_match %></p>
                 </div>
-                <div class="match-date-wrap">
-                  <p class="offence-match-year"><%= result.plan_date %>年</p>
-                  <p class="offence-match-month"><%= result.place %>月</p>
-                  <p class="offence-match-day"><%=  %>日</p>
+                <div class="schedule-date-wrap">
+                  <p class="schedule-match-year">試合会場：</p>
+                  <p class="schedule-match"><%= result.place %></p>
+                </div>
+                <div class="schedule-date-wrap">
+                  <p class="schedule-match-year">試合日程：</p>
+                  <p class="schedule-match"><%= result.plan_date %></p>
                 </div>
                 <% end %>
               </div>

@@ -54,7 +54,7 @@ class MembersController < ApplicationController
 
   def destroy
     if @member.destroy
-      flash[:destroy_member] = "選手を登録しました。"
+      flash[:destroy_member] = "選手を削除しました。"
       redirect_to root_path
     else
       render 'show'
