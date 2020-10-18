@@ -79,7 +79,7 @@
                 </div>     
                 <% @members.each do |member| %>  
                   <% if current_user.id == member.user_id && @attend.attend_name_id == member.id %>     
-                  <div class="new-attend-select-wrap" >
+                  <div class="show-attend-select-wrap" >
                     <%= member.name %>
                   </div>
                   <% end %>
@@ -90,15 +90,16 @@
                 <div class="schedule-search-input">
                   出席者コメント
                 </div>            
-                <div class="new-attend-comment" >
-                  <div class="new-attend-comment-field"><%= @attend.attend_comment %></div>
+                <div class="show-attend-comment" >
+                  <div class="show-attend-comment-field"><%= @attend.attend_comment %></div>
                 </div>
               </div>
 
 
               <div class="new-attend-btn-wrap">
-                <%# <%= f.submit "出席する", class:"attend-registration-send" %> %>
-                <%= link_to "出席者コメント一覧", schedule_attends_path, class:"show-schedule-root-path-btn"%>
+                <%= link_to "編集", edit_schedule_attend_path, method: :get, class:"show-schedule-root-path-btn"%>
+                <%= link_to "削除", schedule_attend_path, method: :destroy, class:"show-schedule-root-path-btn"%>
+                <%= link_to "試合予定詳細に戻る", schedule_path, class:"show-schedule-root-path-btn"%>
               </div>
 
             </div>

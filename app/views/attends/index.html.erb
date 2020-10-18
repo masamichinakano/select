@@ -71,15 +71,13 @@
             <div class="show-attend-wrap">
             <% @attends.each do |attend| %>
               <% @members.each do |member| %>
-                <% if current_user.id == @schedule.user_id && attend.attend_name_id == member.id %>
-                  <%= link_to schedule_attend_path(attend.id) do %>
+                <% if current_user.id == @schedule.user_id && attend.schedule_id == @schedule.id && attend.attend_name_id == member.id%>
                   <div class ="index-attend-member-wrap">
                     <p><%= member.name %>：</p>
                     <div class="index-attend-member-comment">
                       <div class="index-attend-member-comment_p"><%= attend.attend_comment%></div>
                     </div>
                   </div>
-                  <% end %>
                 <% end %>
               <% end %>
             <% end %>

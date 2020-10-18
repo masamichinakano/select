@@ -15,7 +15,6 @@ class AttendsController < ApplicationController
   end
 
   def create
-    binding.pry
     @schedule = Schedule.find(params[:schedule_id])
     @attend = Attend.new(attend_params)
     if @attend.save
@@ -33,7 +32,27 @@ class AttendsController < ApplicationController
     @attend = Attend.find(params[:id])
   end
 
+  def edit
+    @schedules = Schedule.all
+    @members = Member.all
+    @attend = Attend.find(params[:id])
 
+  end
+
+  def update
+    binding.pry
+    @schedules = Schedule.all
+    @members = Member.all
+    @attend = Attend.find(params[:id])
+    if @attend.update(attend_params)
+      flash[:attend_edit] = "試合予定を編集しました。"
+      redirect_to root_path
+    else
+      render 'edit'
+    end
+
+
+  end
 
   private
 
