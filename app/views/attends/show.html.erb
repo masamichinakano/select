@@ -78,7 +78,7 @@
                   出席者
                 </div>     
                 <% @members.each do |member| %>  
-                  <% if current_user.id == member.user_id && @attend.attend_name_id == member.id %>     
+                  <% if current_user.id == member.user_id && @attend.attend_name_id == member.id && @attend %>     
                   <div class="show-attend-select-wrap" >
                     <%= member.name %>
                   </div>

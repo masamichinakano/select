@@ -1,6 +1,7 @@
 class AttendsController < ApplicationController
   def index   
     @schedule = Schedule.find(params[:schedule_id])
+    # @schedules = Schedule.all
     @members = Member.all
     # @schedules = Schedule.all
     @attends = Attend.all

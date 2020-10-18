@@ -75,11 +75,9 @@
             <% @attends.each do |attend| %>
               <% @members.each do |member| %>
                 <% if current_user.id == @schedule.user_id && attend.schedule_id == @schedule.id && attend.attend_name_id == member.id %>               
-                  <%= link_to schedule_attend_path(attend.id) do %>
                   <div class ="show-attend-member-wrap">
                     <p><%= member.name %></p>
                   </div>
-                  <% end %>
                 <% end %>
               <% end %>
             <% end %>
