@@ -85,7 +85,7 @@
 }
 
 .show-attend-contents-history {
-  width: 500px;
+  width: 450px;
   height: 550px;
   background-color: rgba(255, 255, 255, 0.7);
   border: 5px solid #000066;
@@ -121,8 +121,24 @@
 
 .show-attend-wrap {
   width: 400px;
-  border: 2px solid #000066;
+  border: 5px solid #000066;
   height: 400px;
   overflow: scroll;
+  padding: 5px;
+}
 
+.show-attend-member-wrap {
+  width: 100%;
+  border: 2px solid #000066;
+  height: 50px;
+  margin-top: 5px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.show-attend-member-wrap p {
+  font-size: 20px;
+  
 }

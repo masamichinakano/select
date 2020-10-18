@@ -58,3 +58,9 @@
     <%= content_tag :div, "試合予定を削除しました。", class:"alert"%>
   <% end %>
 <% end %>
+
+<% flash.each do |key, value| %>
+  <% if flash[:attend] %>
+    <%= content_tag :div, "出席登録完了しました。", class:"alert"%>
+  <% end %>
+<% end %>

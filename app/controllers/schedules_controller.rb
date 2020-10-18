@@ -32,6 +32,8 @@ class SchedulesController < ApplicationController
 
   def show
     @schedule = Schedule.find(params[:id])
+    @attends = Attend.all
+    @members = Member.all
   end
 
   def edit

@@ -48,19 +48,16 @@
                 </div>
               </div>
               <div class="show-schedule-comment-wrap">
-                <div class="schedule-search-input">
-                  コメント
+                <div class="attend-comment-title">
+                  試合予定詳細コメント
                 </div>            
                 <div class="show-schedule-comment" >
                   <p><%= @schedule.plan_comment %></p>
                 </div>
               </div>
 
-
               <div class="show-schedule-btn-wrap">
-                <%= link_to "編集", edit_schedule_path, method: :get, class:"show-schedule-root-path-btn"%>
-                <%= link_to "削除", schedule_path, method: :delete, class:"show-schedule-root-path-btn"%>
-                <%= link_to "一覧に戻る", schedules_path, class:"show-schedule-root-path-btn"%>
+                <%= link_to "試合予定一覧", schedules_path, class:"show-schedule-root-path-btn"%>
               </div>
             </div>
           </div>
@@ -68,25 +65,36 @@
 
         <div class="show-attend-contents-history">
           <div class="show-attend-history-wrap">
-            <div class="show-attend-header-wrap">
-              <p>出席者一覧</p>
+            <div class="new-attend-header-wrap">
+              <p>出席者コメント一覧</p>
             </div>
-            <div class="show-attend-wrap">
-            <% @attends.each do |attend| %>
-              <% @members.each do |member| %>
-                <% if current_user.id == @schedule.user_id && attend.attend_name_id == member.id %>               
-                  <%= link_to schedule_attend_path(attend.id) do %>
-                  <div class ="show-attend-member-wrap">
-                    <p><%= member.name %></p>
-                  </div>
-                  <% end %>
-                <% end %>
-              <% end %>
+            <div class="new-attend-wrap">
+            <%= form_with model: @attend, url: schedule_attends_path, local: true do |f| %>
+              <div class="attend-member-wrap">
+                <div class="schedule-search-input">
+                  出席者
+                </div>            
+                <div class="new-attend-select-wrap" >
+                  <%= f.collection_select(:attend_name_id, @members.where(user_id: current_user.id), :id, :name, {include_blank: "選手を選択"}, {class:"member-select"})%>
+                </div>
+              </div>
+
+              <div class="show-schedule-comment-wrap">
+                <div class="schedule-search-input">
+                  出席者コメント
+                </div>            
+                <div class="new-attend-comment" >
+                  <%= f.text_area :attend_comment, class:"new-attend-comment-field", placeholder:"出席者の連絡事項等をご記入ください" %>
+                </div>
+              </div>
+
+
+              <div class="new-attend-btn-wrap">
+                <%= f.submit "出席する", class:"attend-registration-send" %>
+                <%= link_to "出席者コメント一覧", schedule_attends_path, class:"show-schedule-root-path-btn"%>
+              </div>
             <% end %>
-            </div>
-            <div class="show-schedule-btn-wrap">
-              <%= link_to "出席する", new_schedule_attend_path(@schedule.id), class:"show-schedule-root-path-btn"%>
-              <%= link_to "出席者コメント一覧", schedule_attends_path(@schedule.id), class:"show-schedule-root-path-btn"%>
+
             </div>
           </div>
         </div>

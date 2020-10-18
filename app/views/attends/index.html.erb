@@ -48,18 +48,15 @@
                 </div>
               </div>
               <div class="show-schedule-comment-wrap">
-                <div class="schedule-search-input">
-                  コメント
+                <div class="attend-comment-title">
+                  試合予定詳細コメント
                 </div>            
                 <div class="show-schedule-comment" >
                   <p><%= @schedule.plan_comment %></p>
                 </div>
               </div>
 
-
               <div class="show-schedule-btn-wrap">
-                <%= link_to "編集", edit_schedule_path, method: :get, class:"show-schedule-root-path-btn"%>
-                <%= link_to "削除", schedule_path, method: :delete, class:"show-schedule-root-path-btn"%>
                 <%= link_to "一覧に戻る", schedules_path, class:"show-schedule-root-path-btn"%>
               </div>
             </div>
@@ -69,15 +66,18 @@
         <div class="show-attend-contents-history">
           <div class="show-attend-history-wrap">
             <div class="show-attend-header-wrap">
-              <p>出席者一覧</p>
+              <p>出席者コメント一覧</p>
             </div>
             <div class="show-attend-wrap">
             <% @attends.each do |attend| %>
               <% @members.each do |member| %>
-                <% if current_user.id == @schedule.user_id && attend.attend_name_id == member.id %>               
+                <% if current_user.id == @schedule.user_id && attend.attend_name_id == member.id %>
                   <%= link_to schedule_attend_path(attend.id) do %>
-                  <div class ="show-attend-member-wrap">
-                    <p><%= member.name %></p>
+                  <div class ="index-attend-member-wrap">
+                    <p><%= member.name %>：</p>
+                    <div class="index-attend-member-comment">
+                      <div class="index-attend-member-comment_p"><%= attend.attend_comment%></div>
+                    </div>
                   </div>
                   <% end %>
                 <% end %>
@@ -85,8 +85,7 @@
             <% end %>
             </div>
             <div class="show-schedule-btn-wrap">
-              <%= link_to "出席する", new_schedule_attend_path(@schedule.id), class:"show-schedule-root-path-btn"%>
-              <%= link_to "出席者コメント一覧", schedule_attends_path(@schedule.id), class:"show-schedule-root-path-btn"%>
+              <%= link_to "出席する", new_schedule_attend_path, class:"show-schedule-root-path-btn"%>
             </div>
           </div>
         </div>

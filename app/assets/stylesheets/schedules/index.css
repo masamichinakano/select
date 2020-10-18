@@ -41,8 +41,7 @@
 
 
 .schedule-search-input {
-  width: 150px;
-  margin-right: 20px;
+  width: 100%;
   font-size: 30px;
   color: #000066;
   font-weight: bold;
