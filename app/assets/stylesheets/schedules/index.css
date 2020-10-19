@@ -105,3 +105,17 @@
   background    : #ffffff;     /* 文字色     */
 }
 
+.main-schedule-contents-wrap {
+  width: 100%;
+  height: 600px;
+}
+
+@media (max-width: 500px) {
+
+  .main-schedule-contents-wrap {
+    width: 100%;
+    height: 650px;
+  
+  }
+  
+}
