@@ -11,8 +11,8 @@
 
     <%= render "shared/header" %>
     <div class="main-offence-contents-wrap">
-      <div class="offence-contents-wrap">
-        <div class="offence-contents">
+      <div class="schedule-offence-contents-wrap">
+        <div class="schedule-offence-contents">
           <div class="offence-data-wrap">
             <div class="schedule-wrap">
               <div class="schedule-show-content">
@@ -48,7 +48,7 @@
                 </div>
               </div>
               <div class="show-schedule-comment-wrap">
-                <div class="attend-comment-title">
+                <div class="schedule-search-input">
                   試合予定詳細コメント
                 </div>            
                 <div class="show-schedule-comment" >
@@ -56,7 +56,7 @@
                 </div>
               </div>
 
-              <div class="show-schedule-btn-wrap">
+              <div class="attend-show-schedule-btn-wrap">
                 <%= link_to "試合予定一覧", schedules_path, class:"show-schedule-root-path-btn"%>
               </div>
             </div>
@@ -76,7 +76,7 @@
                 </div>            
                 <div class="new-attend-select-wrap" >
 
-                  <%= f.collection_select(:attend_name_id, @members.where(id: @b), :id, :name, {include_blank: "選手を選択"}, {class:"member-select"})%>
+                  <%= f.collection_select(:attend_name_id, @members.where(id: @b), :id, :name, {include_blank: "選手を選択"}, {class:"attend-new-member-select"})%>
                 </div>
               </div>
 
@@ -92,8 +92,8 @@
 
               <div class="new-attend-btn-wrap">
                 <%= f.submit "出席する", class:"attend-registration-send" %>
-                <%= link_to "コメント一覧", schedule_attends_path, class:"show-schedule-root-path-btn"%>
-                <%= link_to "出席者一覧", schedule_path(@schedule.id), class:"show-schedule-root-path-btn"%>
+                <%= link_to "コメント一覧", schedule_attends_path, class:"new-schedule-root-path-btn"%>
+                <%= link_to "出席者一覧", schedule_path(@schedule.id), class:"new-schedule-root-path-btn"%>
               </div>
             <% end %>
 

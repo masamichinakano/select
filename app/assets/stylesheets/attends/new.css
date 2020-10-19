@@ -1,7 +1,6 @@
 .new-attend-header-wrap {
   width: 100%;
   height: 100px;
-  overflow: scroll;
 }
 
 .new-attend-header-wrap p {
@@ -93,4 +92,143 @@
   width: 100%;
   display: flex;
   justify-content: space-around;
+}
+
+.attend-show-schedule-btn-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.new-schedule-root-path-btn {
+  margin-top: 20px;
+  display       : inline-block;
+  border-radius : 5%;          /* 角丸       */
+  font-size     : 10pt;        /* 文字サイズ */
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 12px 25px;   /* 余白       */
+  background    : #000066;     /* 背景色     */
+  color         : #ffffff;     /* 文字色     */
+  line-height   : 1em;         /* 1行の高さ  */
+  transition    : .3s;         /* なめらか変化 */
+  border        : 2px solid #000066;    /* 枠の指定 */
+}
+
+.new-schedule-root-path-btn:hover {
+  color         : #000066;     /* 背景色     */
+  background    : #ffffff;     /* 文字色     */
+}
+
+.attend-new-member-select {
+  width: 100%;
+  height: 100%;
+  text-indent: 120px;
+
+}
+
+
+@media (max-width: 500px) {
+
+  .attend-show-schedule-btn-wrap {
+    margin-top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+
+  .edit-attend-member-wrap {
+    width: 100%;
+    height: 50px;
+    margin-top: 10px;
+  }
+
+  .new-attend-select-wrap {
+    height: 30px;
+    margin: 0 10px;
+    background-color: white;
+    font-size: 20px;
+    color: #000066;
+  }
+  
+  .new-attend-header-wrap {
+    width: 100%;
+    height: 50px;
+  }
+  
+  .new-attend-header-wrap p {
+    font-size: 15px;
+    color: #000066;
+    font-weight: normal;
+    margin-top: 10px;
+  }
+  
+  .new-attend-comment {
+    width: 93%;
+    height: 100px;
+    margin: 0 10px;
+    border: 5px solid #000066;
+    background-color: white;
+    font-size: 10px;
+    color: #000066;
+    display: flex;
+    justify-content: flex-start;
+    white-space: pre-wrap;
+    overflow-y: scroll;  
+    -webkit-overflow-scrolling: touch;  
+  }
+  
+  
+  .new-attend-comment-field {
+    padding: 5px;
+    width: 100%;
+  }
+  
+  .new-attend-btn-wrap {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+ 
+  .attend-registration-send {
+    margin-top: 0;
+    height: 30px;
+    display       : inline-block;
+    border-radius : 0;          /* 角丸       */
+    font-size     : 10px;        /* 文字サイズ */
+    text-align    : center;      /* 文字位置   */
+    cursor        : pointer;     /* カーソル   */
+    padding       : 9px 15px;   /* 余白       */
+    background    : #000066;     /* 背景色     */
+    color         : #ffffff;     /* 文字色     */
+    line-height   : 0;         /* 1行の高さ  */
+    transition    : 0;         /* なめらか変化 */
+    border        : none;    /* 枠の指定 */
+  }
+
+  .new-schedule-root-path-btn {
+    margin-top: 0;
+    display       : inline-block;
+    border-radius : 0;          /* 角丸       */
+    font-size     : 10px;        /* 文字サイズ */
+    text-align    : center;      /* 文字位置   */
+    cursor        : pointer;     /* カーソル   */
+    padding       : 15px 12px;   /* 余白       */
+    background    : #000066;     /* 背景色     */
+    color         : #ffffff;     /* 文字色     */
+    line-height   : 0;         /* 1行の高さ  */
+    transition    : 0;         /* なめらか変化 */
+    border        : none;    /* 枠の指定 */
+  }
+
+  .attend-new-member-select {
+    width: 100%;
+    height: 100%;
+    text-indent: 70px;
+    font-size: 15px;
+  }
+
+  
 }
