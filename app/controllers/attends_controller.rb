@@ -16,8 +16,8 @@ class AttendsController < ApplicationController
   def new
     @attends = Attend.all
     @attend = Attend.new
-
-    m = @members.pluck(:id)
+    # m = Member.where()
+    m = current_user.members.pluck(:id)
     a = @schedule.attends.pluck(:attend_name_id)
     @b = m - a
     # binding.pry
