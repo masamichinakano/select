@@ -1,4 +1,5 @@
 class AttendsController < ApplicationController
+  before_action :authenticate_user!
   before_action :only_schedule_attends, only: [:index]
   before_action :only_attend, only: [:show]
   before_action :set_schedule_find, only: [:new, :create, :show, :edit]

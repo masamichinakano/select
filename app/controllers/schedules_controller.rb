@@ -1,4 +1,5 @@
 class SchedulesController < ApplicationController
+  before_action :authenticate_user!
   before_action :search_schedule_product, only: [:index, :search]
   before_action :set_schedule_product_column, only: [:index, :search]
   before_action :set_schedule_find, only: [:edit, :update, :destroy]
