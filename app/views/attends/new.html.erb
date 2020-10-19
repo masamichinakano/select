@@ -75,7 +75,8 @@
                   出席者
                 </div>            
                 <div class="new-attend-select-wrap" >
-                  <%= f.collection_select(:attend_name_id, @members.where(user_id: current_user.id), :id, :name, {include_blank: "選手を選択"}, {class:"member-select"})%>
+
+                  <%= f.collection_select(:attend_name_id, @members.where(id: @b), :id, :name, {include_blank: "選手を選択"}, {class:"member-select"})%>
                 </div>
               </div>
 
@@ -91,7 +92,8 @@
 
               <div class="new-attend-btn-wrap">
                 <%= f.submit "出席する", class:"attend-registration-send" %>
-                <%= link_to "出席者コメント一覧", schedule_attends_path, class:"show-schedule-root-path-btn"%>
+                <%= link_to "コメント一覧", schedule_attends_path, class:"show-schedule-root-path-btn"%>
+                <%= link_to "出席者一覧", schedule_path(@schedule.id), class:"show-schedule-root-path-btn"%>
               </div>
             <% end %>
 

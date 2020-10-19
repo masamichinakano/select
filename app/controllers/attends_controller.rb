@@ -14,7 +14,13 @@ class AttendsController < ApplicationController
   end
   
   def new
+    @attends = Attend.all
     @attend = Attend.new
+
+    m = @members.pluck(:id)
+    a = @schedule.attends.pluck(:attend_name_id)
+    @b = m - a
+    # binding.pry
   end
 
   def create

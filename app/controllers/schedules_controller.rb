@@ -26,7 +26,7 @@ class SchedulesController < ApplicationController
   end
 
   def search
-    @results_schedule = @x.result
+    @results_schedule = @x.result.order("created_at DESC")
   end
 
 

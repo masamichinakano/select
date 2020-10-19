@@ -17,7 +17,7 @@
             <div class="offence-search-wrap">
             <%= search_form_for @x, url: search_schedules_path do |f| %>
               <div class="search-content">
-                <div class="search-input">
+                <div class="schedule-search-input-text">
                   <%= f.label :plan_name_eq, "大会名" %>
                 </div>
                 <div class="offence-search-form" >
@@ -25,7 +25,7 @@
                 </div>
               </div>
               <div class="search-content">
-                <div class="search-input">
+                <div class="schedule-search-input-text">
                   <%= f.label :plan_match_eq, '対戦相手' %>
                 </div>
                 <div class="offence-search-form" >
@@ -33,8 +33,8 @@
                 </div>
               </div>
               <div class="search-content">
-                <div class="search-input">
-                  <%= f.label :plan_date_eq, '対戦 年', class: "search-input" %>
+                <div class="schedule-search-input-text">
+                  <%= f.label :plan_date_eq, '対戦日程', class: "search-input" %>
                 </div>            
                 <div class="offence-search-form" >
                   <%= f.date_field :plan_date_eq, class:"offence-search-form" %>

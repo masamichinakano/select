@@ -36,7 +36,7 @@ class MatchsController < ApplicationController
   end
   
   def search
-    @results = @p.result
+    @results = @p.result.order("created_at DESC")
     
   end
 
