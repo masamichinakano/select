@@ -73,13 +73,11 @@
             </div>
             <div class="show-attend-wrap">
             <% @attends.each do |attend| %>
-              <% @members.each do |member| %>
-                <% if current_user.id == @schedule.user_id && attend.schedule_id == @schedule.id && attend.attend_name_id == member.id %>               
-                  <div class ="show-attend-member-wrap">
-                    <p><%= member.name %></p>
-                  </div>
-                <% end %>
-              <% end %>
+              <p><% t = attend.attend_name_id %></p>
+              <% n = Member.find_by(id: t) %>
+              <div class ="show-attend-member-wrap">
+                <%= n.name %>
+              </div>
             <% end %>
             </div>
             <div class="show-schedule-btn-wrap">

@@ -1,10 +1,8 @@
 class AttendsController < ApplicationController
-  def index   
+  def index  
     @schedule = Schedule.find(params[:schedule_id])
-    # @schedules = Schedule.all
     @members = Member.all
-    # @schedules = Schedule.all
-    @attends = Attend.all
+    @attends = @schedule.attends.all.order("created_at DESC")
   end
   
   def new
@@ -28,13 +26,14 @@ class AttendsController < ApplicationController
 
   def show
     @members = Member.all
-
-    @schedules = Schedule.all
+    @schedule = Schedule.find(params[:schedule_id])
     @attend = Attend.find(params[:id])
+    # binding.pry
+    # @attend = Attend.find(params[:id])
   end
 
   def edit
-    @schedules = Schedule.all
+    @schedule = Schedule.find(params[:schedule_id])
     @members = Member.all
     @attend = Attend.find(params[:id])
 
