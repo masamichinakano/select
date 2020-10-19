@@ -1,0 +1,106 @@
+<div class="member-main-image">
+  <div class="top-session-wrap">
+    <div class="player-header-wrap">
+      <%= render "shared/second_header" %>
+      <div class="player-header-contents">
+        <div class="session-header-logo-warap">
+          <h1><%= link_to "select", root_path, class:"player-header-logo" %></h1>
+        </div>
+      </div>
+    </div>
+
+    <%= render "shared/header" %>
+    <div class="main-offence-contents-wrap">
+      <div class="offence-contents-wrap">
+        <div class="offence-contents">
+          <div class="offence-data-wrap">
+            <div class="schedule-wrap">
+              <div class="schedule-show-content">
+                <div class="schedule-search-input">
+                  大会名
+                </div>
+                <div class="show-schedule-form">
+                  <%= @schedule.plan_name %>
+                </div>
+              </div>
+              <div class="schedule-show-content">
+                <div class="schedule-search-input">
+                  対戦相手
+                </div>
+                <div class="show-schedule-form">
+                  <%= @schedule.plan_match %>
+                </div>
+              </div>
+              <div class="schedule-show-content">
+                <div class="schedule-search-input">
+                  日程
+                </div>            
+                <div class="show-schedule-form">
+                  <%= @schedule.plan_date %>
+                </div>
+              </div>
+              <div class="schedule-show-content">
+                <div class="schedule-search-input">
+                  試合会場
+                </div>            
+                <div class="show-schedule-form" >
+                  <%= @schedule.place %>
+                </div>
+              </div>
+              <div class="show-schedule-comment-wrap">
+                <div class="attend-comment-title">
+                  試合予定詳細コメント
+                </div>            
+                <div class="show-schedule-comment" >
+                  <p><%= @schedule.plan_comment %></p>
+                </div>
+              </div>
+
+              <div class="show-schedule-btn-wrap">
+                <%= link_to "試合予定一覧", schedules_path, class:"show-schedule-root-path-btn"%>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="show-attend-contents-history">
+          <div class="show-attend-history-wrap">
+            <div class="new-attend-header-wrap">
+              <p>出席者コメント一覧</p>
+            </div>
+            <div class="new-attend-wrap">
+            <%= form_with model: @attend, url: schedule_attends_path, local: true do |f| %>
+              <div class="edit-attend-member-wrap">
+                <div class="schedule-search-input">
+                  出席者
+                </div>            
+                <div class="new-attend-select-wrap" >
+                  <%= f.collection_select(:attend_name_id, @members.where(user_id: current_user.id), :id, :name, {include_blank: "選手を選択"}, {class:"member-select"})%>
+                </div>
+              </div>
+
+              <div class="show-schedule-comment-wrap">
+                <div class="schedule-search-input">
+                  出席者コメント
+                </div>            
+                <div class="new-attend-comment" >
+                  <%= f.text_area :attend_comment, class:"new-attend-comment-field", placeholder:"出席者の連絡事項等をご記入ください" %>
+                </div>
+              </div>
+
+
+              <div class="new-attend-btn-wrap">
+                <%= f.submit "出席する", class:"attend-registration-send" %>
+                <%= link_to "出席者コメント一覧", schedule_attends_path, class:"show-schedule-root-path-btn"%>
+              </div>
+            <% end %>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</div>

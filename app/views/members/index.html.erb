@@ -69,6 +69,7 @@
           <li><%= link_to "スタメン設定", matchs_path, class:"main-list" %></li>
           <li><%= link_to "スタメン確認", ofence_matchs_path, class:"main-list"%></li> 
           <li><%= link_to "試合結果", historys_path, class:"main-list"%></li> 
+          <li><%= link_to "スケジュール", schedules_path, class:"main-list"%></li> 
         </ul>
         <div class="alert-wrap" id="alert-wrap">
           <%= render partial: 'layouts/flash' %>
@@ -82,7 +83,7 @@
               <p>１.選手の登録・管理・詳細表示</p>
               <p>２.スターティングメンバーの事前設定</p>
               <p>３.試合結果を記録</p>
-              <p>４.チーム内での情報発信</p>
+              <p>４.試合予定登録・出席確認</p>
             </div>
           </div>
         </div>

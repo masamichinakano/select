@@ -1,0 +1,78 @@
+<div class="member-main-image">
+  <div class="top-session-wrap">
+    <div class="player-header-wrap">
+      <%= render "shared/second_header" %>
+      <div class="player-header-contents">
+        <div class="session-header-logo-warap">
+          <h1><%= link_to "select", root_path, class:"player-header-logo" %></h1>
+        </div>
+      </div>
+    </div>
+
+    <%= render "shared/header" %>
+    <%= form_with model: @schedule, url: schedules_path, class:"new-member-wrap", local: true do |f| %>
+      <div class="registration-wrap">
+        <div class="registration-edit-member-wrap">
+          <div class="member-form-wrap">
+            <%= render 'shared/error_messages', model: f.object %>
+            <div class="form-header-member-text">
+              試合予定入力
+            </div>
+          </div>
+          <div class="member-first-contents">
+            <div class="edit-form">
+              <div>
+                <label class="member-form-text">試合項目</label>
+              </div>
+              <div>
+                <%= f.text_field :plan_name, placeholder:"（例）〇〇大会、練習試合", class:"member-field", id:"member_name" %>
+              </div>
+            </div>
+            <div class="edit-form">
+              <div>
+                <label class="member-form-text">対戦相手</label>
+              </div>
+              <div>
+                <%= f.text_field :plan_match, placeholder:"全角で入力してください", class:"member-field"%> 
+              </div>
+            </div>
+          </div>
+          <div class="member-first-contents">
+            <div class="edit-form">
+              <div>
+                <label class="member-form-text">日程</label>
+              </div>
+              <div>
+                <%= f.date_field :plan_date, class:"member-field" %>
+              </div>
+            </div>
+            <div class="edit-form">
+              <div>
+                <label class="member-form-text">場所</label>
+              </div>
+              <div>
+                <%= f.text_field :place, placeholder:"試合会場名を入力", class:"member-field" %>
+              </div>
+            </div>
+          </div>
+            <div class="schedule-comment-form">
+              <div class="schedule-comment-form-wrap">
+                <label class="schedule-form-text">コメント</label>
+              </div>
+              <div class="schedule-comment-form-wrap">
+                <%= f.text_area :plan_comment, placeholder:"連絡事項、試合会場の住所など", class:"schedule-comment-field" %>
+              </div>
+            </div>
+
+
+          <div class="member-registration-group">
+            <div class='member-registration'>
+              <%= f.submit "試合予定登録", class:"schedule-registration-send" %>
+              <%= link_to "トップに戻る", root_path, class:"root-path-send" %>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -40,3 +40,39 @@
     <%= content_tag :div, "試合履歴を削除しました。", class:"alert"%>
   <% end %>
 <% end %>
+
+<% flash.each do |key, value| %>
+  <% if flash[:schedule] %>
+    <%= content_tag :div, "試合予定を登録しました。", class:"alert"%>
+  <% end %>
+<% end %>
+
+<% flash.each do |key, value| %>
+  <% if flash[:schedule_edit] %>
+    <%= content_tag :div, "試合予定を編集しました。", class:"alert"%>
+  <% end %>
+<% end %>
+
+<% flash.each do |key, value| %>
+  <% if flash[:destroy_schedule] %>
+    <%= content_tag :div, "試合予定を削除しました。", class:"alert"%>
+  <% end %>
+<% end %>
+
+<% flash.each do |key, value| %>
+  <% if flash[:attend] %>
+    <%= content_tag :div, "出席情報を登録しました。", class:"alert"%>
+  <% end %>
+<% end %>
+
+<% flash.each do |key, value| %>
+  <% if flash[:attend_edit] %>
+    <%= content_tag :div, "出席情報を編集しました。", class:"alert"%>
+  <% end %>
+<% end %>
+
+<% flash.each do |key, value| %>
+  <% if flash[:attend_destroy] %>
+    <%= content_tag :div, "出席情報を削除しました。", class:"alert"%>
+  <% end %>
+<% end %>

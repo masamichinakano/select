@@ -1,0 +1,85 @@
+<div class="member-main-image">
+  <div class="top-session-wrap">
+    <div class="player-header-wrap">
+      <%= render "shared/second_header" %>
+      <div class="player-header-contents">
+        <div class="session-header-logo-warap">
+          <h1><%= link_to "select", root_path, class:"player-header-logo" %></h1>
+        </div>
+      </div>
+    </div>
+
+    <%= render "shared/header" %>
+    <div class="main-offence-contents-wrap">
+      <div class="offence-contents-wrap">
+        <div class="offence-contents">
+          <div class="offence-data-wrap">
+            <div class="offence-search-wrap">
+            <%= search_form_for @x, url: search_schedules_path do |f| %>
+              <div class="search-content">
+                <div class="schedule-search-input">
+                  <%= f.label :plan_name_eq, "大会名" %>
+                </div>
+                <div class="offence-search-form" >
+                  <%= f.collection_select :plan_name_eq, @schedule_names.where(user_id: current_user.id), :plan_name, :plan_name,  {include_blank: '指定なし'}, {class:"offence-search-form"} %>
+                </div>
+              </div>
+              <div class="search-content">
+                <div class="schedule-search-input">
+                  <%= f.label :plan_match_eq, '対戦相手' %>
+                </div>
+                <div class="offence-search-form" >
+                  <%= f.collection_select :plan_match_eq, @schedule_matchs.where(user_id: current_user.id), :plan_match, :plan_match,  {include_blank: '指定なし'}, {class:"offence-search-form"} %>
+                </div>
+              </div>
+              <div class="search-content">
+                <div class="schedule-search-input">
+                  <%= f.label :plan_date_eq, '日程' %>
+                </div>            
+                <div class="offence-search-form" >
+                  <%= f.date_field :plan_date_eq, class:"offence-search-form" %>
+                </div>
+              </div>
+
+              <div class="search-btn-wrap">
+                <%= f.submit "スタメン検索", class: "match-search-btn" %>
+                <%= link_to "試合予定登録", new_schedule_path, class:"offence-root-path-btn"%>
+                <%= link_to "トップへ戻る", root_path, class:"offence-root-path-btn"%>
+              </div>
+            <% end %>
+            </div>
+          </div>
+        </div>
+
+        <div class="offence-contents-history">
+          <div class="offence-history-wrap">
+            <% @schedules.each do |schedule| %>
+              <% if current_user.id == schedule.user_id %>
+              <div class="schedule-history">
+                <%= link_to schedule_path(schedule.id) do %>
+                <div class="match-name-wrap">
+                  <p class="offence-user-name"><%= current_user.name %></p>
+                  <label class="ofence-form-text"> VS </label>
+                  <p class="offence-match-name"><%= schedule.plan_match %></p>
+                </div>
+                <div class="schedule-date-wrap">
+                  <p class="schedule-match-year">試合会場：</p>
+                  <p class="schedule-match"><%= schedule.place %></p>
+                </div>
+                <div class="schedule-date-wrap">
+                  <p class="schedule-match-year">試合日程：</p>
+                  <p class="schedule-match"><%= schedule.plan_date %></p>
+                </div>
+
+                <% end %>
+              </div>
+              <% end %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</div>

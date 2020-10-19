@@ -1,7 +1,7 @@
 class MembersController < ApplicationController
   before_action :move_to_new_user_session, except: [:index]    
   before_action :only_player, only: [:show]
-  before_action :set_member, only: [:show, :edit, :update, :destroy]
+  before_action :set_member, only: [:edit, :update, :destroy]
   before_action :all_member, only: [:player, :pitch, :catch, :inside, :outside]
 
 
@@ -54,7 +54,7 @@ class MembersController < ApplicationController
 
   def destroy
     if @member.destroy
-      flash[:destroy_member] = "選手を登録しました。"
+      flash[:destroy_member] = "選手を削除しました。"
       redirect_to root_path
     else
       render 'show'
