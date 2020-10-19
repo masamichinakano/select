@@ -11,8 +11,8 @@
 
     <%= render "shared/header" %>
     <div class="main-offence-contents-wrap">
-      <div class="offence-contents-wrap">
-        <div class="offence-contents">
+      <div class="schedule-offence-contents-wrap">
+        <div class="schedule-offence-contents">
           <div class="offence-data-wrap">
             <div class="schedule-wrap">
               <div class="schedule-show-content">
@@ -72,13 +72,13 @@
               <p>出席者一覧</p>
             </div>
             <div class="show-attend-wrap">
-            <% @attends.each do |attend| %>
-              <p><% t = attend.attend_name_id %></p>
-              <% n = Member.find_by(id: t) %>
-              <div class ="show-attend-member-wrap">
-                <%= n.name %>
-              </div>
-            <% end %>
+              <% @attends.each do |attend| %>
+                <p><% t = attend.attend_name_id %></p>
+                <% n = Member.find_by(id: t) %>
+                <div class ="show-attend-member-wrap">
+                  <%= n.name %>
+                </div>
+              <% end %>
             </div>
             <div class="show-schedule-btn-wrap">
               <%= link_to "出席する", new_schedule_attend_path(@schedule.id), class:"show-schedule-root-path-btn"%>

@@ -15,17 +15,12 @@
             <ul class="sub-list-contents">
               <li><%= link_to "ログイン", user_session_path, class:"sub-log-in" %></li>
               <li><%= link_to "新規登録", new_user_registration_path, class:"sub-session" %></li>
+              <li><%= link_to 'Facebookで登録', user_facebook_omniauth_authorize_path, method: :post, class:"session-facebook"%></li>
+              <li><%= link_to 'Googleで登録', user_google_oauth2_omniauth_authorize_path, method: :post, class:"session-google"%></li>
             </ul>
           <% end %>
         </div>
         <div>
-          <ul class="sub-main-menu-lists">
-            <li><%= link_to "選手登録", new_member_path, class:"sub-main-list"%></li> 
-            <li><%= link_to "選手一覧", player_members_path, class:"sub-main-list" %></li>
-            <li><%= link_to "スタメン設定", matchs_path, class:"sub-main-list" %></li>
-            <li><%= link_to "スタメン確認", ofence_matchs_path, class:"sub-main-list"%></li> 
-            <li><%= link_to "試合結果", historys_path, class:"sub-main-list"%></li> 
-          </ul>
         </div>  
 
 
