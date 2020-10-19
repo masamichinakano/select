@@ -14,16 +14,13 @@
       <div class="offence-contents-wrap">
         <div class="offence-contents">
           <div class="offence-data-wrap">
-          <% @schedules.each do |schedule| %>
-            <% if current_user.id == @attend.user_id && schedule.id == @attend.schedule_id %>
-
             <div class="schedule-wrap">
               <div class="schedule-show-content">
                 <div class="schedule-search-input">
                   大会名
                 </div>
                 <div class="show-schedule-form">
-                  <%= schedule.plan_name %>
+                  <%= @schedule.plan_name %>
                 </div>
               </div>
               <div class="schedule-show-content">
@@ -31,7 +28,7 @@
                   対戦相手
                 </div>
                 <div class="show-schedule-form">
-                  <%= schedule.plan_match %>
+                  <%= @schedule.plan_match %>
                 </div>
               </div>
               <div class="schedule-show-content">
@@ -39,7 +36,7 @@
                   日程
                 </div>            
                 <div class="show-schedule-form">
-                  <%= schedule.plan_date %>
+                  <%= @schedule.plan_date %>
                 </div>
               </div>
               <div class="schedule-show-content">
@@ -47,7 +44,7 @@
                   試合会場
                 </div>            
                 <div class="show-schedule-form" >
-                  <%= schedule.place %>
+                  <%= @schedule.place %>
                 </div>
               </div>
               <div class="show-schedule-comment-wrap">
@@ -55,7 +52,7 @@
                   試合予定詳細コメント
                 </div>            
                 <div class="show-schedule-comment" >
-                  <p><%= schedule.plan_comment %></p>
+                  <p><%= @schedule.plan_comment %></p>
                 </div>
               </div>
 
@@ -63,8 +60,6 @@
                 <%= link_to "試合予定一覧", schedules_path, class:"show-schedule-root-path-btn"%>
               </div>
             </div>
-            <% end %>
-          <% end %>
           </div>
         </div>
 
@@ -75,7 +70,7 @@
             </div>
             <div class="new-attend-wrap">
             <%= form_with model: @attend, url: schedule_attend_path, local: true do |f| %>
-              <div class="attend-member-wrap">
+              <div class="edit-attend-member-wrap">
                 <div class="schedule-search-input">
                   出席者
                 </div>            

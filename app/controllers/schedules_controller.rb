@@ -32,7 +32,7 @@ class SchedulesController < ApplicationController
 
   def show
     @schedule = Schedule.find(params[:id])
-    @attends = @schedule.attends.all
+    @attends = @schedule.attends.all.order("created_at DESC")
     @members = Member.all
   end
 
