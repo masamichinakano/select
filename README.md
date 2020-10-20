@@ -1,7 +1,9 @@
 # README
 
+
 ## アプリケーション名 
 - select-9
+
 
 ## アプリケーション概要
 - 1.チーム管理機能
@@ -11,12 +13,19 @@
 - 5.試合予定を管理できる。
 - 6.試合の出席確認を把握できる。
 
+
 ## URL
 https://select-9.herokuapp.com/
 
+
 ## テストアカウント
-- email：
-- password：
+- email：test@gmail.com
+- password：test00
+
+
+ ## 開発環境
+ 【開発実績】
+- HTML・CSS・Ruby・Ruby on Rails・JavaScript・GitHub・AWS等
 
 
 ## 利用方法
@@ -79,11 +88,25 @@ https://select-9.herokuapp.com/
 <img src=e567ca26a1c16afe1859d648a2825bd5.gif>
 
 
-
 ## ER図
 <img src=https://i.gyazo.com/75e1f2bdfdb8b76cd989fd306a05f092.png, width="60%">
 
-## 
+
+## 工夫したポイント
+- 1.見やすくシンプルな構造
+- 2.スコア入力時、合計点数が非同期で出力される
+- 3.試合結果を登録後に再度確認した際、勝敗表示が出力される
+- 4.試合予定の詳細画面に出席者一覧が表示される
+- 5.出席済みの選手は出席する際の選択肢から除外されている
+- 6.google、facebookでのログイン可能
+- 7.選手一覧表示画面でポジションごとの表示可能
+
+
+## 今後実装したい機能
+- 選手の個人実績登録機能
+
+
+## DB設計
 
 ## users テーブル
 
@@ -98,8 +121,8 @@ https://select-9.herokuapp.com/
 - has_many :matchs
 - has_many :fronts
 - has_many :backs
-
-
+- has_many :schedules
+- has_many :attends
 
 
 
@@ -120,8 +143,6 @@ https://select-9.herokuapp.com/
 
 ### Association
 - belongs_to_active_hash :style
-
-
 - belongs_to :user
 - has_one_attached :image
 - has_one :first
@@ -151,8 +172,6 @@ https://select-9.herokuapp.com/
 - belongs_to_active_hash :year
 - belongs_to_active_hash :month
 - belongs_to_active_hash :day
-
-
 - belongs_to :user
 - has_one :first, dependent: :destroy
 - has_one :second, dependent: :destroy
@@ -165,6 +184,36 @@ https://select-9.herokuapp.com/
 - has_one :ninth, dependent: :destroy
 - has_one :front, dependent: :destroy
 - has_one :back, dependent: :destroy
+
+
+## schedules テーブル
+
+| Column        | Type          | Options                        |
+| --------------| --------------|--------------------------------|
+| plan_name     | string        | null: false                    |
+| plan_match    | string         | null: false                   |
+| plan_date     | string        | null: false                    |
+| place         | string         | null: false                   |
+| plan_comment  | text         | null: false                     |
+| user          | references    | null: false, foreign_key: true |
+
+### Association
+- belongs_to :user
+- has_many :attends
+
+
+## attends テーブル
+
+| Column           | Type          | Options                        |
+| -----------------| --------------|--------------------------------|
+| attend_name_id   | string        | null: false                    |
+| attend_comment   | string        | null: false                    |
+| user             |references     | null: false, foreign_key: true |
+| schedule         | references    | null: false, foreign_key: true |
+
+### Association
+- belongs_to :user
+- belongs_to :schedule
 
 
 
