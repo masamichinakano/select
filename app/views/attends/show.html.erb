@@ -11,8 +11,8 @@
 
     <%= render "shared/header" %>
     <div class="main-offence-contents-wrap">
-      <div class="offence-contents-wrap">
-        <div class="offence-contents">
+      <div class="schedule-offence-contents-wrap">
+        <div class="schedule-offence-contents">
           <div class="offence-data-wrap">
             <div class="schedule-wrap">
               <div class="schedule-show-content">
@@ -47,8 +47,8 @@
                   <%= @schedule.place %>
                 </div>
               </div>
-              <div class="show-schedule-comment-wrap">
-                <div class="attend-comment-title">
+              <div class="new-show-schedule-comment-wrap">
+                <div class="schedule-search-input">
                   試合予定詳細コメント
                 </div>            
                 <div class="show-schedule-comment" >
@@ -56,44 +56,44 @@
                 </div>
               </div>
 
-              <div class="show-schedule-btn-wrap">
+              <div class="attend-show-schedule-btn-wrap">
                 <%= link_to "試合予定一覧", schedules_path, class:"show-schedule-root-path-btn"%>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="show-attend-contents-history">
+        <div class="s-show-attend-contents-history">
           <div class="show-attend-history-wrap">
             <div class="new-attend-header-wrap">
               <p>出席者コメント一覧</p>
             </div>
-            <div class="new-attend-wrap">
-              <div class="attend-member-wrap">
+            <div class="show-attend-wrap">
+              <div class="show-attend-comment-member-wrap">
                 <div class="schedule-search-input">
                   出席者
                 </div>
                 <div class="show-attend-select-wrap" >
                   <p><% t = @attend.attend_name_id %></p>
                   <% n = Member.find_by(id: t) %>
-                  <%= n.name %>：
+                  <%= n.name %>
 
                 </div>
                 <div class="show-schedule-comment-wrap">
                   <div class="schedule-search-input">
                     出席者コメント
                   </div>            
-                  <div class="show-attend-comment" >
-                    <div class="show-attend-comment-field"><%= @attend.attend_comment %></div>
+                  <div class="show-new-attend-comment" >
+                    <div class="show-new-attend-comment-field"><%= @attend.attend_comment %></div>
                   </div>
                 </div>
               </div>
 
 
-              <div class="new-attend-btn-wrap">
+              <div class="show-attend-btn-wrap">
                 <%= link_to "編集", edit_schedule_attend_path, method: :get, class:"show-schedule-root-path-btn"%>
                 <%= link_to "削除", schedule_attend_path, method: :delete, class:"show-schedule-root-path-btn"%>
-                <%= link_to "試合予定詳細に戻る", schedule_path, class:"show-schedule-root-path-btn"%>
+                <%= link_to "コメント一覧に戻る", schedule_attends_path, class:"show-schedule-root-path-btn"%>
               </div>
 
             </div>

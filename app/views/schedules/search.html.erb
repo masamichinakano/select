@@ -16,7 +16,7 @@
           <div class="offence-data-wrap">
             <div class="offence-search-wrap">
             <%= search_form_for @x, url: search_schedules_path do |f| %>
-              <div class="search-content">
+              <div class="schedule-search-content">
                 <div class="schedule-search-input-text">
                   <%= f.label :plan_name_eq, "大会名" %>
                 </div>
@@ -24,7 +24,7 @@
                   <%= f.collection_select :plan_name_eq, @schedule_names.where(user_id: current_user.id), :plan_name, :plan_name,  {include_blank: '指定なし'}, {class:"offence-search-form"} %>
                 </div>
               </div>
-              <div class="search-content">
+              <div class="schedule-search-content">
                 <div class="schedule-search-input-text">
                   <%= f.label :plan_match_eq, '対戦相手' %>
                 </div>
@@ -32,7 +32,7 @@
                   <%= f.collection_select :plan_match_eq, @schedule_matchs.where(user_id: current_user.id), :plan_match, :plan_match,  {include_blank: '指定なし'}, {class:"offence-search-form"} %>
                 </div>
               </div>
-              <div class="search-content">
+              <div class="schedule-search-content">
                 <div class="schedule-search-input-text">
                   <%= f.label :plan_date_eq, '対戦日程', class: "search-input" %>
                 </div>            
@@ -42,7 +42,7 @@
               </div>
 
               <div class="schedule-search-btn-wrap">
-                <%= f.submit "スタメン検索", class: "schedule-match-search-btn" %>
+                <%= f.submit "試合予定検索", class: "schedule-match-search-btn" %>
                 <%= link_to "試合予定登録", new_schedule_path, class:"schedule-offence-root-path-btn"%>
                 <%= link_to "トップへ戻る", root_path, class:"schedule-root-path-btn"%>
               </div>

@@ -123,8 +123,14 @@
 .attend-new-member-select {
   width: 100%;
   height: 100%;
-  text-indent: 120px;
+  text-indent: 180px;
 
+}
+
+.new-show-schedule-comment-wrap {
+  width: 100%;
+  height: 200px;
+  margin-top: 10px;
 }
 
 
@@ -166,7 +172,7 @@
   
   .new-attend-comment {
     width: 93%;
-    height: 100px;
+    height: 140px;
     margin: 0 10px;
     border: 5px solid #000066;
     background-color: white;
@@ -226,9 +232,16 @@
   .attend-new-member-select {
     width: 100%;
     height: 100%;
-    text-indent: 70px;
+    text-indent: 110px;
     font-size: 15px;
   }
+
+  .new-show-schedule-comment-wrap {
+    width: 100%;
+    height: 130px;
+    margin-top: 10px;
+  }
+
 
   
 }

@@ -20,10 +20,10 @@
   font-size: 20px;
   color: #000066;
   display: flex;
-  justify-content: flex-start;
+  /* justify-content: flex-start;
   white-space: pre-wrap;
   overflow-y: scroll;  
-  -webkit-overflow-scrolling: touch;  
+  -webkit-overflow-scrolling: touch;   */
 }
 
 .show-attend-comment-field {
@@ -34,3 +34,122 @@
   float: left;
 }
 
+.show-attend-wrap {
+  height: 430px;
+  width: 100%;
+}
+
+.show-attend-comment-member-wrap {
+  width: 100%;
+  height: 300px;
+  margin-top: 10px;
+}
+
+.show-new-attend-comment {
+  width: 93%;
+  height: 200px;
+  margin: 0 10px;
+  border: 5px solid #000066;
+  background-color: white;
+  font-size: 10px;
+  color: #000066;
+}
+
+.show-new-attend-comment-field {
+  padding: 5px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  white-space: pre-wrap;
+  overflow-y: scroll;  
+  -webkit-overflow-scrolling: touch;  
+}
+
+.show-attend-btn-wrap {
+  margin-top: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.s-show-attend-contents-history {
+  width: 450px;
+  height: 550px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 5px solid #000066;
+  margin-right: 50px;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+}
+
+
+
+@media (max-width: 500px) {
+  .show-attend-select-wrap {
+    height: 30px;
+    margin: 0 10px;
+    background-color: white;
+    border: 3px solid #000066;
+    font-size: 15px;
+    color: #000066;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  
+  .show-attend-wrap {
+    height: 330px;
+    width: 100%;
+  }
+
+  .show-attend-comment-member-wrap {
+    width: 100%;
+    height: 180px;
+    margin-top: 0;
+  }
+  
+  .show-new-attend-comment {
+    width: 93%;
+    height: 100px;
+    margin: 0 10px;
+    border: 5px solid #000066;
+    background-color: white;
+    font-size: 10px;
+    color: #000066;
+  }
+  
+  
+  .show-new-attend-comment-field {
+    padding: 5px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    white-space: pre-wrap;
+    overflow-y: scroll;  
+    -webkit-overflow-scrolling: touch;  
+  }
+  
+  
+  .show-attend-btn-wrap {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+
+  .s-show-attend-contents-history {
+    width: 100%;
+    height: 320px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 5px solid #000066;
+    margin-top: 20px;
+    margin-right: 0;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+  }
+
+}
