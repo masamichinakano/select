@@ -57,6 +57,8 @@ https://select-9.herokuapp.com/
 ## 課題①
 - 課題：スターティングメンバーを決める際、用紙に記入する為、書き直しなどの無駄があり現地で記述するなど思いついた時に記載できない。
 - 解決機能：スターティングメンバーを事前に設定できることでいつでもどこでも思いついた時に保存、管理が出来る。また、正規の用紙に記述する際、記述ミスが軽減され運営費の削減とペーパーレスにも繋がる。
+- 挙動：
+<img src=https://i.gyazo.com/4c8c4b56c2818ddb84d2d2ea974244b9.gif, width="30%">
 
 
 ## 課題②
@@ -75,7 +77,7 @@ https://select-9.herokuapp.com/
 
 
 ## ER図
-- 画像link：<img src=https://i.gyazo.com/75e1f2bdfdb8b76cd989fd306a05f092.png, width="60%">
+<img src=https://i.gyazo.com/75e1f2bdfdb8b76cd989fd306a05f092.png, width="60%">
 
 ## 
 
