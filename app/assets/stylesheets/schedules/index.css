@@ -269,19 +269,19 @@
 
   .schedule-root-path-btn {
     width: 100px;
-    height: 10px;
+    height: 20px;
     display       : inline-block;
     border-radius : 0;          /* 角丸       */
     font-size     : 10px;        /* 文字サイズ */
     text-align    : center;      /* 文字位置   */
     cursor        : pointer;     /* カーソル   */
-    padding       : 10px 0;   /* 余白       */
+    padding       : 15px 0;   /* 余白       */
     background    : #000066;     /* 背景色     */
     color         : #ffffff;     /* 文字色     */
     line-height   : 0;         /* 1行の高さ  */
     transition    : 0;         /* なめらか変化 */
     border        : none;    /* 枠の指定 */
-    margin-top: 15px;
+    margin-top: 10px;
     margin-left: 5px;
   }
 
