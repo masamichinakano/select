@@ -9,12 +9,12 @@ RSpec.describe Schedule, type: :model do
     it "全ての項目がが存在すれば登録できること" do
       expect(@schedule).to be_valid
     end
-    it 'plan_nameが存在しないと出品できない' do
+    it 'plan_nameが存在しないと保存できない' do
       @schedule.plan_name = ''
       @schedule.valid?
       expect(@schedule.errors.full_messages).to include("Plan name can't be blank")
     end
-    it 'plan_dateが存在しないと出品できない' do
+    it 'plan_dateが存在しないと保存できない' do
       @schedule.plan_date = ''
       @schedule.valid?
       expect(@schedule.errors.full_messages).to include("Plan date can't be blank")
