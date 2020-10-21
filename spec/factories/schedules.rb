@@ -6,6 +6,5 @@ FactoryBot.define do
     place          {"東京ドーム"}
     plan_comment   {"コメント"}
     association :user
-
   end
 end
