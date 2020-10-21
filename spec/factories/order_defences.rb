@@ -22,6 +22,5 @@ FactoryBot.define do
     eighth_position_id    {1}
     ninth_name_id         {1}
     ninth_position_id     {1}
-    association :user  
   end
 end
