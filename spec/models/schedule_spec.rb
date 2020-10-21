@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Schedule, type: :model do
-  describe '選手登録機能' do
+  describe '試合予定登録機能' do
     before do
       @schedule = FactoryBot.build(:schedule)
     end
