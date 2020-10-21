@@ -19,6 +19,12 @@ RSpec.describe Member, type: :model do
       @member.valid?
       expect(@member.errors.full_messages).to include("Age can't be blank")
     end
+    it 'ageが全角であると保存できない' do
+      @member.age = '１２'
+      @member.valid?
+      expect(@member.errors.full_messages).to include("Age is invalid")
+    end
+
     it 'style_idが存在しないと保存できない' do
       @member.style_id = 0
       @member.valid?
@@ -29,6 +35,12 @@ RSpec.describe Member, type: :model do
       @member.valid?
       expect(@member.errors.full_messages).to include("Number can't be blank")
     end
+    it 'numberが全角であると保存できない' do
+      @member.number = '１２'
+      @member.valid?
+      expect(@member.errors.full_messages).to include("Number is invalid")
+    end
+
     it 'imageが存在しないと保存できない' do
       @member.image = nil
       @member.valid?
