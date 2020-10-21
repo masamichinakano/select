@@ -3,5 +3,5 @@ class Schedule < ApplicationRecord
   has_many :attends, dependent: :destroy
 
   validates :plan_name, :plan_date, presence: true
-
+  
 end
