@@ -6,10 +6,10 @@ RSpec.describe Attend, type: :model do
       @attend = FactoryBot.build(:attend)
     end
 
-    it "全ての項目がが存在すれば登録できること" do
+    it "全ての項目がが存在すれば保存できること" do
       expect(@attend).to be_valid
     end
-    it 'attend_name_idが存在しないと出品できない' do
+    it 'attend_name_idが存在しないと保存できない' do
       @attend.attend_name_id = " "
       @attend.valid?
       expect(@attend.errors.full_messages).to include("Attend name can't be blank")
