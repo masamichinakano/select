@@ -334,6 +334,7 @@ header {
 }
 
 @media (max-width: 500px) {
+
   .top-main-image {
     padding: 20px;
     background-size: 100% auto;
@@ -345,10 +346,12 @@ header {
     overflow: hidden;
   }
    
+  
   .top-session-wrap {
     padding: 10px;
+  
   }
-
+  
   .header-lists {
     display: none;
   }
@@ -640,7 +643,7 @@ header {
   .top-main-text {
     margin-left: 0;
     width: 100%;
-    height: 430px;
+    height: 360px;
     background-color: rgba(255, 255, 255, 0.7);
   }
   
@@ -655,7 +658,7 @@ header {
     font-size: 21px;
     color: #000066;
     font-weight: bolder;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
   
   
@@ -666,7 +669,7 @@ header {
   }
   
   .top-main-text-contents {
-    margin-top: 20px;
+    margin-top: 5px;
     width: 100%;
 
   
@@ -691,7 +694,7 @@ header {
   .alert-wrap {
     height: 60px;
     margin-top: 70px;
-    margin-bottom: 30px;
+    margin-bottom: 5px;
     display: flex;
     justify-content: center;
   }

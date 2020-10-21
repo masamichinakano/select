@@ -9,14 +9,15 @@
 }
 
 .index-attend-member-wrap p {
-  font-size: 20px;
+  width: 50%;
+  font-size: 15px;
   margin-left: 10px;
 }
 
 
 
 .index-attend-member-comment {
-  width: 250px;
+  width: 150px;
   /* height: 100%; */
   padding: 0 10px;
   display: flex;
