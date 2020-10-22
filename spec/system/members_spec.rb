@@ -22,16 +22,18 @@ RSpec.describe "Members", type: :system do
       # フォームに情報を入力する
       fill_in "member_name", with: @member.name
       fill_in "member_age", with: @member.age
-      fill_in "member_hitting", with: @member.style_id
+      select "右投げ　右打ち", from: "member_hitting"
       fill_in "member_number", with: @member.number
-      fill_in "member_outside_position_id", with: @member.outside_position_id
-      fill_in "member_image", with: @member.image
+      check "member_outside_position_id"
+      attach_file("member_image", 'public/images/test_image.png')
       # 送信するとTweetモデルのカウントが1上がることを確認する
-      # 投稿完了ページに遷移することを確認する
+      expect{
+      find('input[name="commit"]').click
+      }.to change { Member.count }.by(1)
+      # 投稿完了するとトップページに遷移することを確認する
+      expect(current_path).to eq root_path
       # 「投稿が完了しました」の文字があることを確認する
-      # トップページに遷移する
-      # トップページには先ほど投稿した内容のツイートが存在することを確認する（画像）
-      # トップページには先ほど投稿した内容のツイートが存在することを確認する（テキスト）
+      expect(page).to have_content("選手を登録しました。")
     end
   end
   context 'ツイート投稿ができないとき'do
