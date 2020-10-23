@@ -59,7 +59,7 @@
 
         <div class="offence-contents-history">
           <div class="offence-history-wrap">
-            <% @results_schedule.each do |result| %>
+            <% @results.each do |result| %>
               <% if current_user.id == result.user_id && result.front == nil && result.back == nil %>
               <div class="offence-history">
                 <%= link_to match_path(result.id) do %>

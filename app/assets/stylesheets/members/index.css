@@ -298,6 +298,7 @@ ul {
 
   .player-main-image {
     padding: 20px;
+    height: 130vh;
     background-size: 100% 210px;
     background-color: rgb(219, 219, 226);
     background-image: url(https://i.gyazo.com/dba1c44e42f214dec6d4e1b5fac7f289.jpg);
@@ -564,7 +565,7 @@ ul {
   
   .member-contents-wrap {
     margin-top: 20px;
-    height: 540px;
+    height: 600px;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.7);
     overflow-y: scroll;

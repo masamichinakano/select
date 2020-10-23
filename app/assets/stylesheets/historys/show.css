@@ -196,6 +196,15 @@
 
 
 @media (max-width: 500px) {
+  .history-main-image {
+    height: 180vh;
+    padding: 20px;
+  
+    background-image: url(https://i.gyazo.com/cdcbbf6fcc69df6b3b192dd7df04bdcd.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
 
   .sub-offence-match-year {
     width: 70px;
