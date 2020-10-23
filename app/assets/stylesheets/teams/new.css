@@ -222,6 +222,15 @@
 
 @media (max-width: 500px) {
 
+  /* .member-main-image {
+    height: 100%;
+    padding: 20px;
+    background-image: url(https://i.gyazo.com/d9b04c655ba0318922800c814ac8c207.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  } */
+  
+
   .registration-edit-member-wrap {
     background-color: rgba(255, 255, 255, 0.7);
     margin-top: 0;
