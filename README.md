@@ -15,7 +15,8 @@
 
 
 ## URL
-https://select-9.herokuapp.com/
+- heroku　URL：https://select-9.herokuapp.com/
+- AWS　Elastic IP アドレス：54.249.45.108
 
 
 ## テストアカウント
@@ -23,9 +24,15 @@ https://select-9.herokuapp.com/
 - password：test00
 
 
- ## 開発環境
+ ## 使用技術・言語
  【開発実績】
-- HTML・CSS・Ruby・Ruby on Rails・JavaScript・GitHub・AWS等
+- フロントエンド（HTML・CSS・JavaScript）
+- バックエンド（Ruby on Rails6.0）
+- テスト（RSpec・FactoryBot・Capybara）
+- Web サーバ（Nginx・unicorn・heroku）
+- データベース（MySQL）
+- AWS(EC2・S3)
+- 開発環境（MacOS・VScode・Git・GitHub）
 
 
 ## 利用方法
