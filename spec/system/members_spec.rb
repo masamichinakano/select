@@ -32,7 +32,7 @@ RSpec.describe "Members", type: :system do
       }.to change { Member.count }.by(1)
       # 投稿完了するとトップページに遷移することを確認する
       expect(current_path).to eq root_path
-      # 「投稿が完了しました」の文字があることを確認する
+      # 「選手を登録しました」の文字があることを確認する
       expect(page).to have_content("選手を登録しました。")
     end
   end
