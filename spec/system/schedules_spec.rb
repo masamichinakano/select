@@ -52,6 +52,23 @@ RSpec.describe "Schedules", type: :system do
       expect(page).to have_content("2020-02-02")
       expect(page).to have_content(@schedule.place)
       expect(page).to have_content(@schedule.plan_comment)
+      expect(page).to have_content("試合予定削除")
+      # 削除する
+      click_on("試合予定削除")
+      # トップページへ遷移し
+      # 「試合予定を削除しました。」の文字があることを確認する
+      expect(page).to have_content("試合予定を削除しました。")
+      visit root_path
+      # 試合結果ページへのリンクがあることを確認する
+      expect(page).to have_content('スケジュール')
+      visit schedules_path
+      # 保存した試合結果が存在しないことを確認する
+      expect(page).to have_no_content(@schedule.plan_match)
+      # トップへ戻るリンクが存在することを確認する
+      expect(page).to have_content("トップへ戻る")
+      # トップへ戻るをクリックしトップページへ遷移する
+      click_on("トップへ戻る")
+      visit root_path
     end
   end
 
