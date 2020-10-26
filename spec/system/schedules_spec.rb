@@ -30,7 +30,6 @@ RSpec.describe "Schedules", type: :system do
       fill_in "schedule[place]", with: @schedule.place
       fill_in "schedule[plan_comment]", with: @schedule.plan_comment
       # 送信するとScheduleモデルのカウントが1上がることを確認する
-      # binding.pry
       expect{
       find('input[name="commit"]').click
       }.to change { Schedule.count }.by(1)
