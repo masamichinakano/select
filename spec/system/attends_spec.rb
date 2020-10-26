@@ -76,10 +76,41 @@ RSpec.describe "Attends", type: :system do
       expect(current_path).to eq root_path
       # 「出席情報を登録しました。」の文字があることを確認する
       expect(page).to have_content("出席情報を登録しました。")
-
-
-    
-    
+      # スケジュールページへ遷移し試合予定詳細へ遷移する
+      expect(page).to have_content('スケジュール')
+      visit schedules_path
+      expect(page).to have_content(@schedule.plan_match)
+      click_on(@schedule.plan_match)
+      # 出席者に選手が追加されていることを確認する
+      expect(page).to have_content(@member.name)
+      # 出席者コメント一覧のリンクがあることを確認する
+      expect(page).to have_content("出席者コメント一覧")
+      # 出席者コメント一覧へ遷移する
+      click_on("出席者コメント一覧")
+      # 出席者一覧が確認できる
+      expect(page).to have_content("山田太郎")
+      expect(page).to have_content(@attend.attend_comment)
+      # 出席者詳細ページへ遷移する
+      click_on(@attend.attend_comment)
+      # 出席者の情報と編集、削除ボタンが確認できる
+      expect(page).to have_content("山田太郎")
+      expect(page).to have_content(@attend.attend_comment)
+      expect(page).to have_content("編集")
+      expect(page).to have_content("削除")
+      expect(page).to have_content("コメント一覧に戻る")
+      # 出席者を削除する
+      click_on("削除")
+      # トップページへ遷移し
+      # 「出席情報を削除しました。」の文字があることを確認する
+      expect(page).to have_content("出席情報を削除しました。")
+      visit root_path
+      # スケジュールページへ遷移し試合予定詳細へ遷移する
+      expect(page).to have_content('スケジュール')
+      visit schedules_path
+      expect(page).to have_content(@schedule.plan_match)
+      click_on(@schedule.plan_match)
+      # 削除した出席者が存在しないか確認する
+      expect(page).to have_no_content(@member.name)
     end
   end
 end
