@@ -123,6 +123,7 @@
 | email          | string             | null: false |
 | password       | encrypted_password | null: false |
 
+
 ### Association
 - has_many :members
 - has_many :matchs
@@ -152,6 +153,7 @@
 - belongs_to_active_hash :style
 - belongs_to :user
 - has_one_attached :image
+
 
 
 ## matchs テーブル
@@ -184,6 +186,7 @@
 - has_one :back, dependent: :destroy
 
 
+
 ## schedules テーブル
 
 | Column        | Type          | Options                        |
@@ -200,6 +203,7 @@
 - has_many :attends
 
 
+
 ## attends テーブル
 
 | Column           | Type          | Options                        |
@@ -209,7 +213,8 @@
 | user             |references     | null: false, foreign_key: true |
 | schedule         | references    | null: false, foreign_key: true |
 
-### Association
+
+## Association
 - belongs_to :user
 - belongs_to :schedule
 
